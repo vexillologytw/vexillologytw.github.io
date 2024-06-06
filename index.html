@@ -3,9 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>旗章製造</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .anton-regular {
+            font-family: "Anton", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .noto-sans-tc-mandarin {
+            font-family: "Noto Sans TC", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 800;
+            font-style: normal;
+        }
+        .text-tsubaki {
+            color: #bc002e;
+        }
+        .massive-title {
+            font-size: 10em;;
+        }
+        .sub-massive-title {
+            font-size: 9em;;
+        }
+    </style>
 </head>
-<body>
-    this is where vexillologytw.github.io begin.
+<body style="overflow-x: hidden;">
+    
+    <div data-title="title" class="title bg-dark d-flex mb-5">
+        <div class="container d-flex justify-content-between align-items-center py-2">
+            <div class="massive-title anton-regular lh-1 text-white">
+                VEXILLOLOGY
+                <br>
+                TAIWAN
+            </div>
+            <div>
+                <img src="/images/tsubaki-white-1024.png" width="300" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div data-title="body" class="container W-100">
+
+        <div data-title="web-description" class="fs-3 mb-5">
+            旗章製造是個人網站，並非官方。
+            <br>
+            這裡收錄了<span class="text-tsubaki">祈椿</span>（化名）的各種作品，從旗幟、文字紋到家紋，應有盡有。
+            <br>
+        </div>
+        <!-- end of web-description -->
+
+        <div data-title="flag-display" class="mb-5">
+            <div class="d-flex justify-content-center mb-2">
+                <div id="carouselExampleControls" class="carousel slide w-50" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active text-secondary text-center">
+                            <img src="/images//flag-of-taiwan.png" class="img-fluid w-100 mb-2" alt="台灣百合旗">
+                            台灣百合旗
+                        </div>
+                        <div class="carousel-item text-secondary text-center">
+                            <img src="/images//naval-flag-of-taiwan.png" class="img-fluid w-100 mb-2" alt="台灣百合旗（海上旗）">
+                            台灣百合旗（海上旗）
+                        </div>
+                        <div class="carousel-item text-secondary text-center">
+                            <img src="/images//flag-of-takaohsiung.png" class="img-fluid w-100 mb-2" alt="大高雄旗">
+                            大高雄旗
+                        </div>
+                        <div class="carousel-item text-secondary text-center">
+                            <img src="/images//flag-of-taipei.png" class="img-fluid w-100 mb-2" alt="台北市旗">
+                            台北市旗
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- end of flag display -->
+
+        <div data-title="monji-display" class="w-100">
+            <div class="d-flex justify-content-center flex-wrap">
+                <span class="text-center">
+                    <img src="/images/monji-of-hualian.png" width="200" height="200">
+                    <br>
+                    <span class="text-secondary">花蓮縣</span>
+                </span>
+                <span class="text-center">
+                    <img src="/images/monji-of-nantou.png" width="200" height="200">
+                    <br>
+                    <span class="text-secondary">南投縣</span>
+                </span>
+                <span class="text-center">
+                    <img src="/images/monji-of-taichung.png" width="200" height="200">
+                    <br>
+                    <span class="text-secondary">台中市</span>
+                </span>
+                <span class="text-center">
+                    <img src="/images/monji-of-tainan.png" width="200" height="200">
+                    <br>
+                    <span class="text-secondary">台南市</span>
+                </span>
+                <span class="text-center">
+                    <img src="/images/monji-of-taipei.png" width="200" height="200">
+                    <br>
+                    <span class="text-secondary">台北市</span>
+                </span>
+                <span class="text-center">
+                    <img src="/images/monji-of-taitung.png" width="200" height="200">
+                    <br>
+                    <span class="text-secondary">台東縣</span>
+                </span>
+                <span class="text-center">
+                    <img src="/images/monji-of-takaohsiung.png" width="200" height="200">
+                    <br>
+                    <span class="text-secondary">高雄市</span>
+                </span>
+                <span class="text-center">
+                    <img src="/images/monji-of-yilan.png" width="200" height="200">
+                    <br>
+                    <span class="text-secondary">宜蘭縣</span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div data-title="footer" class="bg-dark d-flex justify-content-center py-5">
+        <div class="d-flex align-items-center noto-sans-tc-mandarin text-white fs-3">
+            旗章<img src="/images/tsubaki-white-128.png" class="mx-3" width="50" alt="">製造
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>
