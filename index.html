@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>旗章製造</title>
+    
+    <!-- google fonts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- bootstrap -->
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .anton-regular {
             font-family: "Anton", sans-serif;
@@ -26,17 +32,31 @@
         .text-tsubaki {
             color: #bc002e;
         }
+        .text-twitter {
+            color: #1DA1F2;
+        }
         .massive-title {
             font-size: 10em;;
         }
         .sub-massive-title {
             font-size: 9em;;
         }
+        #background-area {
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1)), url("/images/background-main.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%; /* Ensures the image fits the window width */
+            width: 100vw; /* Ensures the element width is the same as the viewport width */
+            height: 150vw; /* Adjust the height as necessary, here it's set to viewport height */
+        }
+        #background-space {
+            width: 10em;
+            height: 100em;
+        }
     </style>
 </head>
 <body style="overflow-x: hidden;">
     
-    <div data-title="title" class="title bg-dark d-flex mb-5">
+    <div data-title="title" class="title bg-dark d-flex">
         <div class="container d-flex justify-content-between align-items-center py-2">
             <div class="massive-title anton-regular lh-1 text-white">
                 VEXILLOLOGY
@@ -49,95 +69,23 @@
         </div>
     </div>
 
-    <div data-title="body" class="container W-100">
+    <div id="background-area">
+        <div id="background-space"></div>
+    </div>
 
-        <div data-title="web-description" class="fs-3 mb-5">
-            旗章製造是個人網站，並非官方。
-            <br>
-            這裡收錄了<span class="text-tsubaki">祈椿</span>（化名）的各種作品，從旗幟、文字紋到家紋，應有盡有。
-            <br>
-        </div>
-        <!-- end of web-description -->
+    <div data-title="body" class="container p-relative W-100 mb-5">
 
-        <div data-title="flag-display" class="mb-5">
-            <div class="d-flex justify-content-center mb-2">
-                <div id="carouselExampleControls" class="carousel slide w-50" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active text-secondary text-center">
-                            <img src="/images//flag-of-taiwan.png" class="img-fluid w-100 mb-2" alt="台灣百合旗">
-                            台灣百合旗
-                        </div>
-                        <div class="carousel-item text-secondary text-center">
-                            <img src="/images//naval-flag-of-taiwan.png" class="img-fluid w-100 mb-2" alt="台灣百合旗（海上旗）">
-                            台灣百合旗（海上旗）
-                        </div>
-                        <div class="carousel-item text-secondary text-center">
-                            <img src="/images//flag-of-takaohsiung.png" class="img-fluid w-100 mb-2" alt="大高雄旗">
-                            大高雄旗
-                        </div>
-                        <div class="carousel-item text-secondary text-center">
-                            <img src="/images//flag-of-taipei.png" class="img-fluid w-100 mb-2" alt="台北市旗">
-                            台北市旗
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
+        <div data-title="web-description" class="d-flex justify-content-center mb-5">
+            <h2 class="noto-sans-tc-mandarin text-center" style="font-size: 2em;">
+                這裡收錄著
+                <br class="my-4">
+                台與旗與紋的故事
+            </h2>
         </div>
-        <!-- end of flag display -->
 
         <div data-title="monji-display" class="w-100">
-            <div class="d-flex justify-content-center flex-wrap">
-                <span class="text-center">
-                    <img src="/images/monji-of-hualian.png" width="200" height="200">
-                    <br>
-                    <span class="text-secondary">花蓮縣</span>
-                </span>
-                <span class="text-center">
-                    <img src="/images/monji-of-nantou.png" width="200" height="200">
-                    <br>
-                    <span class="text-secondary">南投縣</span>
-                </span>
-                <span class="text-center">
-                    <img src="/images/monji-of-taichung.png" width="200" height="200">
-                    <br>
-                    <span class="text-secondary">台中市</span>
-                </span>
-                <span class="text-center">
-                    <img src="/images/monji-of-tainan.png" width="200" height="200">
-                    <br>
-                    <span class="text-secondary">台南市</span>
-                </span>
-                <span class="text-center">
-                    <img src="/images/monji-of-taipei.png" width="200" height="200">
-                    <br>
-                    <span class="text-secondary">台北市</span>
-                </span>
-                <span class="text-center">
-                    <img src="/images/monji-of-taitung.png" width="200" height="200">
-                    <br>
-                    <span class="text-secondary">台東縣</span>
-                </span>
-                <span class="text-center">
-                    <img src="/images/monji-of-takaohsiung.png" width="200" height="200">
-                    <br>
-                    <span class="text-secondary">高雄市</span>
-                </span>
-                <span class="text-center">
-                    <img src="/images/monji-of-yilan.png" width="200" height="200">
-                    <br>
-                    <span class="text-secondary">宜蘭縣</span>
-                </span>
-            </div>
+            <div class="d-flex justify-content-center flex-wrap" id="monjis"></div>
         </div>
-
     </div>
 
     <div data-title="footer" class="bg-dark d-flex justify-content-center py-5">
@@ -146,6 +94,52 @@
         </div>
     </div>
 
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script>
+        var dir = "/images/monjis/";
+        var fileExtension = ".png";
+        var monjiImages = [
+            {en:"monji-of-changhua-county", md:"彰化縣"},
+            {en:"monji-of-chiayi-city", md:"嘉義市"},
+            {en:"monji-of-chiayi-county", md:"嘉義縣"},
+            {en:"monji-of-hsinchu-city", md:"新竹市"},
+            {en:"monji-of-hsinchu-county", md:"新竹縣"},
+            {en:"monji-of-hualian-county", md:"花蓮縣"},
+            {en:"monji-of-keelung-city", md:"基隆市"},
+            {en:"monji-of-miaoli-county", md:"苗栗縣"},
+            {en:"monji-of-nantou-county", md:"南投縣"},
+            {en:"monji-of-new-taipei-city", md:"新北市"},
+            {en:"monji-of-penghu-county", md:"澎湖縣"},
+            {en:"monji-of-pingtung-county", md:"屏東縣"},
+            {en:"monji-of-taichung-city", md:"台中市"},
+            {en:"monji-of-tainan-city", md:"台南市"},
+            {en:"monji-of-taipei-city", md:"台北市"},
+            {en:"monji-of-taitung-county", md:"台東縣"},
+            {en:"monji-of-takaohsiung-city", md:"高雄市"},
+            {en:"monji-of-taoyuan-city", md:"桃園市"},
+            {en:"monji-of-yilan-county", md:"宜蘭縣"},
+            {en:"monji-of-yunlin-county", md:"雲林縣"}
+        ];
+
+        $(function() {
+            for (var monjiImage of monjiImages) {
+                appendImage(monjiImage);
+            }
+        });
+
+        function appendImage(monjiImage) {
+            var path = dir + monjiImage.en + fileExtension;
+            $("<span class=\"text-center p-3\">" +
+                    "<img src=\"" + path + "\" width=\"150\" height=\"150\">"+
+                    "<br>"+
+                    "<span class=\"text-secondary\">" + monjiImage.md + "</span>"+
+                "</span>\""
+            ).attr('src', path).appendTo("#monjis");
+        }
+
+    </script>
 </body>
 </html>
