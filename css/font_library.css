@@ -1,0 +1,23 @@
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.noto-sans-tc-mandarin {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+.text-tsubaki {
+    color: #bc002e;
+}
+.text-twitter {
+    color: #1DA1F2;
+}
+.massive-title {
+    font-size: calc(100vw / 10);
+}
+.sub-massive-title {
+    font-size: 9em;;
+}

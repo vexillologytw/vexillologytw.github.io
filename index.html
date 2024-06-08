@@ -3,63 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>旗章製造</title>
-    
-    <!-- google fonts -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <meta name="description" content="旗章製造收錄了台灣的各式旗幟與紋章創作。">
+    <meta name="keywords" content="旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計">
+    <link name="favicon" rel="icon" type="image/x-icon" href="/images/tsubaki-128.png">
     
     <!-- bootstrap -->
-    <!-- Option 1: Include in HTML -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
+    
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="/plugins/bootstrap/bootstrap-icons.min.css">
+
+    <!-- google fonts anton -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/plugins/googleapis/anton/css2.css">
+    
+    <!-- google fonts notosans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/plugins/googleapis/notosans/css2.css">
+    
+    <link rel="stylesheet" href="/css/font_library.css">
     <style>
-        .anton-regular {
-            font-family: "Anton", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-        .noto-sans-tc-mandarin {
-            font-family: "Noto Sans TC", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 800;
-            font-style: normal;
-        }
-        .text-tsubaki {
-            color: #bc002e;
-        }
-        .text-twitter {
-            color: #1DA1F2;
-        }
-        .massive-title {
-            font-size: calc(100vw / 10);
-        }
         #title-image {
             width: calc(100vw / 5);
-        }
-        .sub-massive-title {
-            font-size: 9em;;
         }
         #background-area {
             background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1)), url("/images/background-main.png");
             background-repeat: no-repeat;
-            background-size: 100% 100%; /* Ensures the image fits the window width */
-            width: 100vw; /* Ensures the element width is the same as the viewport width */
-            height: 150vw; /* Adjust the height as necessary, here it's set to viewport height */
+            background-size: 100% 100%;
+            width: 100vw;
+            height: 150vw;
         }
         #background-space {
             width: 10em;
             height: 100em;
         }
     </style>
+
+    <title>旗章製造</title>
 </head>
 <body style="overflow-x: hidden;">
     
-    <div data-title="title" class="title bg-dark d-flex">
+    <div data-title="banner" class="title bg-dark d-flex">
         <div class="d-flex flex-wrap justify-content-between w-100 align-items-center py-2 px-3">
             <div class="massive-title anton-regular lh-1 text-white">
                 VEXILLOLOGY
@@ -76,9 +62,9 @@
         <div id="background-space"></div>
     </div>
 
-    <div data-title="body" class="container p-relative W-100 mb-5">
+    <div data-title="body" class="container W-100 mb-5">
 
-        <div data-title="web-description" class="d-flex justify-content-center mb-5">
+        <div data-title="web-description" class="justify-content-center mb-5">
             <h2 class="noto-sans-tc-mandarin text-center" style="font-size: 2em;">
                 這裡收錄著
                 <br class="my-4">
@@ -86,68 +72,112 @@
             </h2>
         </div>
 
-        <div data-title="monji-display" class="w-100">
-            <div class="d-flex justify-content-center flex-wrap" id="monjis"></div>
+        <div data-title="monji-display" class="w-100 mb-5">
+            <div class="d-flex justify-content-center flex-wrap" id="monji-ctn"></div>
+        </div>
+
+        <div data-title="flag-display" class="w-100 mb-5">
+            <div class="d-flex justify-content-center flex-wrap" id="flag-ctn"></div>
         </div>
     </div>
 
     <div data-title="footer" class="bg-dark d-flex justify-content-center py-5">
-        <div class="d-flex align-items-center noto-sans-tc-mandarin text-white fs-3">
-            祈<img src="/images/tsubaki-white-128.png" class="mx-3" width="50" alt="">椿
+        <div class="noto-sans-tc-mandarin text-white d-flex align-items-center fs-3">
+            祈<img src="/images/tsubaki-white-128.png" class="mx-3" width="50">椿
         </div>
     </div>
 
+    <!-- Javascript -->
+
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/plugins/jquery/jquery-3.7.1.min.js"></script>
     <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="/plugins/bootstrap/bootstrap.min.js"></script>
     <script>
-        var dir = "/images/monjis/";
         var fileExtension = ".png";
         var monjiImages = [
-            {en:"monji-of-changhua-county", md:"彰化縣"},
-            {en:"monji-of-changhua-city", md:"彰化市"},
-            {en:"monji-of-chiayi-city", md:"嘉義市"},
-            {en:"monji-of-chiayi-county", md:"嘉義縣"},
-            {en:"monji-of-puzi-city", md:"朴子市"},
-            {en:"monji-of-taibou-city", md:"太保市"},
-            {en:"monji-of-hsinchu-city", md:"新竹市"},
-            {en:"monji-of-hsinchu-county", md:"新竹縣"},
-            {en:"monji-of-hualian-county", md:"花蓮縣"},
-            {en:"monji-of-keelung-city", md:"基隆市"},
-            {en:"monji-of-miaoli-county", md:"苗栗縣"},
-            {en:"monji-of-nantou-county", md:"南投縣"},
-            {en:"monji-of-new-taipei-city", md:"新北市"},
-            {en:"monji-of-penghu-county", md:"澎湖縣"},
-            {en:"monji-of-pingtung-county", md:"屏東縣"},
-            {en:"monji-of-taichung-city", md:"台中市"},
-            {en:"monji-of-tainan-city", md:"台南市"},
-            {en:"monji-of-west-central-tainan-city", md:"台南市中西區"},
-            {en:"monji-of-taipei-city", md:"台北市"},
-            {en:"monji-of-taitung-county", md:"台東縣"},
-            {en:"monji-of-takaohsiung-city", md:"高雄市"},
-            {en:"monji-of-taoyuan-city", md:"桃園市"},
-            {en:"monji-of-yilan-county", md:"宜蘭縣"},
-            {en:"monji-of-yunlin-county", md:"雲林縣"},
-            {en:"monji-of-taixi-yunlin-county", md:"雲林縣台西鄉"}
+            {en:"monji-of-changhua-county", md:"彰化縣章"},
+            {en:"monji-of-changhua-city", md:"彰化市章"},
+            {en:"monji-of-chiayi-city", md:"嘉義市章"},
+            {en:"monji-of-chiayi-county", md:"嘉義縣章"},
+            {en:"monji-of-puzi-city", md:"朴子市章"},
+            {en:"monji-of-taibou-city", md:"太保市章"},
+            {en:"monji-of-hsinchu-city", md:"新竹市章"},
+            {en:"monji-of-hsinchu-county", md:"新竹縣章"},
+            {en:"monji-of-hualian-county", md:"花蓮縣章"},
+            {en:"monji-of-keelung-city", md:"基隆市章"},
+            {en:"monji-of-miaoli-county", md:"苗栗縣章"},
+            {en:"monji-of-nantou-county", md:"南投縣章"},
+            {en:"monji-of-new-taipei-city", md:"新北市章"},
+            {en:"monji-of-penghu-county", md:"澎湖縣章"},
+            {en:"monji-of-pingtung-county", md:"屏東縣章"},
+            {en:"monji-of-taichung-city", md:"台中市章"},
+            {en:"monji-of-tainan-city", md:"台南市章"},
+            {en:"monji-of-west-central-tainan-city", md:"台南市中西區章"},
+            {en:"monji-of-taipei-city", md:"台北市章"},
+            {en:"monji-of-taitung-county", md:"台東縣章"},
+            {en:"monji-of-takaohsiung-city", md:"高雄市章"},
+            {en:"monji-of-taoyuan-city", md:"桃園市章"},
+            {en:"monji-of-yilan-county", md:"宜蘭縣章"},
+            {en:"monji-of-yunlin-county", md:"雲林縣章"},
+            {en:"monji-of-taixi-yunlin-county", md:"雲林縣台西鄉章"}
         ];
+        var flagImages = [
+            {en:"flag-of-taiwan-1", md:"台灣百合旗"},
+            {en:"flag-of-taiwan-naval-1", md:"台灣百合海上旗"},
+            {en:"flag-of-taiwan-2", md:"台灣百合旗貳式"},
+            {en:"flag-of-taiwan-naval-2", md:"台灣百合海上旗貳式"},
+            {en:"flag-of-taiwan-3", md:"台灣百合旗參式"},
+            {en:"flag-of-four-languages", md:"四大語言族群旗"},
+            {en:"flag-of-department-of-defence", md:"國防部旗"},
+            {en:"flag-of-department-of-state", md:"行政院旗"},
+            {en:"flag-of-department-of-finance", md:"財政部旗"},
+            {en:"flag-of-coast-guard", md:"海巡署旗"},
+            {en:"flag-of-coast-guard-naval", md:"海巡署海上旗"},
+            {en:"flag-of-takaohsiung-city", md:"大高雄旗"},
+            {en:"flag-of-taipei-city", md:"台北市旗"},
+            {en:"flag-of-tainan-city", md:"台南市旗"},
+            {en:"flag-of-taitung-county", md:"台東縣旗"},
+            {en:"flag-of-changhua-county", md:"彰化縣旗"},
+            {en:"flag-of-chiayi-county", md:"嘉義縣旗"},
+            {en:"flag-of-hsintsu-city", md:"新竹市旗"},
+            {en:"flag-of-nantou-county", md:"南投縣旗"},
+            {en:"flag-of-sea", md:"海洋旗"},
+            {en:"flag-of-land", md:"山岳旗"}
+        ];
+        var monjiConfig = {
+                dir: "/images/monjis/",
+                container: "#monji-ctn",
+                width: 150,
+                height: 150,
+                imageClasses: ""
+        };
+        var flagConfig = {
+                dir:"/images/flags/",
+                container:"#flag-ctn",
+                width:300,
+                height:180,
+                imageClasses: "border"
+        };
 
         $(function() {
             for (var monjiImage of monjiImages) {
-                appendImage(monjiImage);
+                appendImage(monjiImage, monjiConfig);
+            }
+            for (var flagImage of flagImages) {
+                appendImage(flagImage, flagConfig);
             }
         });
 
-        function appendImage(monjiImage) {
-            var path = dir + monjiImage.en + fileExtension;
-            $("<div class=\"text-center p-3\">" +
-                    "<img src=\"" + path + "\" width=\"150\" height=\"150\">"+
-                    "<br>"+
-                    "<div class=\"noto-sans-tc-mandarin text-secondary pt-2\">" + monjiImage.md + "</div>"+
-                "</div>\""
-            ).attr('src', path).appendTo("#monjis");
+        function appendImage(image, config) {
+            var path = config.dir + image.en + fileExtension;
+            $(`<div class=\"text-center p-3\">` +
+                    `<img src=\"${path}\" class=\"${config.imageClasses}\"" width=\"${config.width}\" height=\"${config.height}\">`+
+                    `<br>`+
+                    `<div class=\"noto-sans-tc-mandarin text-secondary pt-2\">${image.md}</div>`+
+                `</div>\"`
+            ).attr('src', path).appendTo(config.container);
         }
-
     </script>
 </body>
 </html>
