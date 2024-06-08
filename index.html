@@ -3,9 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="旗章製造收錄了台灣的各式旗幟與紋章創作。">
+    <meta name="keywords" content="旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計">
+    <link name="favicon" rel="icon" type="image/x-icon" href="/images/tsubaki-128.png">
+    
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
+    
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="/plugins/bootstrap/bootstrap-icons.min.css">
+
+    <!-- google fonts anton -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/plugins/googleapis/anton/css2.css">
+    
+    <!-- google fonts notosans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/plugins/googleapis/notosans/css2.css">
+    
+    <link rel="stylesheet" href="/css/font_library.css">
+    <style>
+        #title-image {
+            width: calc(100vw / 5);
+        }
+        #background-area {
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1)), url("/images/background-main.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100vw;
+            height: 150vw;
+        }
+        #background-space {
+            width: 10em;
+            height: 100em;
+        }
+        .modal-trigger-image {
+            cursor: pointer;
+        }
+    </style>
+
+    <title>旗章製造</title>
 </head>
-<body>
-    this is where vexillologytw.github.io begin.
+<body style="overflow-x: hidden;">
+    
+    <div data-title="banner" class="title bg-dark d-flex">
+        <div class="d-flex flex-wrap justify-content-between w-100 align-items-center py-2 px-3">
+            <div class="massive-title anton-regular lh-1 text-white">
+                VEXILLOLOGY
+                <br>
+                TAIWAN
+            </div>
+            <div>
+                <img src="/images/tsubaki-white-1024.png" id="title-image" width="300" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="background-area">
+        <div id="background-space"></div>
+    </div>
+
+    <div data-title="body" class="container W-100 mb-5">
+
+        <div data-title="web-description" class="justify-content-center mb-5">
+            <h2 class="noto-sans-tc-mandarin text-center" style="font-size: 2em;">
+                這裡收錄著
+                <br class="my-4">
+                台與旗與紋的故事
+            </h2>
+        </div>
+
+        <div data-title="monji-display" class="w-100 mb-5">
+            <div class="d-flex justify-content-center flex-wrap" id="monji-ctn"></div>
+        </div>
+
+        <div data-title="flag-display" class="w-100 mb-5">
+            <div class="d-flex justify-content-center flex-wrap" id="flag-ctn"></div>
+        </div>
+    </div>
+
+    <div data-title="footer" class="bg-dark d-flex justify-content-center py-5">
+        <div class="noto-sans-tc-mandarin text-white d-flex align-items-center fs-3">
+            祈<img src="/images/tsubaki-white-128.png" class="mx-3" width="50">椿
+        </div>
+    </div>
+
+    <!-- Modal Trigger -->
+    <button type="button" class="d-none" id="image-modal-trigger" data-bs-toggle="modal" data-bs-target="#image-modal"></button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="image-modal" tabindex="-1" aria-labelledby="image-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 0;">
+                <div class="modal-body p-0">
+                    <img id="modal-image-src" style="width: 100%; position: relative;">
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- jquery -->
+    <script src="/plugins/jquery/jquery-3.7.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- monji & flag data -->
+    <script src="/js/monji_data.js"></script>
+    <script src="/js/flag_data.js"></script>
+    <script>
+        $(function() {
+            for (var monjiImage of monjiImages) {   // monjiImage & monjiConfig are from /js/monji_data.js
+                appendImage(monjiImage, monjiConfig);
+            }
+            for (var flagImage of flagImages) {     // flagImage & flagConfig are from /js/flag_data.js
+                appendImage(flagImage, flagConfig);
+            }
+            $(".modal-trigger-image").on("mousedown", function(event) {
+                if (event.which != 1) return;
+                $("#modal-image-src").attr("src", $(this).attr("src"));
+                $("#image-modal-trigger").click();
+            })
+        });
+
+        /**
+         * Append image to an image container, element shall be configured in parameter config's attribute "container"
+         */
+        function appendImage(image, config) {
+            var path = config.dir + image.en + ".png";
+            $(`<div class=\"text-center p-3\">` +
+                    `<img src=\"${path}\" class=\"${config.imageClasses}\"" width=\"${config.width}\" height=\"${config.height}\">`+
+                    `<br>`+
+                    `<div class=\"noto-sans-tc-mandarin text-secondary pt-2\">${image.md}</div>`+
+                `</div>\"`
+            ).attr('src', path).appendTo(config.container);
+        }
+    </script>
 </body>
 </html>
