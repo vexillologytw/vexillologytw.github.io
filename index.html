@@ -39,6 +39,9 @@
             width: 10em;
             height: 100em;
         }
+        .modal-trigger-image {
+            cursor: pointer;
+        }
     </style>
 
     <title>旗章製造</title>
@@ -87,90 +90,47 @@
         </div>
     </div>
 
-    <!-- Javascript -->
+    <!-- Modal Trigger -->
+    <button type="button" class="d-none" id="image-modal-trigger" data-bs-toggle="modal" data-bs-target="#image-modal"></button>
 
+    <!-- Modal -->
+    <div class="modal fade" id="image-modal" tabindex="-1" aria-labelledby="image-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 0;">
+                <div class="modal-body p-0">
+                    <img id="modal-image-src" style="width: 100%; position: relative;">
+                </div>
+            </div>
+        </div>
+    </div>
+  
     <!-- jquery -->
     <script src="/plugins/jquery/jquery-3.7.1.min.js"></script>
     <!-- bootstrap -->
     <script src="/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- monji & flag data -->
+    <script src="/js/monji_data.js"></script>
+    <script src="/js/flag_data.js"></script>
     <script>
-        var fileExtension = ".png";
-        var monjiImages = [
-            {en:"monji-of-changhua-county", md:"彰化縣章"},
-            {en:"monji-of-changhua-city", md:"彰化市章"},
-            {en:"monji-of-chiayi-city", md:"嘉義市章"},
-            {en:"monji-of-chiayi-county", md:"嘉義縣章"},
-            {en:"monji-of-puzi-city", md:"朴子市章"},
-            {en:"monji-of-taibou-city", md:"太保市章"},
-            {en:"monji-of-hsinchu-city", md:"新竹市章"},
-            {en:"monji-of-hsinchu-county", md:"新竹縣章"},
-            {en:"monji-of-hualian-county", md:"花蓮縣章"},
-            {en:"monji-of-keelung-city", md:"基隆市章"},
-            {en:"monji-of-miaoli-county", md:"苗栗縣章"},
-            {en:"monji-of-nantou-county", md:"南投縣章"},
-            {en:"monji-of-new-taipei-city", md:"新北市章"},
-            {en:"monji-of-penghu-county", md:"澎湖縣章"},
-            {en:"monji-of-pingtung-county", md:"屏東縣章"},
-            {en:"monji-of-taichung-city", md:"台中市章"},
-            {en:"monji-of-tainan-city", md:"台南市章"},
-            {en:"monji-of-west-central-tainan-city", md:"台南市中西區章"},
-            {en:"monji-of-taipei-city", md:"台北市章"},
-            {en:"monji-of-taitung-county", md:"台東縣章"},
-            {en:"monji-of-takaohsiung-city", md:"高雄市章"},
-            {en:"monji-of-taoyuan-city", md:"桃園市章"},
-            {en:"monji-of-yilan-county", md:"宜蘭縣章"},
-            {en:"monji-of-yunlin-county", md:"雲林縣章"},
-            {en:"monji-of-taixi-yunlin-county", md:"雲林縣台西鄉章"}
-        ];
-        var flagImages = [
-            {en:"flag-of-taiwan-1", md:"台灣百合旗"},
-            {en:"flag-of-taiwan-naval-1", md:"台灣百合海上旗"},
-            {en:"flag-of-taiwan-2", md:"台灣百合旗貳式"},
-            {en:"flag-of-taiwan-naval-2", md:"台灣百合海上旗貳式"},
-            {en:"flag-of-taiwan-3", md:"台灣百合旗參式"},
-            {en:"flag-of-four-languages", md:"四大語言族群旗"},
-            {en:"flag-of-department-of-defence", md:"國防部旗"},
-            {en:"flag-of-department-of-state", md:"行政院旗"},
-            {en:"flag-of-department-of-finance", md:"財政部旗"},
-            {en:"flag-of-coast-guard", md:"海巡署旗"},
-            {en:"flag-of-coast-guard-naval", md:"海巡署海上旗"},
-            {en:"flag-of-takaohsiung-city", md:"大高雄旗"},
-            {en:"flag-of-taipei-city", md:"台北市旗"},
-            {en:"flag-of-tainan-city", md:"台南市旗"},
-            {en:"flag-of-taitung-county", md:"台東縣旗"},
-            {en:"flag-of-changhua-county", md:"彰化縣旗"},
-            {en:"flag-of-chiayi-county", md:"嘉義縣旗"},
-            {en:"flag-of-hsintsu-city", md:"新竹市旗"},
-            {en:"flag-of-nantou-county", md:"南投縣旗"},
-            {en:"flag-of-sea", md:"海洋旗"},
-            {en:"flag-of-land", md:"山岳旗"}
-        ];
-        var monjiConfig = {
-                dir: "/images/monjis/",
-                container: "#monji-ctn",
-                width: 150,
-                height: 150,
-                imageClasses: ""
-        };
-        var flagConfig = {
-                dir:"/images/flags/",
-                container:"#flag-ctn",
-                width:300,
-                height:180,
-                imageClasses: "border"
-        };
-
         $(function() {
-            for (var monjiImage of monjiImages) {
+            for (var monjiImage of monjiImages) {   // monjiImage & monjiConfig are from /js/monji_data.js
                 appendImage(monjiImage, monjiConfig);
             }
-            for (var flagImage of flagImages) {
+            for (var flagImage of flagImages) {     // flagImage & flagConfig are from /js/flag_data.js
                 appendImage(flagImage, flagConfig);
             }
+            $(".modal-trigger-image").on("mousedown", function(event) {
+                if (event.which != 1) return;
+                $("#modal-image-src").attr("src", $(this).attr("src"));
+                $("#image-modal-trigger").click();
+            })
         });
 
+        /**
+         * Append image to an image container, element shall be configured in parameter config's attribute "container"
+         */
         function appendImage(image, config) {
-            var path = config.dir + image.en + fileExtension;
+            var path = config.dir + image.en + ".png";
             $(`<div class=\"text-center p-3\">` +
                     `<img src=\"${path}\" class=\"${config.imageClasses}\"" width=\"${config.width}\" height=\"${config.height}\">`+
                     `<br>`+
