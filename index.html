@@ -136,9 +136,17 @@
             for (var flagImage of flagImages) {     // flagImage & flagConfig are from /js/flag_data.js
                 appendImage(flagImage, flagConfig);
             }
+            // show modal on left click on images
             $(".modal-trigger-image").on("mousedown", function(event) {
+                // only trigger on left click
                 if (event.which != 1) return;
-                $("#modal-image-src").attr("src", $(this).attr("src"));
+                var imgSrc = $(this).attr("src");
+
+                // if this image is monji, change the img src to images in /images/monjis/desctiptions
+                if ($(this).attr("data-type") === "monji") {
+                    imgSrc = origSrc.replace(".png", "-desc.png").replace("monjis/", "monjis/descriptions/");
+                }
+                $("#modal-image-src").attr("src", imgSrc);
                 $("#image-modal-trigger").click();
             })
         });
@@ -149,7 +157,7 @@
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";
             $(`<div class=\"text-center p-3\">` +
-                    `<img src=\"${path}\" class=\"${config.imageClasses}\"" width=\"${config.width}\" height=\"${config.height}\">`+
+                    `<img src=\"${path}\" class=\"${config.imageClasses}\"" data-title=\"${image.en}\"" data-type=\"${config.type}\"" width=\"${config.width}\" height=\"${config.height}\">`+
                     `<br>`+
                     `<div class=\"noto-sans-tc-mandarin text-secondary pt-2\">${image.md}</div>`+
                 `</div>\"`

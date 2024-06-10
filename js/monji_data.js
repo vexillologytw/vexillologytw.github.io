@@ -7,6 +7,7 @@ var monjiImages = [
     {en:"monji-of-taibou-city", md:"太保市章"},
     {en:"monji-of-hsinchu-city", md:"新竹市章"},
     {en:"monji-of-hsinchu-county", md:"新竹縣章"},
+    {en:"monji-of-zhubei-city", md:"竹北市章"},
     {en:"monji-of-hualian-county", md:"花蓮縣章"},
     {en:"monji-of-keelung-city", md:"基隆市章"},
     {en:"monji-of-miaoli-county", md:"苗栗縣章"},
@@ -28,6 +29,7 @@ var monjiImages = [
 var monjiConfig = {
     dir: "/images/monjis/",
     container: "#monji-ctn",
+    type: "flag",
     width: 150,
     height: 150,
     imageClasses: "modal-trigger-image"

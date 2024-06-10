@@ -1,9 +1,12 @@
 var flagImages = [
     {en:"flag-of-taiwan-1", md:"台灣百合旗"},
-    {en:"flag-of-taiwan-naval-1", md:"台灣百合海上旗"},
     {en:"flag-of-taiwan-2", md:"台灣百合旗貳式"},
-    {en:"flag-of-taiwan-naval-2", md:"台灣百合海上旗貳式"},
     {en:"flag-of-taiwan-3", md:"台灣百合旗參式"},
+    {en:"flag-of-taiwan-4", md:"台灣百合旗肆式"},
+    {en:"flag-of-taiwan-naval-1", md:"台灣百合海上旗"},
+    {en:"flag-of-taiwan-naval-2", md:"台灣百合海上旗貳式"},
+    {en:"flag-of-taiwan-naval-3", md:"台灣百合海上旗參式"},
+    {en:"flag-of-taiwan-naval-4", md:"台灣百合海上旗肆式"},
     {en:"flag-of-four-languages", md:"四大語言族群旗"},
     {en:"flag-of-department-of-defence", md:"國防部旗"},
     {en:"flag-of-department-of-state", md:"行政院旗"},
@@ -24,6 +27,7 @@ var flagImages = [
 var flagConfig = {
     dir:"/images/flags/",
     container:"#flag-ctn",
+    type: "flag",
     width:300,
     height:180,
     imageClasses: "modal-trigger-image border"
