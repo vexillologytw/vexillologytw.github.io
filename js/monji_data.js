@@ -29,7 +29,7 @@ var monjiImages = [
 var monjiConfig = {
     dir: "/images/monjis/",
     container: "#monji-ctn",
-    type: "flag",
+    type: "monji",
     width: 150,
     height: 150,
     imageClasses: "modal-trigger-image"

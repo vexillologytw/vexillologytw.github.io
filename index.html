@@ -144,7 +144,7 @@
 
                 // if this image is monji, change the img src to images in /images/monjis/desctiptions
                 if ($(this).attr("data-type") === "monji") {
-                    imgSrc = origSrc.replace(".png", "-desc.png").replace("monjis/", "monjis/descriptions/");
+                    imgSrc = imgSrc.replace(".png", "-desc.png").replace("monjis/", "monjis/descriptions/");
                 }
                 $("#modal-image-src").attr("src", imgSrc);
                 $("#image-modal-trigger").click();
