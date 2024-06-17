@@ -22,82 +22,67 @@
     <meta name="twitter:description" content="旗章製造收錄了台灣的各式旗幟與紋章創作。" />
     <meta name="twitter:creator" content="@vexillology_tw" />
 
-    <link name="favicon" rel="icon" type="image/x-icon" href="/images/tsubaki-128.png" crossorigin>
+    <link name="favicon" rel="icon" type="image/x-icon" href="/images/tsubaki-128.png">
     
     <!-- bootstrap -->
-    <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css" crossorigin>
+    <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
     
     <!-- bootstrap icon -->
-    <link rel="stylesheet" href="/plugins/bootstrap/bootstrap-icons.min.css" crossorigin>
+    <link rel="stylesheet" href="/plugins/bootstrap/bootstrap-icons.min.css">
 
     <!-- google fonts anton -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="/plugins/googleapis/anton/css2.css" crossorigin>
+    <link rel="stylesheet" href="/plugins/googleapis/anton/css2.css">
     
     <!-- google fonts notosans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="/plugins/googleapis/notosans/css2.css" crossorigin>
+    <link rel="stylesheet" href="/plugins/googleapis/notosans/css2.css">
     
     <link rel="stylesheet" href="/css/font_library.css">
     <style>
         #title-image {
-            width: calc(100vw / 5);
+            width: calc(100vw / 10);
         }
-        #background-area {
-            background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1)), url("/images/background-main.png");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            width: 100vw;
-            height: 150vw;
-        }
-        #background-space {
-            width: 10em;
-            height: 100em;
+        .main-image {
+            aspect-ratio: 1/1;
+            max-height: calc(40vh);
         }
         .modal-trigger-image {
             cursor: pointer;
         }
     </style>
-
-    <title>旗章製造</title>
+    <title>載入中...</title>
 </head>
 <body style="overflow-x: hidden;">
     
     <div data-title="banner" class="title bg-dark d-flex">
         <div class="d-flex flex-wrap justify-content-between w-100 align-items-center py-2 px-2">
             <div class="massive-title anton-regular lh-1 text-white">
-                VEXILLOLOGY
-                <br>
-                TAIWAN
+                VEXILLOLOGY TAIWAN
             </div>
             <div>
                 <img src="/images/tsubaki-white-1024.png" id="title-image" width="300" alt="">
             </div>
         </div>
     </div>
+    
+    <div data-title="body" class="container d-flex flex-wrap justify-content-center W-100 mb-5">
 
-    <div id="background-area">
-        <div id="background-space"></div>
-    </div>
+        <nav aria-title="breadcrumb" class="w-75 py-1">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html" class="text-secondary">旗章製造</a></li>
+            </ol>
+        </nav>
 
-    <div data-title="body" class="container W-100 mb-5">
-
-        <div data-title="web-description" class="justify-content-center mb-5">
-            <h2 class="noto-sans-tc text-center" style="font-size: 2em;">
-                這裡收錄著
-                <br class="my-4">
-                台與旗與紋的故事
-            </h2>
+        <div data-title="display" class="d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center w-75 pt-5 my-5">
+            <img class="main-image me-md-5 mb-5 mb-md-0 modal-trigger-image" data-type="monji">
+            <div class="description noto-sans-tc fs-5"></div>
         </div>
 
-        <div data-title="monji-display" class="w-100 mb-5">
+        <div data-title="monji-display" class="w-100 mb-5 my-5">
             <div class="d-flex justify-content-center flex-wrap" id="monji-ctn"></div>
-        </div>
-
-        <div data-title="flag-display" class="w-100 mb-5">
-            <div class="d-flex justify-content-center flex-wrap" id="flag-ctn"></div>
         </div>
     </div>
 
@@ -120,7 +105,7 @@
             </div>
         </div>
     </div>
-  
+    
     <!-- jquery -->
     <script src="/plugins/jquery/jquery-3.7.1.min.js"></script>
     <!-- bootstrap -->
@@ -130,35 +115,56 @@
     <script src="/js/monji_data.js"></script>
     <script src="/js/flag_data.js"></script>
     <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const monjiName = urlParams.get("name");
+
+        var monji = getMonjiByEn(monjiName);
+        
+        if (monji == null) {
+            window.location.href = "/404.html";
+        }
         $(function() {
-            for (var monjiImage of monjiImages) {   // monjiImage & monjiConfig are from /js/monji_data.js
-                if (monjiImage.level === 1) {
-                    appendImage(monjiImage, monjiConfig);
-                }
+            document.title = monji.md;
+            var path = monjiConfig.dir + monji.en + ".png";
+            $(".main-image").attr("src", path);
+            $(".main-image").attr("alt", monji.title);
+            if (monji.desc == undefined || monji.desc.length == 0) {
+                $(".description").html("紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。");
+            } else {
+                $(".description").html(monji.desc);
             }
-            for (var flagImage of flagImages) {     // flagImage & flagConfig are from /js/flag_data.js
-                if (flagImage.level === 1) {
-                    appendImage(flagImage, flagConfig);
-                }
+
+            buildBreadcrumb(monji);
+            
+            var subentities = getMonjiesByParentName(monjiName);
+
+            for (var subEntity of subentities) {
+                appendImage(subEntity, monjiConfig);
             }
             // show modal on left click on images
             $(".modal-trigger-image").on("mousedown", function(event) {
                 // only trigger on left click
                 if (event.which != 1) return;
-                var imgSrc = $(this).attr("src");
-
-                // if this image is monji, change the img src to images in /images/monjis/desctiptions
-                if ($(this).attr("data-type") === "monji") {
-                    imgSrc = imgSrc.replace(".png", "-desc.png").replace("monjis/", "monjis/descriptions/");
-                }
+                var imgSrc = $(this).attr("src")
+                                    .replace(".png", "-desc.png")
+                                    .replace("monjis/", "monjis/descriptions/");
                 $("#modal-image-src").attr("src", imgSrc);
                 $("#image-modal-trigger").click();
             })
         });
 
-        /**
-         * Append image to an image container, element shall be configured in parameter config's attribute "container"
-         */
+        function buildBreadcrumb(monji) {
+            do {
+                if (monji.en === monjiName) {
+                    $(".breadcrumb").append(`<li class="breadcrumb-item text-secondary">${monji.title_md}</li>`);
+                } else {
+                    $(".breadcrumb").append(`<li class="breadcrumb-item"><a href="/monji-detail.html?name=${monji.en}" class="text-secondary">${monji.title_md}</a></li>`);
+                }
+                monji = getMonjiByEn(monji.parent);
+            } while (monji !== null);
+        }
+
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";
             var text = image.title_md;
