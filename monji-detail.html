@@ -63,7 +63,9 @@
                 VEXILLOLOGY TAIWAN
             </div>
             <div>
-                <img src="/images/tsubaki-white-1024.png" id="title-image" width="300" alt="">
+                <a href="https://x.com/vexillology_tw">
+                    <img src="/images/tsubaki-white-1024.png" id="title-image" width="300" alt="">
+                </a>
             </div>
         </div>
     </div>
@@ -86,9 +88,11 @@
         </div>
     </div>
 
-    <div data-title="footer" class="d-flex justify-content-center bg-dark text-white py-5">
-        <div class="noto-sans-tc d-flex align-items-center fs-3">
-            祈<img src="/images/tsubaki-white-128.png" class="mx-3" width="50">椿
+    <div data-title="footer" class="d-flex justify-content-center bg-dark py-5">
+        <div class="d-flex align-items-center fs-3">
+            <a href="https://x.com/vexillology_tw" class="text-decoration-none noto-sans-tc text-white">
+                祈<img src="/images/tsubaki-white-128.png" class="mx-3" width="50">椿
+            </a>
         </div>
     </div>
 
@@ -111,9 +115,8 @@
     <!-- bootstrap -->
     <script src="/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="/plugins/bootstrap/bootstrap.bundle.min.js"></script>
-    <!-- monji & flag data -->
+    <!-- monji data -->
     <script src="/js/monji_data.js"></script>
-    <script src="/js/flag_data.js"></script>
     <script>
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
@@ -157,7 +160,7 @@
         function buildBreadcrumb(monji) {
             do {
                 if (monji.en === monjiName) {
-                    $(".breadcrumb").append(`<li class="breadcrumb-item text-secondary">${monji.title_md}</li>`);
+                    $(".breadcrumb").append(`<li class="breadcrumb-item text-secondary">${monji.md}</li>`);
                 } else {
                     $(".breadcrumb").append(`<li class="breadcrumb-item"><a href="/monji-detail.html?name=${monji.en}" class="text-secondary">${monji.title_md}</a></li>`);
                 }

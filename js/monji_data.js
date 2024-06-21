@@ -5,7 +5,7 @@ var monjiImages = [
     {en:"monji-of-chiayi-county", md:"嘉義縣", level:1, detail:false, parent:null, title_en:"Chiayi County", title_md:"嘉義縣", desc:""},
     {en:"monji-of-puzi-city", md:"朴子市", level:1, detail:false, parent:"monji-of-chiayi-county", title_en:"Puzi City", title_md:"朴子市", desc:""},
     {en:"monji-of-taibou-city", md:"太保市", level:1, detail:false, parent:"monji-of-chiayi-county", title_en:"Taibou City", title_md:"太保市", desc:""},
-    {en:"monji-of-hsinchu-city", md:"新竹市", level:1, detail:false, parent:null, title_en:"Hsintsu City", title_md:"新竹市", desc:"磚紅色的紋由「竹」與「市」字所組成，象徵新竹的悠久歷史與濃厚人文。紋可分為三個區塊，分別象徵科學、創新與永續發展。"},
+    {en:"monji-of-hsinchu-city", md:"新竹市", level:1, detail:true, parent:null, title_en:"Hsintsu City", title_md:"新竹市", desc:"位於台灣的北部的新竹市是台灣的科技重鎮，世界第一的半導體製造公司台積電總部就坐落於此。<br><br>紋由「竹」與「市」字所組成，可分為三個區塊，分別象徵科學、創新與永續發展。"},
     {en:"monji-of-hsinchu-county", md:"新竹縣", level:1, detail:false, parent:null, title_en:"Hsintsu County", title_md:"新竹縣", desc:""},
     {en:"monji-of-zhubei-city", md:"竹北市", level:1, detail:false, parent:"monji-of-hsinchu-county", title_en:"Zhubei City", title_md:"竹北市", desc:""},
     {en:"monji-of-hualian-county", md:"花蓮縣", level:1, detail:false, parent:null, title_en:"Hualian County", title_md:"花蓮縣", desc:""},
@@ -43,7 +43,7 @@ var monjiConfig = {
     imageClasses: "modal-trigger-image"
 };
 function getMonjiByEn(en) {
-    for (monji of monjiImages) {
+    for (var monji of monjiImages) {
         if (monji.en === en) {
             return monji;
         }
