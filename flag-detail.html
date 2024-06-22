@@ -71,7 +71,7 @@
                         <img id="windless-hanged-flag" data-type="flag">
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="noto-sans-tc text-center">
                     旗在無風狀態下的樣子
                 </div>
             </div>
@@ -81,17 +81,17 @@
             <div class="d-flex justify-content-center flex-wrap" id="flag-ctn"></div>
         </div>
 
-        <div data-title="neighbors" class="w-100 mb-5">
-            <div class="d-flex justify-content-center">
-                <span id="prev-flag">
-                    <a class="text-dark mx-2 fs-4">
+        <div data-title="neighbors" class="mw-100 mb-5">
+            <div class="d-flex flex-wrap flex-md-nowrap justify-content-center">
+                <span class="w-100 w-md-50 text-center my-2" id="prev-flag">
+                    <a class="text-dark text-nowrap mx-2 fs-4">
                         <i class="bi bi-arrow-left-square-fill"></i>
-                        <span></span>
+                        <span class="noto-sans-tc text-nowrap"></span>
                     </a>
                 </span>
-                <span id="next-flag">
-                    <a class="text-dark mx-2 fs-4">
-                        <span></span>
+                <span class="w-100 w-md-50 text-center my-2" id="next-flag">
+                    <a class="text-dark text-nowrap mx-2 fs-4">
+                        <span class="noto-sans-tc text-nowrap"></span>
                         <i class="bi bi-arrow-right-square-fill"></i>
                     </a>
                 </span>
@@ -126,7 +126,7 @@
             setMainImage(flag);
             setHangedFlag(flag);
             buildBreadcrumb(flag);
-            
+
             $("#prev-flag").hide();
             $("#next-flag").hide();
             
