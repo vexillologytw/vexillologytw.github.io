@@ -49,9 +49,7 @@
     <div data-title="body" class="container d-flex flex-wrap justify-content-center W-100 mb-5">
 
         <nav aria-title="breadcrumb" class="w-75 py-1">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/index.html" class="text-secondary">旗章製造</a></li>
-            </ol>
+            <ol class="breadcrumb"></ol>
         </nav>
 
         <div data-title="display" class="d-flex flex-wrap justify-content-center align-items-center w-75 pt-5 my-5">
@@ -176,12 +174,13 @@
         function buildBreadcrumb(flag) {
             do {
                 if (flag.en === flagName) {
-                    $(".breadcrumb").append(`<li class="breadcrumb-item text-secondary">${flag.md}</li>`);
+                    $(".breadcrumb").prepend(`<li class="breadcrumb-item text-secondary">${flag.md}</li>`);
                 } else {
-                    $(".breadcrumb").append(`<li class="breadcrumb-item"><a href="/flag-detail.html?name=${flag.en}" class="text-secondary">${flag.title_md}</a></li>`);
+                    $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/flag-detail.html?name=${flag.en}" class="text-secondary">${flag.title_md}</a></li>`);
                 }
                 flag = getFlagByEn(flag.parent);
             } while (flag !== null);
+            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html" class="text-secondary">旗章製造</a></li>`);
         }
 
         function appendImage(image, config) {
@@ -189,7 +188,7 @@
             var text = image.title_md;
 
             if (image.detail) {
-                text = `<a class="text-secondary" href="/${config.type}.html?name=${image.en}">${text}</a>`;
+                text = `<a class="text-secondary" href="/flag-detail.html?name=${image.en}">${text}</a>`;
             }
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses} mw-100 h-auto" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
