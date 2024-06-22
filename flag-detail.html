@@ -1,75 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="祈椿" />
-    <meta name="description" content="旗章製造收錄了台灣的各式旗幟與紋章創作。">
-    <meta name="keywords" content="旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計">
-    
-    <meta itemprop="name" content="旗章製造" />
-    <meta itemprop="image" content="https://vexillologytw.github.io/images/tsubaki-2048-shadow">
-    <meta itemprop="description" content="旗章製造收錄了台灣的各式旗幟與紋章創作。">
-    
-    <meta property="og:title" content="旗章製造" />
-    <meta property="og:description" content="旗章製造收錄了台灣的各式旗幟與紋章創作。" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://vexillologytw.github.io/images/tsubaki-2048-shadow" />
-    
-    <meta name="twitter:card" content="https://vexillologytw.github.io/images/tsubaki-2048-shadow" />
-    <meta name="twitter:site" content="@vexillology_tw" />
-    <meta name="twitter:title" content="旗章製造" />
-    <meta name="twitter:description" content="旗章製造收錄了台灣的各式旗幟與紋章創作。" />
-    <meta name="twitter:creator" content="@vexillology_tw" />
-
-    <link name="favicon" rel="icon" type="image/x-icon" href="/images/tsubaki-128.png">
-    
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
-    
-    <!-- bootstrap icon -->
-    <link rel="stylesheet" href="/plugins/bootstrap/bootstrap-icons.min.css">
-
-    <!-- google fonts anton -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="/plugins/googleapis/anton/css2.css">
-    
-    <!-- google fonts notosans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="/plugins/googleapis/notosans/css2.css">
-    
-    <link rel="stylesheet" href="/css/font_library.css">
+    <div data-load="/html/seo.html,/html/csslib.html"></div>
     <style>
         #title-image {
             width: calc(100vw / 10);
         }
-        .main-image {
-            width: 100%;
-            max-width: 60vh;
-            height: auto;
-        }
         .modal-trigger-image {
             cursor: pointer;
+        }
+        #windless-hanged-flag-display {
+            height: 21em;
+            margin-top: 4em;
+        }
+        #windless-hanged-flag-ctn {
+            position: relative;
+            transform: rotate(60deg);
+        }
+        #windless-hanged-flag {
+            min-width: 180px;
+            max-width: 270px;
+            clip-path: polygon(0 0, 100% 42%, 100% 100%, 54% 100%);
+            -webkit-clip-path: polygon(0 0, 100% 42%, 100% 100%, 54% 100%);
+        }
+        #windless-hanged-flag-border {
+            position: absolute;
+            background: black;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            clip-path: polygon(0 0, 100% 42%, 100% 100%, 54% 100%);
+            -webkit-clip-path: polygon(0 0, 100% 42%, 100% 100%, 54% 100%);
+        }
+        #windless-hanged-flag-pole {
+            position: absolute;
+            width: 0.75em;
+            height: 20em;
+            background-color: black;
         }
     </style>
     <title>載入中...</title>
 </head>
 <body style="overflow-x: hidden;">
     
-    <div data-title="banner" class="title bg-dark d-flex">
-        <div class="d-flex flex-wrap justify-content-between w-100 align-items-center py-2 px-2">
-            <div class="massive-title anton-regular lh-1 text-white">
-                VEXILLOLOGY TAIWAN
-            </div>
-            <div>
-                <a href="https://x.com/vexillology_tw">
-                    <img src="/images/tsubaki-white-1024.png" id="title-image" width="300" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
+    <div data-load="/html/banner_detail.html"></div>
     
     <div data-title="body" class="container d-flex flex-wrap justify-content-center W-100 mb-5">
 
@@ -79,38 +54,55 @@
             </ol>
         </nav>
 
-        <div data-title="display" class="d-flex flex-wrap flex-lg-nowrap justify-content-center align-items-center w-75 pt-5 my-5">
-            <img class="main-image me-lg-5 mb-5 mb-lg-0 modal-trigger-image border" data-type="flag">
-            <div class="description noto-sans-tc fs-5"></div>
-        </div>
+        <div data-title="display" class="d-flex flex-wrap justify-content-center align-items-center w-75 pt-5 my-5">
+            
+            <div class="d-flex flex-wrap justify-content-center align-items-center w-100 mb-5">
+                <img class="main-image modal-trigger-image mw-100 border mb-3" data-type="flag">
+                <div class="description noto-sans-tc w-100 text-start fs-5"></div>
+            </div>
 
-        <div data-title="flag-display" class="w-100 mb-5 my-5">
-            <div class="d-flex justify-content-center flex-wrap" id="flag-ctn"></div>
-        </div>
-    </div>
-
-    <div data-title="footer" class="d-flex justify-content-center bg-dark py-5">
-        <div class="d-flex align-items-center fs-3">
-            <a href="https://x.com/vexillology_tw" class="text-decoration-none noto-sans-tc text-white">
-                祈<img src="/images/tsubaki-white-128.png" class="mx-3" width="50">椿
-            </a>
-        </div>
-    </div>
-
-    <!-- Modal Trigger -->
-    <button type="button" class="d-none" id="image-modal-trigger" data-bs-toggle="modal" data-bs-target="#image-modal"></button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="image-modal" tabindex="-1" aria-labelledby="image-modal-label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content" style="border-radius: 0;">
-                <div class="modal-body p-0">
-                    <img id="modal-image-src" style="width: 100%; position: relative;">
+            <div data-title="windless-hanged-display">
+                <div id="windless-hanged-flag-display">
+                    <div class="d-flex justify-content-center">
+                        <div id="windless-hanged-flag-pole"></div>
+                    </div>
+                    <div id="windless-hanged-flag-ctn">
+                        <div id="windless-hanged-flag-border"></div>
+                        <img id="windless-hanged-flag" data-type="flag">
+                    </div>
+                </div>
+                <div class="text-center">
+                    旗在無風狀態下的樣子
                 </div>
             </div>
         </div>
+
+        <div data-title="flag-display" class="w-100 mb-5">
+            <div class="d-flex justify-content-center flex-wrap" id="flag-ctn"></div>
+        </div>
+
+        <div data-title="neighbors" class="w-100 mb-5">
+            <div class="d-flex justify-content-center">
+                <span id="prev-flag">
+                    <a class="text-dark mx-2 fs-4">
+                        <i class="bi bi-arrow-left-square-fill"></i>
+                        <span></span>
+                    </a>
+                </span>
+                <span id="next-flag">
+                    <a class="text-dark mx-2 fs-4">
+                        <span></span>
+                        <i class="bi bi-arrow-right-square-fill"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
     </div>
+
+    <div data-load="/html/footer.html" id="footer"></div>
+    <div data-load="/html/image_modal.html"></div>
     
+    <script src="/js/load_html.js"></script>
     <!-- jquery -->
     <script src="/plugins/jquery/jquery-3.7.1.min.js"></script>
     <!-- bootstrap -->
@@ -122,24 +114,21 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const flagName = urlParams.get("name");
-
+        
         var flag = getFlagByEn(flagName);
+        var neighbors = getNeighborFlags(flagName);
         
         if (flag == null) {
             window.location.href = "/404.html";
         }
         $(function() {
             document.title = flag.md;
-            var path = flagConfig.dir + flag.en + ".png";
-            $(".main-image").attr("src", path);
-            $(".main-image").attr("alt", flag.title);
-            if (flag.desc == undefined || flag.desc.length == 0) {
-                $(".description").html("旗的介紹還沒完成，但或許過一段時間它就會自己長出來了。");
-            } else {
-                $(".description").html(flag.desc);
-            }
-
+            setMainImage(flag);
+            setHangedFlag(flag);
             buildBreadcrumb(flag);
+            
+            $("#prev-flag").hide();
+            $("#next-flag").hide();
             
             var subentities = getFlagsByParentName(flagName);
 
@@ -154,7 +143,35 @@
                 $("#modal-image-src").attr("src", imgSrc);
                 $("#image-modal-trigger").click();
             })
+            // set neighbors
+            if (neighbors.prev != null) {
+                var href = `/flag-detail.html?name=${neighbors.prev.en}`;
+                $("#prev-flag").show();
+                $("#prev-flag > a").attr("href", href);
+                $("#prev-flag > a > span").html(neighbors.prev.md);
+            }
+            if (neighbors.next != null) {
+                var href = `/flag-detail.html?name=${neighbors.next.en}`;
+                $("#next-flag").show();
+                $("#next-flag > a").attr("href", href);
+                $("#next-flag > a > span").html(neighbors.next.md);
+            }
         });
+
+        function setMainImage(flag) {
+            $(".main-image").attr("src", flagConfig.dir + flag.en + ".png");
+            $(".main-image").attr("alt", flag.title);
+            if (flag.desc == undefined || flag.desc.length == 0) {
+                $(".description").html("旗的介紹還沒完成，但或許過一段時間它就會自己長出來了。");
+            } else {
+                $(".description").html(flag.desc);
+            }
+        }
+
+        function setHangedFlag(flag) {
+            $("#windless-hanged-flag").attr("src", flagConfig.dir + flag.en + ".png");
+            $("#windless-hanged-flag").attr("alt", flag.title);
+        }
 
         function buildBreadcrumb(flag) {
             do {
@@ -175,7 +192,7 @@
                 text = `<a class="text-secondary" href="/${config.type}.html?name=${image.en}">${text}</a>`;
             }
             $(`<div class="text-center p-3">
-                    <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
+                    <img src="${path}" class="${config.imageClasses} mw-100 h-auto" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">${text}</div>
                 </div>`
