@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div data-load="/html/seo.html,/html/csslib.html"></div>
+    <style>
+        #crafting-table {
+            width: 50em;
+            height: 30em;
+        }
+        .flag-component {
+            position: absolute;
+        }
+    </style>
+    <title>工作坊</title>
+</head>
+<body style="overflow-x: hidden;">
+    
+    <div data-load="/html/banner_detail.html"></div>
+    
+    <div data-title="body" class="container d-flex flex-wrap justify-content-center W-100 mb-5">
+        <nav aria-title="breadcrumb" class="w-75 py-1 noto-sans-tc">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html" class="text-secondary">旗章製造</a></li>
+                <li class="breadcrumb-item text-secondary">工作坊</li>
+            </ol>
+        </nav>
+
+        <div data-title="crafting-table" class="border border-dark" id="crafting-table"></div>
+    </div>
+
+    <div data-load="/html/footer.html" id="footer"></div>
+    <div data-load="/html/image_modal.html"></div>
+    
+    <script src="/js/load_html.js"></script>
+    <!-- jquery -->
+    <script src="/plugins/jquery/jquery-3.7.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- toastr -->
+    <script src="/plugins/toastr/toastr.min.js"></script>
+    <!-- FlagComponent -->
+    <script src="/js/flag_maker/FlagComponent.js"></script>
+    <script>
+        $(function() {
+            toastr.options = {
+                timeOut: 25,
+                extendedTimeOut: 40
+            }
+            var c = new FlagComponent({
+                placement: "#crafting-table"
+            });
+        });
+    </script>
+</body>
+</html>

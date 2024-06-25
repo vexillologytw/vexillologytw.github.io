@@ -21,3 +21,12 @@
 .sub-massive-title {
     font-size: 9em;;
 }
+.btn-dark:hover {
+    background-color: #bc002e;
+    color: white;
+    border-color: #bc002e;
+    transition: none;
+}
+a.text-dark:hover {
+    color: #bc002e !important;
+}
