@@ -42,3 +42,23 @@
 a.text-dark:hover {
     color: #bc002e !important;
 }
+.text-tblue {
+    color: #003255 !important;
+}
+.text-tcyan {
+    color: #00b4b2 !important;
+}
+.bg-tblue {
+    background-color: #003255 !important;
+}
+.bg-tcyan {
+    background-color: #00b4b2 !important;
+}
+.btn-tblue {
+    background-color: #003255 !important;
+    color: white;
+}
+.btn-tcyan {
+    background-color: #00b4b2 !important;
+    color: white
+}

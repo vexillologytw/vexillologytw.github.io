@@ -10,6 +10,9 @@
         .flag-component {
             position: absolute !important;
         }
+        .pill-control {
+            display: flex;
+        }
     </style>
     <title>工作坊</title>
 </head>
@@ -25,7 +28,79 @@
             </ol>
         </nav>
 
-        <div data-title="crafting-table" class="border border-dark" id="crafting-table"></div>
+        <div>
+            <div data-title="crafting-table" class="row">
+                <div class="col-12">
+                    <div class="border border-dark" id="crafting-table"></div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-tcyan my-3" onclick="createComponent()">新增部件</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="input-group mb-3">
+                        <button class="input-group-text text-white" type="button" id="enable-grid-alignment-btn">
+                            已停用網格對齊
+                        </button>
+                        <input class="d-none" type="checkbox" id="enable-grid-alignment">
+                        <input type="text" class="form-control" placeholder="網格對齊" aria-label="網格對齊">
+                        <span class="input-group-text bg-tblue text-white">px</span>
+                    </div>
+                </div>
+            </div>
+            <div id="component-parameters">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center my-3">
+                        <span>調整選取元素的參數</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-tblue text-white">水平座標</span>
+                            <input type="number" class="form-control" id="component-x-input">
+                            <span class="input-group-text bg-tblue text-white">px</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-tblue text-white">垂直座標</span>
+                            <input type="number" class="form-control" id="component-y-input">
+                            <span class="input-group-text bg-tblue text-white">px</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-tblue text-white">寬度</span>
+                            <input type="number" class="form-control" id="component-width-input">
+                            <span class="input-group-text bg-tblue text-white">px</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-tblue text-white">長度</span>
+                            <input type="number" class="form-control" id="component-height-input">
+                            <span class="input-group-text bg-tblue text-white">px</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-tblue text-white">角度</span>
+                            <input type="number" class="form-control" id="component-rotate-input" min="0" max="360">
+                            <span class="input-group-text bg-tblue text-white">度</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div data-load="/html/footer.html" id="footer"></div>
@@ -47,10 +122,34 @@
                 timeOut: 25,
                 extendedTimeOut: 40
             }
-            var c = new FlagComponent({
+            $("#enable-grid-alignment-btn").bind("click", (e) => {
+                $("#enable-grid-alignment").click();
+            })
+            $("#enable-grid-alignment").bind("change", (e) => {
+                updateEnableGridAlignmentColor(e.target.checked);
+            });
+            updateEnableGridAlignmentColor($("#enable-grid-alignment").is(":checked"));
+        });
+
+        function updateEnableGridAlignmentColor(isChecked) {
+            if (isChecked) {
+                $("#enable-grid-alignment-btn").removeClass("bg-secondary");
+                $("#enable-grid-alignment-btn").addClass("bg-tcyan");
+                $("#enable-grid-alignment-btn").html("已啟用網格對齊");
+            } else {
+                $("#enable-grid-alignment-btn").removeClass("bg-tcyan");
+                $("#enable-grid-alignment-btn").addClass("bg-secondary");
+                $("#enable-grid-alignment-btn").html("已停用網格對齊");
+            }
+        }
+
+        var focusId = undefined;
+
+        function createComponent() {
+            new FlagComponent({
                 placement: "#crafting-table"
             });
-        });
+        }
     </script>
 </body>
 </html>
