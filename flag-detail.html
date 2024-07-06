@@ -158,7 +158,8 @@
                 $("#next-flag > a").attr("href", href);
                 $("#next-flag > a > span").html(neighbors.next.md);
             }
-            $("#flag-waver-link").attr("href", `https://krikienoid.github.io/flagwaver/#?src=${encodeURI(window.location.href)}`)
+            var callback = `${window.location.host}/images/flags/${flag.en}`;
+            $("#flag-waver-link").attr("href", `https://krikienoid.github.io/flagwaver/#?src=${encodeURI(callback)}`)
         });
 
         function setMainImage(flag) {
