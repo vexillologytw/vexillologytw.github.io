@@ -158,7 +158,7 @@
                 $("#next-flag > a").attr("href", href);
                 $("#next-flag > a > span").html(neighbors.next.md);
             }
-            var callback = window.location.host + flagConfig.dir + flag.en + ".png";
+            var callback = "https://" +  window.location.host + flagConfig.dir + flag.en + ".png";
             $("#flag-waver-link").attr("href", `https://krikienoid.github.io/flagwaver/#?src=${encodeURI(callback)}`)
         });
 
