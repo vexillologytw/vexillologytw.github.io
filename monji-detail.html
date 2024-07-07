@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <div data-load="/html/seo.html,/html/csslib.html"></div>
+<head data-load="/html/seo.html,/html/csslib.html">
     <style>
         .main-image {
             aspect-ratio: 1/1;
@@ -16,13 +15,13 @@
     
     <div data-title="body" class="container d-flex flex-wrap justify-content-center W-100 mb-5">
 
-        <nav aria-title="breadcrumb" class="w-75 py-1">
+        <nav aria-title="breadcrumb" class="noto-sans-tc w-75 py-1">
             <ol class="breadcrumb"></ol>
         </nav>
 
         <div data-title="display" class="d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center w-75 pt-5 my-5">
             <img class="main-image me-md-5 mb-5 mb-md-0 modal-trigger-image" data-type="monji">
-            <div class="description noto-sans-tc fs-5"></div>
+            <div class="description noto-sans-tc fs-5">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
         </div>
 
         <div data-title="monji-display" class="w-100 mb-5 my-5">
@@ -71,15 +70,9 @@
         }
         $(function() {
             document.title = monji.md;
-            var path = monjiConfig.dir + monji.en + ".png";
-            $(".main-image").attr("src", path);
-            $(".main-image").attr("alt", monji.title);
-            if (monji.desc == undefined || monji.desc.length == 0) {
-                $(".description").html("紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。");
-            } else {
-                $(".description").html(monji.desc);
-            }
-            buildBreadcrumb(monji);
+            setMainImage(monji)
+            setBreadcrumb(monji);
+            setMeta(monji);
             
             $("#prev-monji").hide();
             $("#next-monji").hide();
@@ -113,11 +106,28 @@
                 $("#next-monji > a > span").html(neighbors.next.md);
             }
         });
+        
+        function setMainImage(monji) {
+            $(".main-image").attr("src", monjiConfig.dir + monji.en + ".png");
+            $(".main-image").attr("alt", monji.title);
 
-        function buildBreadcrumb(monji) {
+            // default desc is in html
+
+            if (monji.desc) { // if desc exists
+                $(".description").html(monji.desc);
+            } else {
+                if (monji.desc_inherit !== true) return;
+                const parentMonji = getMonjiByEn(monji.parent);
+                if (!parentMonji) return;
+                if (!parentMonji.desc) return;
+                $(".description").html(parentMonji.desc); // if monji inherits desc
+            }
+        }
+
+        function setBreadcrumb(monji) {
             do {
                 if (monji.en === monjiName) {
-                    $(".breadcrumb").prepend(`<li class="breadcrumb-item text-secondary">${monji.md}</li>`);
+                    $(".breadcrumb").prepend(`<li class="breadcrumb-item text-secondary">${monji.title_md}</li>`);
                 } else {
                     $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/monji-detail.html?name=${monji.en}" class="text-secondary">${monji.title_md}</a></li>`);
                 }
@@ -126,17 +136,38 @@
             $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html" class="text-secondary">旗章製造</a></li>`);
         }
 
+        function setMeta(monji) {
+            const imageSrc = monjiConfig.dir + monji.en + ".png";
+            const desc = monji.desc ?? "旗章製造收錄了台灣的各式旗幟與紋章創作。";
+
+            setSingleMeta("name", "keywords", `旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計,${monji.md}`);
+            setSingleMeta("name", "image", imageSrc);
+            setSingleMeta("name", "description", desc);
+            
+            setSingleMeta("property", "og:title", monji.title_md);
+            setSingleMeta("property", "og:description", desc);
+            setSingleMeta("property", "og:description", imageSrc);
+            
+            setSingleMeta("name", "twitter:title", monji.title_md);
+            setSingleMeta("name", "twitter:description", desc);
+            setSingleMeta("name", "twitter:card", imageSrc);
+        }
+
+        function setSingleMeta(attr, attrValue, content) {
+            $(`meta[${attr}="${attrValue}"]`).remove();
+            $(`head`).prepend(`<meta ${attr}="${attrValue}" content="${content}">`);
+        }
+
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";
             var text = image.title_md;
 
-            if (image.detail) {
-                text = `<a class="text-secondary" href="/monji-detail.html?name=${image.en}">${text}</a>`;
-            }
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
-                    <div class="noto-sans-tc text-secondary pt-2">${text}</div>
+                    <div class="noto-sans-tc text-secondary pt-2">
+                        <a class="text-secondary" href="/monji-detail.html?name=${image.en}">${text}</a>
+                    </div>
                 </div>`
             ).appendTo(config.container);
         }

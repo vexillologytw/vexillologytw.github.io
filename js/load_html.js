@@ -4,7 +4,7 @@ async function loadHtml() {
         var loadTarget = loader.getAttribute("data-load");
         for (var html of loadTarget.split(",")) {
             try {
-                loader.innerHTML += await (await fetch(html)).text();
+                loader.innerHTML = await (await fetch(html)).text() + loader.innerHTML;
             } catch (e) {
                 console.log(e);
             }

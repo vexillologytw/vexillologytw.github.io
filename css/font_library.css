@@ -9,12 +9,6 @@
     font-weight: 800;
     font-style: normal;
 }
-.text-tsubaki {
-    color: #bc002e;
-}
-.text-twitter {
-    color: #1DA1F2;
-}
 .massive-title {
     font-size: calc(100vw / 10);
     -webkit-touch-callout: none;
@@ -33,6 +27,8 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+/* tsubaki hover */
 .btn-dark:hover {
     background-color: #bc002e;
     color: white;
@@ -42,23 +38,45 @@
 a.text-dark:hover {
     color: #bc002e !important;
 }
-.text-tblue {
-    color: #003255 !important;
+a.text-secondary:hover {
+    color: #bc002e !important;
 }
+
+.text-tsubaki {
+    color: #bc002e;
+}
+.bg-tsubaki {
+    background-color: #bc002e !important;
+}
+.btn-tsubaki {
+    background-color: #bc002e !important;
+    color: white;
+}
+.btn-tsubaki:hover {
+    background-color: black !important;
+    color: white;
+}
+
+/* tcyan */
 .text-tcyan {
     color: #00b4b2 !important;
-}
-.bg-tblue {
-    background-color: #003255 !important;
 }
 .bg-tcyan {
     background-color: #00b4b2 !important;
 }
+.btn-tcyan {
+    background-color: #00b4b2 !important;
+    color: white;
+}
+
+/* tblue */
+.text-tblue {
+    color: #003255 !important;
+}
+.bg-tblue {
+    background-color: #003255 !important;
+}
 .btn-tblue {
     background-color: #003255 !important;
     color: white;
-}
-.btn-tcyan {
-    background-color: #00b4b2 !important;
-    color: white
 }

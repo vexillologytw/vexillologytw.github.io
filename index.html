@@ -92,13 +92,12 @@
             var path = config.dir + image.en + ".png";
             var text = image.title_md;
 
-            if (image.detail) {
-                text = `<a class="text-secondary" href="/${config.type}-detail.html?name=${image.en}">${text}</a>`;
-            }
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
-                    <div class="noto-sans-tc text-secondary pt-2">${text}</div>
+                    <div class="noto-sans-tc text-secondary pt-2">
+                        <a class="text-secondary" href="/${config.type}-detail.html?name=${image.en}">${text}</a>
+                    </div>
                 </div>`
             ).appendTo(config.container);
         }

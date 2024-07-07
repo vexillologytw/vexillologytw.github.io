@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <div data-load="/html/seo.html,/html/csslib.html"></div>
+<head data-load="/html/seo_detail.html,/html/csslib.html">
     <style>
         #windless-hanged-flag-display {
             height: 21em;
@@ -50,7 +49,7 @@
             
             <div class="d-flex flex-wrap justify-content-center align-items-center w-100 mb-5">
                 <img class="main-image modal-trigger-image mw-100 border mb-3" data-type="flag">
-                <div class="description noto-sans-tc w-100 text-start fs-5"></div>
+                <div class="description noto-sans-tc w-100 text-start fs-5">旗的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
             </div>
 
             <div data-title="windless-hanged-display">
@@ -70,7 +69,7 @@
         </div>
 
         <div data-title="flag-waver" class="w-100 mb-5 text-center">
-            <a href="https://krikienoid.github.io/flagwaver/#?src=" class="btn btn-dark text-white noto-sans-tc" id="flag-waver-link">
+            <a class="btn btn-dark text-white noto-sans-tc" id="flag-waver-link">
                 在 FlagWaver 上檢視<i class="bi bi-flag-fill ms-2"></i>
             </a>
         </div>
@@ -113,8 +112,8 @@
         const urlParams = new URLSearchParams(queryString);
         const flagName = urlParams.get("name");
         
-        var flag = getFlagByEn(flagName);
-        var neighbors = getNeighborFlags(flagName);
+        const flag = getFlagByEn(flagName);
+        const neighbors = getNeighborFlags(flagName);
         
         if (flag == null) {
             window.location.href = "/404.html";
@@ -123,16 +122,17 @@
             document.title = flag.md;
             setMainImage(flag);
             setHangedFlag(flag);
-            buildBreadcrumb(flag);
+            setBreadcrumb(flag);
+            setMeta(flag);
 
             $("#prev-flag").hide();
             $("#next-flag").hide();
             
-            var subentities = getFlagsByParentName(flagName);
+            const childrenFlags = getFlagsByParentName(flagName);
 
-            if (subentities != undefined && subentities.length) {
+            if (childrenFlags != undefined && childrenFlags.length) {
                 $("div[data-title='flag-display']").addClass("mb-5");
-                for (var subEntity of subentities) {
+                for (var subEntity of childrenFlags) {
                     appendImage(subEntity, flagConfig);
                 }
             }
@@ -159,16 +159,25 @@
                 $("#next-flag > a > span").html(neighbors.next.md);
             }
             var callback = "https://" +  window.location.host + flagConfig.dir + flag.en + ".png";
-            $("#flag-waver-link").attr("href", `https://krikienoid.github.io/flagwaver/#?src=${encodeURI(callback)}`)
+            $("#flag-waver-link").bind("click", () => {
+                window.open(`https://krikienoid.github.io/flagwaver/#?src=${encodeURI(callback)}`, `_blank`).focus();
+            });
         });
 
         function setMainImage(flag) {
             $(".main-image").attr("src", flagConfig.dir + flag.en + ".png");
             $(".main-image").attr("alt", flag.title);
-            if (flag.desc == undefined || flag.desc.length == 0) {
-                $(".description").html("旗的介紹還沒完成，但或許過一段時間它就會自己長出來了。");
-            } else {
+
+            // default desc is in html
+
+            if (flag.desc) { // if desc exists
                 $(".description").html(flag.desc);
+            } else {
+                if (flag.desc_inherit !== true) return;
+                const parentFlag = getFlagByEn(flag.parent);
+                if (!parentFlag) return;
+                if (!parentFlag.desc) return;
+                $(".description").html(parentFlag.desc); // if flag inherits desc
             }
         }
 
@@ -177,7 +186,7 @@
             $("#windless-hanged-flag").attr("alt", flag.title);
         }
 
-        function buildBreadcrumb(flag) {
+        function setBreadcrumb(flag) {
             do {
                 if (flag.en === flagName) {
                     $(".breadcrumb").prepend(`<li class="breadcrumb-item text-secondary">${flag.md}</li>`);
@@ -189,17 +198,37 @@
             $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html" class="text-secondary">旗章製造</a></li>`);
         }
 
+        function setMeta(flag) {
+            const imageSrc = flagConfig.dir + flag.en + ".png";
+            const desc = flag.desc ?? "旗章製造收錄了台灣的各式旗幟與紋章創作。";
+
+            setSingleMeta("name", "keywords", `旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計,${flag.md}`);
+            setSingleMeta("name", "image", imageSrc);
+            setSingleMeta("name", "description", desc);
+            
+            setSingleMeta("property", "og:title", flag.title_md);
+            setSingleMeta("property", "og:description", desc);
+            setSingleMeta("property", "og:description", imageSrc);
+            
+            setSingleMeta("name", "twitter:title", flag.title_md);
+            setSingleMeta("name", "twitter:description", desc);
+            setSingleMeta("name", "twitter:card", imageSrc);
+        }
+
+        function setSingleMeta(attr, attrValue, content) {
+            $(`meta[${attr}="${attrValue}"]`).remove();
+            $(`head`).prepend(`<meta ${attr}="${attrValue}" content="${content}">`);
+        }
+
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";
             var text = image.title_md;
-
-            if (image.detail) {
-                text = `<a class="text-secondary" href="/flag-detail.html?name=${image.en}">${text}</a>`;
-            }
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses} mw-100 h-auto" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
-                    <div class="noto-sans-tc text-secondary pt-2">${text}</div>
+                    <div class="noto-sans-tc text-secondary pt-2">
+                        <a class="text-secondary" href="/flag-detail.html?name=${image.en}">${text}</a>
+                    </div>
                 </div>`
             ).appendTo(config.container);
         }
