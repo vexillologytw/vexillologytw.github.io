@@ -1,5 +1,5 @@
 var flagImages = [
-    {en:"flag-of-taiwan-1-1", md:"台灣百合旗", level:1, parent:null, title_en:"Flag of Taiwan", title_md:"台灣百合旗", desc:"藍色象徵敬畏與海洋，代表正義與民主。<br><br>青色象徵山岳，代表生命力與自由。<br><br>黃色象徵台灣人，代表歷史傳承與繁榮。<br><br>白色象徵和諧，代表善良與和平。<br><br>百合象徵不屈的精神，也代表台灣本土歷史與濃厚人文。<br><br>圓象徵共榮，台灣人即使有不同的立場也能同心協力建設台灣。<br><br>向外散發的線條象徵台灣走向世界，發揚台灣之光。", desc_inherit:false},
+    {en:"flag-of-taiwan-1-1", md:"台灣百合旗", level:1, parent:null, title_en:"Flag of Taiwan", title_md:"台灣百合旗", desc:"藍色象徵海洋，代表正義與民主。<br><br>青色象徵山岳，代表生命力與自由。<br><br>黃色象徵台灣人，代表歷史傳承與繁榮。<br><br>白色象徵和諧，代表善良與和平。<br><br>百合象徵不屈的精神，也代表台灣本土歷史與濃厚人文。<br><br>圓象徵共榮，台灣人即使有不同的立場也能同心協力建設台灣。<br><br>向外散發的線條象徵台灣走向世界，發揚台灣之光。", desc_inherit:false},
     {en:"flag-of-taiwan-1-2", md:"台灣百合旗一式二型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-II", title_md:"台灣百合旗一式二型", desc:null, desc_inherit:true},
     {en:"flag-of-taiwan-1-3", md:"台灣百合旗一式三型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-III", title_md:"台灣百合旗一式三型", desc:null, desc_inherit:true},
     {en:"flag-of-taiwan-1-4", md:"台灣百合旗一式四型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-VI", title_md:"台灣百合旗一式四型", desc:null, desc_inherit:true},
