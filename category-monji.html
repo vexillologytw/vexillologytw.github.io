@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head data-load="/html/seo.html,/html/csslib.html">
+    <style>
+        .main-image {
+            aspect-ratio: 1/1;
+            max-height: calc(40vh);
+        }
+    </style>
+    <title>台灣各級區域紋章一覽</title>
+</head>
+<body style="overflow-x: hidden;">
+    
+    <div data-load="/html/banner_detail.html"></div>
+
+    <div data-title="body" class="container W-100 mb-5">
+
+        <nav aria-title="breadcrumb" class="noto-sans-tc w-75 py-1">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html" class="text-secondary"><i class="bi bi-house-fill"></i></a>
+                <li class="breadcrumb-item text-secondary">台灣各級區域紋章一覽</li>
+            </ol>
+        </nav>
+
+        <div data-title="monji-display" class="w-100 mb-5">
+            <div class="d-flex justify-content-center flex-wrap" id="monji-ctn"></div>
+        </div>
+
+    </div>
+
+    <div data-load="/html/footer.html"></div>
+    <div data-load="/html/image_modal.html"></div>
+  
+    <!-- jquery -->
+    <script src="/plugins/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <!-- bootstrap -->
+    <script src="/plugins/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/plugins/bootstrap/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <!-- image data -->
+    <script src="/js/monji_data.js" type="text/javascript"></script>
+    <script src="/js/load_html.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+            for (var monjiImage of monjiImages) {     // monjiImage & monjiConfig are from /js/monji_data.js
+                if (monjiImage.level === 1) {
+                    appendImage(monjiImage, monjiConfig);
+                }
+            }
+            // show modal on left click on images
+            $(".modal-trigger-image").on("mousedown", function(event) {
+                // only trigger on left click
+                if (event.which != 1) return;
+                var imgSrc = $(this).attr("src").replace(".png", "-desc.png").replace("monjijis/", "monjijis/descriptions/");;
+                $("#modal-image-src").attr("src", imgSrc);
+                $("#image-modal-trigger").click();
+            })
+        });
+
+        /**
+         * Append image to an image container, element shall be configured in parameter config's attribute "container"
+         */
+        function appendImage(image, config) {
+            var path = config.dir + image.en + ".png";
+            var text = image.title_md;
+
+            $(`<div class="text-center p-3">
+                    <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
+                    <br>
+                    <div class="noto-sans-tc text-secondary pt-2">
+                        <a class="text-secondary" href="/${config.type}-detail.html?name=${image.en}">${text}</a>
+                    </div>
+                </div>`
+            ).appendTo(config.container);
+        }
+    </script>
+</body>
+</html>

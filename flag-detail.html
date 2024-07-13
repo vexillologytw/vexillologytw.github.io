@@ -195,11 +195,12 @@
                 }
                 flag = getFlagByEn(flag.parent);
             } while (flag !== null);
-            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html" class="text-secondary">旗章製造</a></li>`);
+            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/category-flag.html" class="text-secondary">旗幟一覽</a></li>`);
+            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html" class="text-secondary"><i class="bi bi-house-fill"></i></a></li>`);
         }
 
         function setMeta(flag) {
-            const imageSrc = flagConfig.dir + flag.en + ".png";
+            const imageSrc = "https://" +  window.location.host + flagConfig.dir + flag.en + ".png";
             const desc = flag.desc ?? "旗章製造收錄了台灣的各式旗幟與紋章創作。";
 
             setSingleMeta("name", "keywords", `旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計,${flag.md}`);

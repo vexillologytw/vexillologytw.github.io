@@ -6,6 +6,9 @@
             aspect-ratio: 1/1;
             max-height: calc(40vh);
         }
+        #mon-ctn > div {
+            min-width: 250px;
+        }
     </style>
     <title>載入中...</title>
 </head>
@@ -20,23 +23,23 @@
         </nav>
 
         <div data-title="display" class="d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center w-75 pt-5 my-5">
-            <img class="main-image me-md-5 mb-5 mb-md-0 modal-trigger-image" data-type="monji">
+            <img class="main-image me-md-5 mb-5 mb-md-0 modal-trigger-image" data-type="mon">
             <div class="description noto-sans-tc fs-5">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
         </div>
 
-        <div data-title="monji-display" class="w-100 mb-5 my-5">
-            <div class="d-flex justify-content-center flex-wrap" id="monji-ctn"></div>
+        <div data-title="mon-display" class="w-100 mb-5 my-5">
+            <div class="d-flex justify-content-center flex-wrap" id="mon-ctn"></div>
         </div>
 
         <div data-title="neighbors" class="mw-100 mb-5">
             <div class="d-flex flex-wrap flex-md-nowrap justify-content-center">
-                <span class="w-100 w-md-50 text-center my-2" id="prev-monji">
+                <span class="w-100 w-md-50 text-center my-2" id="prev-mon">
                     <a class="text-dark text-nowrap mx-2 fs-4">
                         <i class="bi bi-arrow-left-square-fill"></i>
                         <span class="noto-sans-tc text-nowrap"></span>
                     </a>
                 </span>
-                <span class="w-100 w-md-50 text-center my-2" id="next-monji">
+                <span class="w-100 w-md-50 text-center my-2" id="next-mon">
                     <a class="text-dark text-nowrap mx-2 fs-4">
                         <span class="noto-sans-tc text-nowrap"></span>
                         <i class="bi bi-arrow-right-square-fill"></i>
@@ -54,102 +57,100 @@
     <!-- bootstrap -->
     <script src="/plugins/bootstrap/bootstrap.min.js"></script>
     <script src="/plugins/bootstrap/bootstrap.bundle.min.js"></script>
-    <!-- monji data -->
-    <script src="/js/monji_data.js"></script>
+    <!-- mon data -->
+    <script src="/js/mon_data.js"></script>
     <script src="/js/load_html.js"></script>
     <script>
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-        const monjiName = urlParams.get("name");
+        const monName = urlParams.get("name");
 
-        var monji = getMonjiByEn(monjiName);
-        var neighbors = getNeighborMonjis(monjiName);
+        var mon = getMonByEn(monName);
+        var neighbors = getNeighborMons(monName);
         
-        if (monji == null) {
+        if (mon == null) {
             window.location.href = "/404.html";
         }
         $(function() {
-            document.title = monji.md;
-            setMainImage(monji)
-            setBreadcrumb(monji);
-            setMeta(monji);
+            document.title = mon.md;
+            setMainImage(mon)
+            setBreadcrumb(mon);
+            setMeta(mon);
             
-            $("#prev-monji").hide();
-            $("#next-monji").hide();
+            $("#prev-mon").hide();
+            $("#next-mon").hide();
             
-            var subentities = getMonjiesByParentName(monjiName);
+            var subentities = getMonsByParentName(monName);
 
             for (var subEntity of subentities) {
-                appendImage(subEntity, monjiConfig);
+                appendImage(subEntity, monConfig);
             }
             // show modal on left click on images
             $(".modal-trigger-image").on("mousedown", function(event) {
                 // only trigger on left click
                 if (event.which != 1) return;
-                var imgSrc = $(this).attr("src")
-                                    .replace(".png", "-desc.png")
-                                    .replace("monjis/", "monjis/descriptions/");
+                var imgSrc = $(this).attr("src");
                 $("#modal-image-src").attr("src", imgSrc);
                 $("#image-modal-trigger").click();
             });
             // set neighbors
             if (neighbors.prev != null) {
-                var href = `/monji-detail.html?name=${neighbors.prev.en}`;
-                $("#prev-monji").show();
-                $("#prev-monji > a").attr("href", href);
-                $("#prev-monji > a > span").html(neighbors.prev.md);
+                var href = `/mon-detail.html?name=${neighbors.prev.en}`;
+                $("#prev-mon").show();
+                $("#prev-mon > a").attr("href", href);
+                $("#prev-mon > a > span").html(neighbors.prev.md);
             }
             if (neighbors.next != null) {
-                var href = `/monji-detail.html?name=${neighbors.next.en}`;
-                $("#next-monji").show();
-                $("#next-monji > a").attr("href", href);
-                $("#next-monji > a > span").html(neighbors.next.md);
+                var href = `/mon-detail.html?name=${neighbors.next.en}`;
+                $("#next-mon").show();
+                $("#next-mon > a").attr("href", href);
+                $("#next-mon > a > span").html(neighbors.next.md);
             }
         });
         
-        function setMainImage(monji) {
-            $(".main-image").attr("src", monjiConfig.dir + monji.en + ".png");
-            $(".main-image").attr("alt", monji.title);
+        function setMainImage(mon) {
+            $(".main-image").attr("src", monConfig.dir + mon.en + ".png");
+            $(".main-image").attr("alt", mon.title);
 
             // default desc is in html
 
-            if (monji.desc) { // if desc exists
-                $(".description").html(monji.desc);
+            if (mon.desc) { // if desc exists
+                $(".description").html(mon.desc);
             } else {
-                if (monji.desc_inherit !== true) return;
-                const parentMonji = getMonjiByEn(monji.parent);
-                if (!parentMonji) return;
-                if (!parentMonji.desc) return;
-                $(".description").html(parentMonji.desc); // if monji inherits desc
+                if (mon.desc_inherit !== true) return;
+                const parentMon = getMonByEn(mon.parent);
+                if (!parentMon) return;
+                if (!parentMon.desc) return;
+                $(".description").html(parentMon.desc); // if mon inherits desc
             }
         }
 
-        function setBreadcrumb(monji) {
+        function setBreadcrumb(mon) {
             do {
-                if (monji.en === monjiName) {
-                    $(".breadcrumb").prepend(`<li class="breadcrumb-item text-secondary">${monji.title_md}</li>`);
+                if (mon.en === monName) {
+                    $(".breadcrumb").prepend(`<li class="breadcrumb-item text-secondary">${mon.title_md}</li>`);
                 } else {
-                    $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/monji-detail.html?name=${monji.en}" class="text-secondary">${monji.title_md}</a></li>`);
+                    $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/mon-detail.html?name=${mon.en}" class="text-secondary">${mon.title_md}</a></li>`);
                 }
-                monji = getMonjiByEn(monji.parent);
-            } while (monji !== null);
-            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/category-monji.html" class="text-secondary">台灣各級區域紋章一覽</a></li>`);
+                mon = getMonByEn(mon.parent);
+            } while (mon !== null);
+            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/category-mon.html" class="text-secondary">和紋一覽</a></li>`);
             $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html" class="text-secondary"><i class="bi bi-house-fill"></i></a></li>`);
         }
 
-        function setMeta(monji) {
-            const imageSrc = "https://" +  window.location.host + monjiConfig.dir + monji.en + ".png";
-            const desc = monji.desc ?? "旗章製造收錄了台灣的各式旗幟與紋章創作。";
+        function setMeta(mon) {
+            const imageSrc = "https://" +  window.location.host + monConfig.dir + mon.en + ".png";
+            const desc = mon.desc ?? "旗章製造收錄了台灣的各式旗幟與紋章創作。";
 
-            setSingleMeta("name", "keywords", `旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計,${monji.md}`);
+            setSingleMeta("name", "keywords", `旗章製造,旗章,旗幟,國旗,市旗,縣旗,旗幟學,紋章,和紋,家紋,市徽,市章,縣徽,縣章,設計,${mon.md}`);
             setSingleMeta("name", "image", imageSrc);
             setSingleMeta("name", "description", desc);
             
-            setSingleMeta("property", "og:title", monji.title_md);
+            setSingleMeta("property", "og:title", mon.title_md);
             setSingleMeta("property", "og:description", desc);
             setSingleMeta("property", "og:description", imageSrc);
             
-            setSingleMeta("name", "twitter:title", monji.title_md);
+            setSingleMeta("name", "twitter:title", mon.title_md);
             setSingleMeta("name", "twitter:description", desc);
             setSingleMeta("name", "twitter:card", imageSrc);
         }
@@ -167,7 +168,7 @@
                     <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">
-                        <a class="text-secondary" href="/monji-detail.html?name=${image.en}">${text}</a>
+                        <a class="text-secondary" href="/mon-detail.html?name=${image.en}">${text}</a>
                     </div>
                 </div>`
             ).appendTo(config.container);
