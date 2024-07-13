@@ -50,7 +50,7 @@
             $(".modal-trigger-image").on("mousedown", function(event) {
                 // only trigger on left click
                 if (event.which != 1) return;
-                var imgSrc = $(this).attr("src").replace(".png", "-desc.png").replace("monjijis/", "monjijis/descriptions/");;
+                var imgSrc = $(this).attr("src").replace(".png", "-desc.png").replace("monjis/", "monjis/descriptions/");;
                 $("#modal-image-src").attr("src", imgSrc);
                 $("#image-modal-trigger").click();
             })
