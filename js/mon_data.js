@@ -8,7 +8,7 @@ var monImages = [
 	{en:"mon-of-5fortune-4", md:"五福四式", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Five Fortunes IV", title_md:"五福四式", desc:"", desc_inherit:true},
 	{en:"mon-of-5fortune-4-o", md:"環內五福四式", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Encircled Five Fortunes IV", title_md:"環內五福四式", desc:"", desc_inherit:true},
 
-	{en:"mon-of-ajisai-3fold-o", md:"環內三重繡球", level:1, parent:null, title_en:"Mon of Encircled Trifold Ajisais", title_md:"環內三重繡球", desc:"", desc_inherit:false},
+	{en:"mon-of-ajisai-3fold-o", md:"環內三瓣繡球", level:1, parent:null, title_en:"Mon of Encircled Trifold Ajisais", title_md:"環內三瓣繡球", desc:"", desc_inherit:false},
 	
 	{en:"mon-of-banboo-leaf", md:"五枚竹", level:1, parent:null, title_en:"Mon of Banboo Leaf", title_md:"五枚竹", desc:"", desc_inherit:false},
 	{en:"mon-of-banboo-leaf-o", md:"環內五枚竹", level:2, parent:"mon-of-banboo-leaf", title_en:"Mon of Encircled Banboo Leaf", title_md:"環內五枚竹", desc:"", desc_inherit:false},
@@ -25,6 +25,9 @@ var monImages = [
 	{en:"mon-of-inori-tsubaki-o", md:"環內祈椿", level:2, parent:"mon-of-inori-tsubaki", title_en:"Mon of Encircled Inori Tsubaki", title_md:"環內祈椿", desc:"", desc_inherit:true},
 	{en:"mon-of-tsubaki-ko", md:"柯椿", level:2, parent:"mon-of-tsubaki", title_en:"Mon of Tsubaki in Ko", title_md:"柯椿", desc:"柯字的紋章化設計，並在口字內擺一朵椿花。", desc_inherit:false},
 	
+	{en:"mon-of-kikyo-3fold-feather", md:"三重箭羽桔梗", level:2, parent:"mon-of-kikyo-3fold-feather-o", title_en:"Mon of Triple Kikyo And Feather", title_md:"三重箭羽桔梗", desc:"三朵向外綻放的劍氣桔梗，以及朝向紋中央的箭羽。", desc_inherit:false},
+	{en:"mon-of-kikyo-3fold-feather-o", md:"環內三重箭羽桔梗", level:1, parent:null, title_en:"Mon of Encircled Triple Kikyo And Feather", title_md:"環內三重箭羽桔梗", desc:"", desc_inherit:true},
+
 	{en:"mon-of-ko", md:"柯", level:1, parent:null, title_en:"Mon of Ko", title_md:"柯", desc:"柯字的紋章化設計。", desc_inherit:false},
 	
 	{en:"mon-of-lily", md:"百合", level:1, parent:null, title_en:"Mon of Lily", title_md:"百合", desc:"", desc_inherit:false},
@@ -32,16 +35,16 @@ var monImages = [
 	{en:"mon-of-lily-3fold-o", md:"環內三重百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Trifold Lilies", title_md:"環內三重百合", desc:"", desc_inherit:false},
 	{en:"mon-of-lily-3split", md:"三分割百合", level:2, parent:"mon-of-lily", title_en:"Mon of Tripartite Lilies", title_md:"三分割百合", desc:"", desc_inherit:false},
 	{en:"mon-of-lily-3split-o", md:"環內三分割百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Tripartite Lilies", title_md:"環內三分割百合", desc:"", desc_inherit:false},
+	{en:"mon-of-lily-3split-feather-o", md:"環內三分割箭羽百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Tripartite Lilies with Feather", title_md:"環內三分割箭羽百合", desc:"", desc_inherit:false},
 	{en:"mon-of-lily-12petal", md:"十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Mon of Twelve-Petaled Lily", title_md:"十二重瓣百合", desc:"", desc_inherit:false},
 	{en:"mon-of-lily-12petal-o", md:"環內十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Twelve-Petaled Lily", title_md:"環內十二重瓣百合", desc:"", desc_inherit:false},
 	{en:"mon-of-lily-12petal-3split-o", md:"環內三分割十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Tripartite Twelve-Petaled Lilies", title_md:"環內三分割十二重瓣百合", desc:"", desc_inherit:false},
-	{en:"mon-of-lily-12petal-feather-3split", md:"三分割十二重瓣箭羽百合", level:2, parent:"mon-of-lily", title_en:"Mon of Tripartite Twelve-Petaled Lilies with Feather", title_md:"三分割十二重瓣箭羽百合", desc:"", desc_inherit:false},
+	{en:"mon-of-lily-12petal-3split-feather-o", md:"環內三分割十二重瓣箭羽百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Tripartite Twelve-Petaled Lilies with Feather", title_md:"環內三分割十二重瓣箭羽百合", desc:"", desc_inherit:false},
 	{en:"mon-of-lily-12petal-upon-sakura", md:"櫻上十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Mon of Tripartite Twelve-Petaled Lilies upon Sakura", title_md:"櫻上十二重瓣百合", desc:"", desc_inherit:false},
 	{en:"mon-of-lily-12petal-upon-sakura-o", md:"環內櫻上十二重瓣百合", level:2, parent:"mon-of-lily-12petal-upon-sakura", title_en:"Mon of Encircled Tripartite Twelve-Petaled Lilies upon Sakura", title_md:"環內櫻上十二重瓣百合", desc:"", desc_inherit:false},
 	{en:"mon-of-lily-24petal", md:"二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Mon of Twenty-Four-Petaled Lily", title_md:"二十四重瓣百合", desc:"", desc_inherit:false},
 	{en:"mon-of-lily-24petal-o", md:"環內二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Twenty-Four-Petaled Lily", title_md:"環內二十四重瓣百合", desc:"", desc_inherit:false},
 	{en:"mon-of-lily-24petal-3split-o", md:"環內三分割二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Tripartite Twenty-Four-Petaled Lilies", title_md:"環內三分割二十四重瓣百合", desc:"", desc_inherit:false},
-	{en:"mon-of-lily-24petal-3split-feather", md:"三分割二十四重瓣箭羽百合", level:2, parent:"mon-of-lily", title_en:"Mon of Tripartite Twenty-Four-Petaled Lilies with Feather", title_md:"三分割二十四重瓣箭羽百合", desc:"", desc_inherit:false},
 	{en:"mon-of-lily-24petal-3split-feather-o", md:"環內三分割二十四重瓣箭羽百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Tripartite Twenty-Four-Petaled Lilies with Feather", title_md:"環內三分割二十四重瓣箭羽百合", desc:"", desc_inherit:false},
 
 	{en:"mon-of-lily-soft", md:"柔百合", level:2, parent:"mon-of-lily", title_en:"Mon of Soft Lily", title_md:"柔百合", desc:"", desc_inherit:false},
