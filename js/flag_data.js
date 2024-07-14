@@ -36,10 +36,7 @@ var flagImages = [
     {en:"flag-of-vexillology-1", md:"台灣旗幟學", level:1, parent:null, title_en:"Flag of Vexillology", title_md:"台灣旗幟學", desc:null, desc_inherit:false},
     {en:"flag-of-vexillology-2", md:"台灣旗幟學二式", level:2, parent:"flag-of-vexillology-1", title_en:"Flag of Vexillology II", title_md:"台灣旗幟學二式", desc:null, desc_inherit:false},
     {en:"flag-of-taizih-1", md:"台字章旗", level:1, parent:null, title_en:"Flag of Taizih", title_md:"台字章旗", desc:null, desc_inherit:false},
-    {en:"flag-of-taizih-2", md:"台字章旗二式", level:2, parent:"flag-of-taizih-1", title_en:"Flag of Taizih II", title_md:"台字章旗二式", desc:null, desc_inherit:true},
-    {en:"flag-of-blazing-sun", md:"烈日旗", level:1, parent:null, title_en:"Flag of Blazing Sun", title_md:"烈日旗", desc:null, desc_inherit:false},
-    {en:"flag-of-blazing-sun-naval", md:"海上烈日旗", level:2, parent:"flag-of-blazing-sun", title_en:"Ensign of Blazing Sun", title_md:"海上烈日旗", desc:null, desc_inherit:true},
-    {en:"flag-of-double-tenth", md:"雙十旗", level:1, parent:null, title_en:"Flag of Double Tenth", title_md:"雙十旗", desc:null, desc_inherit:false}
+    {en:"flag-of-taizih-2", md:"台字章旗二式", level:2, parent:"flag-of-taizih-1", title_en:"Flag of Taizih II", title_md:"台字章旗二式", desc:null, desc_inherit:true}
 ];
 var flagConfig = {
     dir:"/images/flags/",
