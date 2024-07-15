@@ -75,3 +75,25 @@ function getNeighborMonjis(en) {
     }
     return result;
 }
+function getMonjiChildrenCount(parentName) {
+	var count = 0;
+	for (var monji of monjiImages) {
+		if (monji.parent === parentName) {
+			count++;
+		}
+	}
+	return count;
+}
+function getMonjiDesc(en) {
+    var monji = getMonjiByEn(en);
+    if (!monji) {
+        return "";
+    }
+    if (monji.desc_inherit && monji.parent != null) {
+        return getMonjiDesc(monji.parent);
+    }
+    if (monji.desc && monji.desc.length) {
+        return monji.desc;
+    }
+    return "";
+}

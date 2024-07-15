@@ -112,18 +112,21 @@
         const urlParams = new URLSearchParams(queryString);
         const flagName = urlParams.get("name");
         
-        const flag = getFlagByEn(flagName);
+        var flag = getFlagByEn(flagName);
         const neighbors = getNeighborFlags(flagName);
         
         if (flag == null) {
             window.location.href = "/404.html";
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            setMeta(flag);
+        });
         $(function() {
             document.title = flag.md;
+            flag.desc = getFlagDesc(flag.en);
             setMainImage(flag);
             setHangedFlag(flag);
             setBreadcrumb(flag);
-            setMeta(flag);
 
             $("#prev-flag").hide();
             $("#next-flag").hide();
@@ -224,11 +227,14 @@
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";
             var text = image.title_md;
+            var childrenCount = getFlagChildrenCount(image.en);
+            var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
+
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses} mw-100 h-auto" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">
-                        <a class="text-secondary" href="/flag-detail.html?name=${image.en}">${text}</a>
+                        <a class="text-secondary" href="/flag-detail.html?name=${image.en}">${text}${childrenCountHtml}</a>
                     </div>
                 </div>`
             ).appendTo(config.container);

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head data-load="/html/seo.html,/html/csslib.html">
+<head data-load="/html/seo_detail.html,/html/csslib.html">
     <style>
         .main-image {
             aspect-ratio: 1/1;
@@ -63,16 +63,19 @@
         const monjiName = urlParams.get("name");
 
         var monji = getMonjiByEn(monjiName);
-        var neighbors = getNeighborMonjis(monjiName);
+        const neighbors = getNeighborMonjis(monjiName);
         
         if (monji == null) {
             window.location.href = "/404.html";
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            setMeta(monji);
+        });
         $(function() {
             document.title = monji.md;
+            monji.desc = getMonjiDesc(monji.en);
             setMainImage(monji)
             setBreadcrumb(monji);
-            setMeta(monji);
             
             $("#prev-monji").hide();
             $("#next-monji").hide();
@@ -133,7 +136,7 @@
                 }
                 monji = getMonjiByEn(monji.parent);
             } while (monji !== null);
-            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/category-monji.html" class="text-secondary">台灣各級區域紋章</a></li>`);
+            $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/category-monji.html" class="text-secondary">地方紋章</a></li>`);
             $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/index.html" class="text-secondary"><i class="bi bi-house-fill"></i></a></li>`);
         }
 
@@ -162,12 +165,14 @@
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";
             var text = image.title_md;
+            var childrenCount = getMonjiChildrenCount(image.en);
+            var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
 
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">
-                        <a class="text-secondary" href="/monji-detail.html?name=${image.en}">${text}</a>
+                        <a class="text-secondary" href="/monji-detail.html?name=${image.en}">${text}${childrenCountHtml}</a>
                     </div>
                 </div>`
             ).appendTo(config.container);

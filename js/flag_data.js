@@ -1,12 +1,12 @@
 var flagImages = [
-    {en:"flag-of-taiwan-1-1", md:"台灣百合旗", level:1, parent:null, title_en:"Flag of Taiwan", title_md:"台灣百合旗", desc:"藍色象徵海洋，代表正義與民主。<br><br>青色象徵山岳，代表生命力與自由。<br><br>黃色象徵台灣人，代表歷史傳承與繁榮。<br><br>白色象徵和諧，代表善良與和平。<br><br>百合象徵不屈的精神，也代表台灣本土歷史與濃厚人文。<br><br>圓象徵共榮，台灣人即使有不同的立場也能同心協力建設台灣。<br><br>向外散發的線條象徵台灣走向世界，發揚台灣之光。", desc_inherit:false},
+    {en:"flag-of-taiwan-1-1", md:"台灣百合旗", level:1, parent:null, title_en:"Flag of Taiwan", title_md:"台灣百合旗", desc:"藍色象徵海洋，代表正義與民主。<br><br>青色象徵山岳，代表生命力與自由。<br><br>黃色象徵台灣人，代表文明與繁榮。<br><br>白色象徵和諧，代表善良與和平。<br><br>百合象徵不屈的精神，也代表台灣本土歷史與濃厚人文。<br><br>圓象徵台灣多個民族的共和共榮。<br><br>向外散發的線條象徵台灣走向世界，發揚台灣之光。", desc_inherit:false},
     {en:"flag-of-taiwan-1-2", md:"台灣百合旗一式二型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-II", title_md:"台灣百合旗一式二型", desc:null, desc_inherit:true},
     {en:"flag-of-taiwan-1-3", md:"台灣百合旗一式三型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-III", title_md:"台灣百合旗一式三型", desc:null, desc_inherit:true},
     {en:"flag-of-taiwan-1-4", md:"台灣百合旗一式四型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-VI", title_md:"台灣百合旗一式四型", desc:null, desc_inherit:true},
     {en:"flag-of-taiwan-2-1", md:"台灣百合旗二式一型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan II-I", title_md:"台灣百合旗二式一型", desc:null, desc_inherit:false},
     {en:"flag-of-taiwan-3-1", md:"台灣百合旗三式一型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan III-I", title_md:"台灣百合旗三式一型", desc:null, desc_inherit:false},
     {en:"flag-of-taiwan-milktea", md:"奶茶百合旗", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan Milk Tea", title_md:"奶茶百合旗", desc:null, desc_inherit:false},
-    {en:"flag-of-taiwan-naval-1-1", md:"台灣百合海上旗", level:1, parent:null, title_en:"Ensign of Taiwan", title_md:"台灣百合海上旗", desc:null, desc_inherit:true},
+    {en:"flag-of-taiwan-naval-1-1", md:"台灣百合海上旗", level:1, parent:"flag-of-taiwan-1-1", title_en:"Ensign of Taiwan", title_md:"台灣百合海上旗", desc:"", desc_inherit:true},
     {en:"flag-of-taiwan-naval-1-2", md:"台灣百合海上旗一式二型", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-II", title_md:"台灣百合海上旗一式二型", desc:null, desc_inherit:true},
     {en:"flag-of-taiwan-naval-1-3", md:"台灣百合海上旗一式三型", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-III", title_md:"台灣百合海上旗一式三型", desc:null, desc_inherit:true},
     {en:"flag-of-taiwan-naval-1-4", md:"台灣百合海上旗一式四型", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-VI", title_md:"台灣百合海上旗一式四型", desc:null, desc_inherit:true},
@@ -16,6 +16,7 @@ var flagImages = [
     {en:"flag-of-taiwan-naval-2-4", md:"台灣百合海上旗二式四型", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan II-VI", title_md:"台灣百合海上旗二式四型", desc:null, desc_inherit:true},
     {en:"flag-of-high-mountains", md:"高山旗", level:1, parent:null, title_en:"Flag of High Mountains", title_md:"高山旗", desc:"高山孤絕壯麗，象徵台灣人在險惡世界燃起的熊熊魂火。<br><br>藍色象徵玉山，代表台灣人的精神。<br><br>青色象徵晴天，代表自由與希望。<br><br>白色象徵烈日，代表正值正義正大光明。", desc_inherit:false},
     {en:"flag-of-four-languages", md:"四大語言族群旗", level:1, parent:null, title_en:"Flag of Four Ethnics", title_md:"四大語言族群旗", desc:"紅色代表守護自由的決心。<br><br>白色代表善良樸實的美德。<br><br>四條線分別代表台灣四大語言族群：中文、台語、客語、以及原住民語。<br><br>線條重疊而形成的八芒星，象徵多個民族的命運，在歷史的推動下交織在台灣島上。", desc_inherit:false},
+    {en:"flag-of-four-languages-naval", md:"四大語言族群旗", level:2, parent:"flag-of-four-languages", title_en:"Ensign of Four Ethnics", title_md:"四大語言族群海上旗", desc:"", desc_inherit:true},
     {en:"flag-of-three-whales-1-1", md:"三鯨旗", level:1, parent:null, title_en:"Flag of Three Whales", title_md:"三鯨旗", desc:"白色代表和諧與善良；藍色代表生命與正義。<br><br>三條鯨魚代表台灣的獨立、民主與自由。<br><br>鯨魚們相互環繞的意象，象徵台灣與海洋無法分離的緊密聯繫。", desc_inherit:false},
     {en:"flag-of-three-whales-1-2", md:"三鯨旗一式二型", level:2, parent:"flag-of-three-whales-1-1", title_en:"Flag of Three Whales I-II", title_md:"三鯨旗一式二型", desc:null, desc_inherit:true},
     {en:"flag-of-department-of-defence", md:"國防部旗", level:1, parent:null, title_en:"Flag of Department of Defence", title_md:"國防部旗", desc:null, desc_inherit:false},
@@ -76,4 +77,26 @@ function getNeighborFlags(en) {
         result.next = flagImages[thisIndex +1];
     }
     return result;
+}
+function getFlagChildrenCount(parentName) {
+	var count = 0;
+	for (var flag of flagImages) {
+		if (flag.parent === parentName) {
+			count++;
+		}
+	}
+	return count;
+}
+function getFlagDesc(en) {
+    var flag = getFlagByEn(en);
+    if (!flag) {
+        return "";
+    }
+    if (flag.desc_inherit && flag.parent != null) {
+        return getFlagDesc(flag.parent);
+    }
+    if (flag.desc && flag.desc.length) {
+        return flag.desc;
+    }
+    return "";
 }

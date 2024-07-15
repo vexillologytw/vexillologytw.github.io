@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head data-load="/html/seo.html,/html/csslib.html">
+<head data-load="/html/seo_detail.html,/html/csslib.html">
     <style>
         .main-image {
             aspect-ratio: 1/1;
@@ -66,16 +66,19 @@
         const monName = urlParams.get("name");
 
         var mon = getMonByEn(monName);
-        var neighbors = getNeighborMons(monName);
+        const neighbors = getNeighborMons(monName);
         
         if (mon == null) {
             window.location.href = "/404.html";
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            setMeta(mon);
+        });
         $(function() {
             document.title = mon.md;
+            mon.desc = getMonDesc(mon.en);
             setMainImage(mon)
             setBreadcrumb(mon);
-            setMeta(mon);
             
             $("#prev-mon").hide();
             $("#next-mon").hide();
@@ -163,12 +166,14 @@
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";
             var text = image.title_md;
+            var childrenCount = getMonChildrenCount(image.en);
+            var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
 
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">
-                        <a class="text-secondary" href="/mon-detail.html?name=${image.en}">${text}</a>
+                        <a class="text-secondary" href="/mon-detail.html?name=${image.en}">${text}${childrenCountHtml}</a>
                     </div>
                 </div>`
             ).appendTo(config.container);
