@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head data-load="/html/seo_detail.html,/html/csslib.html">
+<head data-load="/html/seo.html,/html/csslib.html">
     <style>
         #windless-hanged-flag-display {
             height: 21em;
@@ -33,7 +33,7 @@
             background-color: black;
         }
     </style>
-    <title>載入中...</title>
+    <title>旗章製造</title>
 </head>
 <body style="overflow-x: hidden;">
     
@@ -118,11 +118,11 @@
         if (flag == null) {
             window.location.href = "/404.html";
         }
-        document.addEventListener("DOMContentLoaded", function () {
-            setMeta(flag);
-        });
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     setMeta(flag);
+        // });
         $(function() {
-            document.title = flag.md;
+            // document.title = flag.md;
             flag.desc = getFlagDesc(flag.en);
             setMainImage(flag);
             setHangedFlag(flag);

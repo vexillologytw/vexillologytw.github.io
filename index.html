@@ -21,12 +21,18 @@
             transform: scale(1.1);
             transition-duration: 0.3s;
         }
-        .shadow-lg {
-            box-shadow: 0 1rem 3rem transparent !important;
-        }
         #body {
             margin-top: -10em;
         }
+        .card-img {
+            border-radius: 1em;
+            box-shadow: 10px 10px 20px 0px #c5c5c5;
+            max-height: 75vh !important;
+            max-width: 25vw !important;
+            width: auto;
+            height: auto;
+        }
+
     </style>
     <title>旗章製造</title>
 </head>
@@ -48,33 +54,35 @@
             </h2>
         </div>
 
-        <div class="row justify-content-center pt-5">
-            <div class="col-4 pb-5">
-                <div class="d-flex justify-content-center mb-3 px-lg-4">
-                    <a type="button" class="hover-zoom shadow-lg text-decoration-none text-center px-0" id="monji-category" href="/category-monji.html">
-                        <img src="/images/card-monjis.png" class="card-img-top">
-                        <span class="fs-5 text-tblue noto-sans-tc">地方紋章</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-4 pb-5">
-                <div class="d-flex justify-content-center mb-3 px-lg-4">
-                    <a type="button" class="hover-zoom shadow-lg text-decoration-none text-center px-0" id="flag-category" href="/category-flag.html">
-                        <div class="d-flex align-items-center">
-                            <img src="/images/card-flags.png" class="card-img-top border">
+        <div class="d-flex justify-content-center">
+            <div class="pt-5" id="card-ctn">
+                <div class="row justify-content-center">
+                    <div class="col-4 pb-5 px-2">
+                        <div class="d-flex justify-content-center">
+                            <a type="button" class="card-category hover-zoom text-decoration-none text-center px-0" id="monji-category" href="/category-monji.html">
+                                <img src="/images/card-monjis.png" class="card-img d-block mb-2">
+                                <span class="fs-5 text-tblue noto-sans-tc">地方紋章</span>
+                            </a>
                         </div>
-                        <span class="fs-5 text-tblue noto-sans-tc">旗幟</span>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="col-4 pb-5">
-                <div class="d-flex justify-content-center mb-3 px-lg-4">
-                    <a type="button" class="hover-zoom shadow-lg text-decoration-none text-center px-0" id="mon-category" href="/category-mon.html">
-                        <img src="/images/card-mons.png" class="card-img-top">
-                        <span class="fs-5 text-tblue noto-sans-tc">台灣和紋</span>
-                    </a>
+                    </div>
+    
+                    <div class="col-4 pb-5 px-2">
+                        <div class="d-flex justify-content-center">
+                            <a type="button" class="card-category hover-zoom text-decoration-none text-center px-0" id="flag-category" href="/category-flag.html">
+                                <img src="/images/card-flags.png" class="card-img d-block mb-2">
+                                <span class="fs-5 text-tblue noto-sans-tc">旗幟</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-4 pb-5 px-2">
+                        <div class="d-flex justify-content-center">
+                            <a type="button" class="card-category hover-zoom text-decoration-none text-center px-0" id="mon-category" href="/category-mon.html">
+                                <img src="/images/card-mons.png" class="card-img d-block mb-2">
+                                <span class="fs-5 text-tblue noto-sans-tc">台灣和紋</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

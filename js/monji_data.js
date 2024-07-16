@@ -42,7 +42,7 @@ var monjiConfig = {
     type: "monji",
     width: 150,
     height: 150,
-    imageClasses: "modal-trigger-image"
+    imageClasses: "modal-trigger-image hover-zoom"
 };
 function getMonjiByEn(en) {
     for (var monji of monjiImages) {

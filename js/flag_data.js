@@ -45,7 +45,7 @@ var flagConfig = {
     type: "flag",
     width:300,
     height:180,
-    imageClasses: "modal-trigger-image border"
+    imageClasses: "modal-trigger-image hover-zoom drop-shadow"
 };
 function getFlagByEn(en) {
     for (var flag of flagImages) {

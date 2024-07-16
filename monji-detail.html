@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head data-load="/html/seo_detail.html,/html/csslib.html">
+<head data-load="/html/seo.html,/html/csslib.html">
     <style>
         .main-image {
             aspect-ratio: 1/1;
             max-height: calc(40vh);
         }
     </style>
-    <title>載入中...</title>
+    <title>旗章製造</title>
 </head>
 <body style="overflow-x: hidden;">
     
@@ -68,11 +68,11 @@
         if (monji == null) {
             window.location.href = "/404.html";
         }
-        document.addEventListener("DOMContentLoaded", function () {
-            setMeta(monji);
-        });
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     setMeta(monji);
+        // });
         $(function() {
-            document.title = monji.md;
+            // document.title = monji.md;
             monji.desc = getMonjiDesc(monji.en);
             setMainImage(monji)
             setBreadcrumb(monji);

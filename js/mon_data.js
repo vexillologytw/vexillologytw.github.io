@@ -90,7 +90,7 @@ var monConfig = {
 	type: "mon",
 	width:150,
 	height:150,
-	imageClasses: "modal-trigger-image"
+	imageClasses: "modal-trigger-image hover-zoom"
 };
 function getMonByEn(en) {
 	for (var mon of monImages) {

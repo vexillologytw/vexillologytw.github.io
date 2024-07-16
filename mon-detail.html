@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head data-load="/html/seo_detail.html,/html/csslib.html">
+<head data-load="/html/seo.html,/html/csslib.html">
     <style>
         .main-image {
             aspect-ratio: 1/1;
@@ -10,7 +10,7 @@
             min-width: 250px;
         }
     </style>
-    <title>載入中...</title>
+    <title>旗章製造</title>
 </head>
 <body style="overflow-x: hidden;">
     
@@ -71,11 +71,11 @@
         if (mon == null) {
             window.location.href = "/404.html";
         }
-        document.addEventListener("DOMContentLoaded", function () {
-            setMeta(mon);
-        });
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     setMeta(mon);
+        // });
         $(function() {
-            document.title = mon.md;
+            // document.title = mon.md;
             mon.desc = getMonDesc(mon.en);
             setMainImage(mon)
             setBreadcrumb(mon);
