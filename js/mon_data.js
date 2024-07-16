@@ -15,7 +15,7 @@ var monImages = [
 	
 	{en:"mon-of-icho-ring-6fold", md:"六輪銀杏", level:1, parent:null, title_en:"Mon of Six Icho Ring", title_md:"六輪銀杏", desc:"", desc_inherit:false},
 	{en:"mon-of-icho-ring-6fold-o", md:"環內六輪銀杏", level:2, parent:"mon-of-icho-ring-6fold", title_en:"Mon of Six Encircled Icho Rings", title_md:"環內六輪銀杏", desc:"", desc_inherit:false},
-	{en:"mon-of-icho-ring-6fold-shell", md:"龜甲內六重銀杏", level:2, parent:"mon-of-icho-ring-6fold", title_en:"Mon of Six Shelled Icho Rings", title_md:"龜甲內六重銀杏", desc:"", desc_inherit:false},
+	{en:"mon-of-icho-ring-6fold-shell", md:"龜甲內六輪銀杏", level:2, parent:"mon-of-icho-ring-6fold", title_en:"Mon of Six Shelled Icho Rings", title_md:"龜甲內六輪銀杏", desc:"", desc_inherit:false},
 	
 	{en:"mon-of-tsubaki", md:"椿", level:1, parent:null, title_en:"Mon of Tsubaki", title_md:"椿", desc:"", desc_inherit:false},
 	{en:"mon-of-tsubaki-o", md:"環內椿", level:2, parent:"mon-of-tsubaki", title_en:"Mon of Encircled Tsubaki", title_md:"環內椿", desc:"", desc_inherit:false},
