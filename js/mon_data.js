@@ -13,8 +13,8 @@ var monImages = [
 	{en:"mon-of-banboo-leaf", md:"五枚竹", level:1, parent:null, title_en:"Mon of Banboo Leaf", title_md:"五枚竹", desc:"竹有著謙虛、氣結與不屈的含意。", desc_inherit:false},
 	{en:"mon-of-banboo-leaf-o", md:"環內五枚竹", level:2, parent:"mon-of-banboo-leaf", title_en:"Mon of Encircled Banboo Leaf", title_md:"環內五枚竹", desc:"", desc_inherit:false},
 	
-	{en:"mon-of-icho-ring-6fold", md:"六重輪銀杏", level:1, parent:null, title_en:"Mon of Six Icho Ring", title_md:"六重輪銀杏", desc:"", desc_inherit:false},
-	{en:"mon-of-icho-ring-6fold-o", md:"環內六重輪銀杏", level:2, parent:"mon-of-icho-ring-6fold", title_en:"Mon of Six Encircled Icho Rings", title_md:"環內六重輪銀杏", desc:"", desc_inherit:false},
+	{en:"mon-of-icho-ring-6fold", md:"六輪銀杏", level:1, parent:null, title_en:"Mon of Six Icho Ring", title_md:"六輪銀杏", desc:"", desc_inherit:false},
+	{en:"mon-of-icho-ring-6fold-o", md:"環內六輪銀杏", level:2, parent:"mon-of-icho-ring-6fold", title_en:"Mon of Six Encircled Icho Rings", title_md:"環內六輪銀杏", desc:"", desc_inherit:false},
 	{en:"mon-of-icho-ring-6fold-shell", md:"龜甲內六重銀杏", level:2, parent:"mon-of-icho-ring-6fold", title_en:"Mon of Six Shelled Icho Rings", title_md:"龜甲內六重銀杏", desc:"", desc_inherit:false},
 	
 	{en:"mon-of-tsubaki", md:"椿", level:1, parent:null, title_en:"Mon of Tsubaki", title_md:"椿", desc:"", desc_inherit:false},
