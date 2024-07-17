@@ -32,6 +32,30 @@
             height: 20em;
             background-color: black;
         }
+        .color-tag-child {
+            display: inline-block !important;
+            transform: rotate(45deg);
+            width: 3.5em;
+            height: 3.5em;
+            border-radius: 0.5em;
+        }
+        /* md-max */
+        @media (max-width: 768px) {
+            .color-tag-ctn {
+                margin-left: -0.25em;
+                margin-right: -0.25em;
+            }
+            .color-tag-text {
+                font-size: x-small !important;
+            }
+        }
+        /* md-min */
+        @media (min-width: 768px) {
+            .color-tag-child {
+                width: 5em;
+                height: 5em;
+            }
+        }
     </style>
     <title>旗章製造</title>
 </head>
@@ -49,6 +73,11 @@
             
             <div class="d-flex flex-wrap justify-content-center align-items-center w-100 mb-5">
                 <img class="main-image modal-trigger-image mw-100 border mb-3" data-type="flag">
+
+                <div class="d-flex justify-content-center flag-colors w-100 noto-sans-tc mt-5 mb-5"></div>
+                
+                <div class="flag-title noto-sans-tc w-100 text-center fs-4 mb-3"></div>
+                
                 <div class="description noto-sans-tc w-100 text-start fs-5">旗的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
             </div>
 
@@ -124,6 +153,7 @@
         $(function() {
             // document.title = flag.md;
             flag.desc = getFlagDesc(flag.en);
+            flag.colors = getFlagColors(flag.en);
             setMainImage(flag);
             setHangedFlag(flag);
             setBreadcrumb(flag);
@@ -171,6 +201,8 @@
             $(".main-image").attr("src", flagConfig.dir + flag.en + ".png");
             $(".main-image").attr("alt", flag.title);
 
+            $(".flag-title").html(flag.title_md);
+
             // default desc is in html
 
             if (flag.desc) { // if desc exists
@@ -181,6 +213,25 @@
                 if (!parentFlag) return;
                 if (!parentFlag.desc) return;
                 $(".description").html(parentFlag.desc); // if flag inherits desc
+            }
+            if (flag.colors) {
+                var flagColors = flag.colors.split(",");
+                for (var flagColor of flagColors) {
+                    flagColor = flagColor.toUpperCase();
+                    var childClass = "";
+                    var styles = `background-color:#${flagColor};`;
+                    if (flagColor === "FFFFFF") {
+                        childClass = " border border-4";
+                    }
+                    $(".flag-colors").append(
+                        `<div class="color-tag-ctn d-flex justify-content-center flex-wrap mx-md-2" style="max-width:4em;">` +
+                            `<span class="color-tag text-center d-inline">` +
+                                `<span class="color-tag-child${childClass}" style="${styles}"></span>` +
+                            `</span>` +
+                            `<span class="color-tag-text mt-2 me-1" style="font-size:smaller">#${flagColor}</span>` +
+                        `</div>`
+                    );
+                }
             }
         }
 

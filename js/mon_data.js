@@ -1,14 +1,10 @@
 var monImages = [
-	{en:"mon-of-5fortune", md:"五福", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Five Fortunes", title_md:"五福", desc:"", desc_inherit:true},
-	{en:"mon-of-5fortune-o", md:"環內五福", level:1, parent:null, title_en:"Mon of Encircled Five Fortunes", title_md:"環內五福", desc:"紋由五個福字組合而成。<br><br>五福有多種定義，其中一種便是「名譽」、「財富」、「長壽」、「健康」與「善終」。", desc_inherit:false},
-	{en:"mon-of-5fortune-2", md:"五福二式", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Five Fortunes II", title_md:"五福二式", desc:"", desc_inherit:true},
-	{en:"mon-of-5fortune-2-o", md:"環內五福二式", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Encircled Five Fortunes II", title_md:"環內五福二式", desc:"", desc_inherit:true},
-	{en:"mon-of-5fortune-3", md:"五福三式", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Five Fortunes III", title_md:"五福三式", desc:"", desc_inherit:true},
-	{en:"mon-of-5fortune-3-o", md:"環內五福三式", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Encircled Five Fortunes III", title_md:"環內五福三式", desc:"", desc_inherit:true},
-	{en:"mon-of-5fortune-4", md:"五福四式", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Five Fortunes IV", title_md:"五福四式", desc:"", desc_inherit:true},
-	{en:"mon-of-5fortune-4-o", md:"環內五福四式", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Encircled Five Fortunes IV", title_md:"環內五福四式", desc:"", desc_inherit:true},
+	{en:"mon-of-5fortune-o", md:"五福", level:1, parent:null, title_en:"Mon of Five Fortunes", title_md:"五福", desc:"紋由五個福字組合而成。<br><br>五福有多種定義，其中一種便是「名譽」、「財富」、「長壽」、「健康」與「善終」。", desc_inherit:false},
+	{en:"mon-of-5fortune-2-o", md:"五福之二", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Encircled Five Fortunes II", title_md:"五福之二", desc:"", desc_inherit:true},
+	{en:"mon-of-5fortune-3-o", md:"五福之三", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Encircled Five Fortunes III", title_md:"五福之三", desc:"", desc_inherit:true},
+	{en:"mon-of-5fortune-4-o", md:"五福之四", level:2, parent:"mon-of-5fortune-o", title_en:"Mon of Encircled Five Fortunes IV", title_md:"五福之四", desc:"", desc_inherit:true},
 
-	{en:"mon-of-ajisai-3fold-o", md:"環內三瓣繡球", level:1, parent:null, title_en:"Mon of Encircled Trifold Ajisais", title_md:"環內三瓣繡球", desc:"", desc_inherit:false},
+	{en:"mon-of-ajisai-3fold-o", md:"環內三瓣繡球", level:1, parent:null, title_en:"Mon of Encircled Trifold Ajisais", title_md:"三瓣繡球", desc:"", desc_inherit:false},
 	
 	{en:"mon-of-banboo-leaf", md:"五枚竹", level:1, parent:null, title_en:"Mon of Banboo Leaf", title_md:"五枚竹", desc:"竹有著謙虛、氣結與不屈的含意。", desc_inherit:false},
 	{en:"mon-of-banboo-leaf-o", md:"環內五枚竹", level:2, parent:"mon-of-banboo-leaf", title_en:"Mon of Encircled Banboo Leaf", title_md:"環內五枚竹", desc:"", desc_inherit:false},
@@ -25,14 +21,14 @@ var monImages = [
 	{en:"mon-of-inori-tsubaki-o", md:"環內祈椿", level:2, parent:"mon-of-inori-tsubaki", title_en:"Mon of Encircled Inori Tsubaki", title_md:"環內祈椿", desc:"", desc_inherit:true},
 	{en:"mon-of-tsubaki-ko", md:"柯椿", level:2, parent:"mon-of-tsubaki", title_en:"Mon of Tsubaki in Ko", title_md:"柯椿", desc:"柯字的紋章化設計，並在口字內擺一朵椿花。", desc_inherit:false},
 	
-	{en:"mon-of-kikyo-3fold-feather", md:"三重箭羽桔梗", level:2, parent:"mon-of-kikyo-3fold-feather-o", title_en:"Mon of Triple Kikyo And Feather", title_md:"三重箭羽桔梗", desc:"三朵向外綻放的劍氣桔梗，以及朝向紋中央的箭羽。", desc_inherit:false},
-	{en:"mon-of-kikyo-3fold-feather-o", md:"環內三重箭羽桔梗", level:1, parent:null, title_en:"Mon of Encircled Triple Kikyo And Feather", title_md:"環內三重箭羽桔梗", desc:"", desc_inherit:true},
+	{en:"mon-of-kikyo-3fold-feather", md:"三枝箭羽桔梗", level:1, parent:null, title_en:"Mon of Triple Kikyo And Feather", title_md:"三枝箭羽桔梗", desc:"", desc_inherit:false},
+	{en:"mon-of-kikyo-3fold-feather-o", md:"環內三枝箭羽桔梗", level:2, parent:"mon-of-kikyo-3fold-feather", title_en:"Mon of Encircled Triple Kikyo And Feather", title_md:"環內三枝箭羽桔梗", desc:"三朵向外綻放的劍氣桔梗，以及朝向紋中央的箭羽。", desc_inherit:true},
 
 	{en:"mon-of-ko", md:"柯", level:1, parent:null, title_en:"Mon of Ko", title_md:"柯", desc:"柯字的紋章化設計。", desc_inherit:false},
 	
 	{en:"mon-of-lily", md:"百合", level:1, parent:null, title_en:"Mon of Lily", title_md:"百合", desc:"百合象徵純潔、崇高與堅忍不拔的精神。", desc_inherit:false},
 	{en:"mon-of-lily-o", md:"環內百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Lily", title_md:"環內百合", desc:"", desc_inherit:true},
-	{en:"mon-of-lily-3fold-o", md:"環內三重百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Trifold Lilies", title_md:"環內三重百合", desc:"", desc_inherit:true},
+	{en:"mon-of-lily-3fold-o", md:"環內三枝百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Trifold Lilies", title_md:"環內三枝百合", desc:"", desc_inherit:true},
 	{en:"mon-of-lily-3split", md:"三分割百合", level:2, parent:"mon-of-lily", title_en:"Mon of Tripartite Lilies", title_md:"三分割百合", desc:"", desc_inherit:true},
 	{en:"mon-of-lily-3split-o", md:"環內三分割百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Tripartite Lilies", title_md:"環內三分割百合", desc:"", desc_inherit:true},
 	{en:"mon-of-lily-3split-feather-o", md:"環內三分割箭羽百合", level:2, parent:"mon-of-lily", title_en:"Mon of Encircled Tripartite Lilies with Feather", title_md:"環內三分割箭羽百合", desc:"百合象徵純潔、崇高與堅忍不拔的精神。<br><br>箭羽象徵能武，代表捍衛所愛的決心。", desc_inherit:false},
@@ -58,6 +54,9 @@ var monImages = [
 	{en:"mon-of-lily-24petal-soft-chiayi", md:"二十四重瓣嘉字柔百合", level:2, parent:"mon-of-lily-24petal-soft", title_en:"Mon of Chiayi in Twenty-Four-Petaled Soft Lily", title_md:"二十四重瓣嘉字柔百合", desc:"", desc_inherit:true},
 	{en:"mon-of-lily-24petal-soft-penghu", md:"二十四重瓣澎字柔百合", level:2, parent:"mon-of-lily-24petal-soft", title_en:"Mon of Penghu in Twenty-Four-Petaled Soft Lily", title_md:"二十四重瓣澎字柔百合", desc:"", desc_inherit:true},
 	
+	{en:"mon-of-tai-upon-lily", md:"百合上台字", level:2, parent:"mon-of-lily", title_en:"Mon of Tai upon Lily", title_md:"百合上台字", desc:"", desc_inherit:false},
+	{en:"mon-of-tai-upon-lily-o", md:"環內百合上台字", level:2, parent:"mon-of-tai-upon-lily", title_en:"Mon of Encircled Tai upon Lily", title_md:"環內百合上台字", desc:"", desc_inherit:false},
+	
 	{en:"mon-of-papilio-thaiwanu", md:"台灣鳳蝶", level:1, parent:null, title_en:"Mon of Papilio Thaiwanu", title_md:"台灣鳳蝶", desc:"", desc_inherit:false},
 	{en:"mon-of-papilio-thaiwanu-o", md:"環內台灣鳳蝶", level:2, parent:"mon-of-papilio-thaiwanu", title_en:"Mon of Encircled Papilio Thaiwanu", title_md:"環內台灣鳳蝶", desc:"", desc_inherit:false},
 	
@@ -77,9 +76,6 @@ var monImages = [
 	{en:"mon-of-tai-cloud", md:"台字祥雲", level:1, parent:null, title_en:"Mon of Tai Cloud", title_md:"台字祥雲", desc:"", desc_inherit:false},
 	
 	{en:"mon-of-tai-thunder", md:"台字震雷", level:1, parent:null, title_en:"Mon of Tai Thunder", title_md:"台字震雷", desc:"", desc_inherit:false},
-	
-	{en:"mon-of-tai-upon-lily", md:"百合上台字", level:1, parent:null, title_en:"Mon of Tai upon Lily", title_md:"百合上台字", desc:"", desc_inherit:false},
-	{en:"mon-of-tai-upon-lily-o", md:"環內百合上台字", level:2, parent:"mon-of-tai-upon-lily", title_en:"Mon of Encircled Tai upon Lily", title_md:"環內百合上台字", desc:"", desc_inherit:false},
 	
 	{en:"mon-of-whale-3fold", md:"三鯨", level:1, parent:null, title_en:"Mon of Three Whales", title_md:"三鯨", desc:"", desc_inherit:false},
 	{en:"mon-of-whale-3fold-o", md:"環內三鯨", level:2, parent:"mon-of-whale-3fold", title_en:"Mon of Encircled Three Whales", title_md:"環內三鯨", desc:"", desc_inherit:false}
