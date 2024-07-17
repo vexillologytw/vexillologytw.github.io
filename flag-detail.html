@@ -205,15 +205,6 @@
 
             // default desc is in html
 
-            if (flag.desc) { // if desc exists
-                $(".description").html(flag.desc);
-            } else {
-                if (flag.desc_inherit !== true) return;
-                const parentFlag = getFlagByEn(flag.parent);
-                if (!parentFlag) return;
-                if (!parentFlag.desc) return;
-                $(".description").html(parentFlag.desc); // if flag inherits desc
-            }
             if (flag.colors) {
                 var flagColors = flag.colors.split(",");
                 for (var flagColor of flagColors) {
@@ -232,6 +223,15 @@
                         `</div>`
                     );
                 }
+            }
+            if (flag.desc) { // if desc exists
+                $(".description").html(flag.desc);
+            } else {
+                if (flag.desc_inherit !== true) return;
+                const parentFlag = getFlagByEn(flag.parent);
+                if (!parentFlag) return;
+                if (!parentFlag.desc) return;
+                $(".description").html(parentFlag.desc); // if flag inherits desc
             }
         }
 
