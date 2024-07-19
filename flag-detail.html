@@ -56,6 +56,10 @@
                 height: 5em;
             }
         }
+        hr {
+            border: 1px solid black;
+            width: 100%;
+        }
     </style>
     <title>旗章製造</title>
 </head>
@@ -103,7 +107,10 @@
             </a>
         </div>
 
+        <hr class="mb-5">
+
         <div data-title="flag-display" class="w-100">
+            <div class="w-100 text-center fs-3 mb-4 noto-sans-tc">相關旗幟</div>
             <div class="d-flex justify-content-center flex-wrap" id="flag-ctn"></div>
         </div>
 
@@ -161,12 +168,12 @@
             $("#prev-flag").hide();
             $("#next-flag").hide();
             
-            const childrenFlags = getFlagsByParentName(flagName);
+            const relatedFlags = getRelatedFlags(flagName);
 
-            if (childrenFlags != undefined && childrenFlags.length) {
+            if (relatedFlags != undefined && relatedFlags.length) {
                 $("div[data-title='flag-display']").addClass("mb-5");
-                for (var subEntity of childrenFlags) {
-                    appendImage(subEntity, flagConfig);
+                for (var relatedFlag of relatedFlags) {
+                    appendImage(relatedFlag, flagConfig);
                 }
             }
             
@@ -278,14 +285,14 @@
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";
             var text = image.title_md;
-            var childrenCount = getFlagChildrenCount(image.en);
-            var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
+            // var childrenCount = getFlagChildrenCount(image.en);
+            // var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
 
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses} mw-100 h-auto" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">
-                        <a class="text-secondary" href="/flag-detail.html?name=${image.en}">${text}${childrenCountHtml}</a>
+                        <a class="text-secondary" href="/flag-detail.html?name=${image.en}">${text}</a>
                     </div>
                 </div>`
             ).appendTo(config.container);
