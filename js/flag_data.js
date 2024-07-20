@@ -1,29 +1,29 @@
 var flagImages = [
     {en:"flag-of-taiwan-1-1", md:"台灣百合旗", level:1, parent:null, title_en:"Flag of Taiwan", title_md:"台灣百合旗", desc:"藍色象徵海洋，代表正義與民主。<br><br>青色象徵山岳，代表生命力與自由。<br><br>黃色象徵台灣人，代表文明與繁榮。<br><br>白色象徵和諧，代表善良與和平。<br><br>百合象徵不屈的精神，也代表台灣本土歷史與濃厚人文。<br><br>圓象徵台灣多個民族的共和共榮。<br><br>向外散發的線條象徵台灣走向世界，發揚台灣之光。", desc_inherit:false, colors:"003255,00b4b2,ffd700,ffffff", colors_inherit:false, tags:"lily", tags_inherit:false},
-    {en:"flag-of-taiwan-1-2", md:"台灣百合旗一式二型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-II", title_md:"台灣百合旗一式二型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-taiwan-1-3", md:"台灣百合旗一式三型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-III", title_md:"台灣百合旗一式三型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-taiwan-1-4", md:"台灣百合旗一式四型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-VI", title_md:"台灣百合旗一式四型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-taiwan-2-1", md:"台灣百合旗二式一型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan II-I", title_md:"台灣百合旗二式一型", desc:null, desc_inherit:false, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-taiwan-3-1", md:"台灣百合旗三式一型", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan III-I", title_md:"台灣百合旗三式一型", desc:null, desc_inherit:false, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-1-2", md:"台灣百合旗一號之二", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-II", title_md:"台灣百合旗一號之二", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-1-3", md:"台灣百合旗一號之三", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-III", title_md:"台灣百合旗一號之三", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-1-4", md:"台灣百合旗一號之四", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan I-VI", title_md:"台灣百合旗一號之四", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-2-1", md:"台灣百合旗二號之一", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan II-I", title_md:"台灣百合旗二號之一", desc:null, desc_inherit:false, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-3-1", md:"台灣百合旗三號之一", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan III-I", title_md:"台灣百合旗三號之一", desc:null, desc_inherit:false, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     
     {en:"flag-of-taiwan-milktea", md:"奶茶百合旗", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan Milk Tea", title_md:"奶茶百合旗", desc:null, desc_inherit:false, colors:"2f2e2a,ad8a6c,ffd700,ffffff", colors_inherit:false, tags:"lily,milktea", tags_inherit:false},
     
     {en:"flag-of-taiwan-naval-1-1", md:"台灣百合海上旗", level:1, parent:"flag-of-taiwan-1-1", title_en:"Ensign of Taiwan", title_md:"台灣百合海上旗", desc:"", desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-taiwan-naval-1-2", md:"台灣百合海上旗一式二型", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-II", title_md:"台灣百合海上旗一式二型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-taiwan-naval-1-3", md:"台灣百合海上旗一式三型", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-III", title_md:"台灣百合海上旗一式三型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-taiwan-naval-1-4", md:"台灣百合海上旗一式四型", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-VI", title_md:"台灣百合海上旗一式四型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-taiwan-naval-2-1", md:"台灣百合海上旗二式一型", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan II-I", title_md:"台灣百合海上旗二式一型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-taiwan-naval-2-2", md:"台灣百合海上旗二式二型", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan II-II", title_md:"台灣百合海上旗二式二型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-taiwan-naval-2-3", md:"台灣百合海上旗二式三型", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan II-III", title_md:"台灣百合海上旗二式三型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-taiwan-naval-2-4", md:"台灣百合海上旗二式四型", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan II-VI", title_md:"台灣百合海上旗二式四型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-naval-1-2", md:"台灣百合海上旗一號之二", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-II", title_md:"台灣百合海上旗一號之二", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-naval-1-3", md:"台灣百合海上旗一號之三", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-III", title_md:"台灣百合海上旗一號之三", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-naval-1-4", md:"台灣百合海上旗一號之四", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-VI", title_md:"台灣百合海上旗一號之四", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-naval-2-1", md:"台灣百合海上旗二號之一", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan II-I", title_md:"台灣百合海上旗二號之一", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-naval-2-2", md:"台灣百合海上旗二號之二", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan II-II", title_md:"台灣百合海上旗二號之二", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-naval-2-3", md:"台灣百合海上旗二號之三", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan II-III", title_md:"台灣百合海上旗二號之三", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-naval-2-4", md:"台灣百合海上旗二號之四", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan II-VI", title_md:"台灣百合海上旗二號之四", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     
     {en:"flag-of-red-lily-1-1", md:"紅百合旗", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Red Lily", title_md:"紅百合旗", desc:"藍色象徵海洋，代表正義與民主。<br><br>紅色象徵生命，代表真誠與力量。<br><br>黃色象徵台灣人，代表文明與繁榮。<br><br>白色象徵和諧，代表善良與和平。<br><br>百合象徵不屈的精神，也代表台灣本土歷史與濃厚人文。<br><br>圓象徵台灣多個民族的共和共榮。<br><br>向外散發的線條象徵台灣走向世界，發揚台灣之光。", desc_inherit:false, colors:"003255,b40000,ffd700,ffffff", colors_inherit:false, tags:"", tags_inherit:true},
-    {en:"flag-of-red-lily-1-2", md:"紅百合旗一式二型", level:2, parent:"flag-of-red-lily-1-1", title_en:"Flag of Red Lily I-II", title_md:"紅百合旗一式二型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-red-lily-2-1", md:"紅百合旗二式一型", level:2, parent:"flag-of-red-lily-1-1", title_en:"Flag of Red Lily II-I", title_md:"紅百合旗二式一型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-red-lily-1-2", md:"紅百合旗一號之二", level:2, parent:"flag-of-red-lily-1-1", title_en:"Flag of Red Lily I-II", title_md:"紅百合旗一號之二", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-red-lily-2-1", md:"紅百合旗二號之一", level:2, parent:"flag-of-red-lily-1-1", title_en:"Flag of Red Lily II-I", title_md:"紅百合旗二號之一", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     
     {en:"flag-of-red-lily-naval-1-1", md:"紅百合海上旗", level:2, parent:"flag-of-red-lily-1-1", title_en:"Ensign of Red Lily", title_md:"紅百合海上旗", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-red-lily-naval-1-2", md:"紅百合海上旗一式二型", level:2, parent:"flag-of-red-lily-1-1", title_en:"Ensign of Red Lily I-II", title_md:"紅百合海上旗一式二型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
-    {en:"flag-of-red-lily-naval-2-1", md:"紅百合海上旗二式一型", level:2, parent:"flag-of-red-lily-1-1", title_en:"Ensign of Red Lily II-I", title_md:"紅百合海上旗二式一型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-red-lily-naval-1-2", md:"紅百合海上旗一號之二", level:2, parent:"flag-of-red-lily-1-1", title_en:"Ensign of Red Lily I-II", title_md:"紅百合海上旗一號之二", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-red-lily-naval-2-1", md:"紅百合海上旗二號之一", level:2, parent:"flag-of-red-lily-1-1", title_en:"Ensign of Red Lily II-I", title_md:"紅百合海上旗二號之一", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     
     {en:"flag-of-high-mountains", md:"高山旗", level:1, parent:null, title_en:"Flag of High Mountains", title_md:"高山旗", desc:"高山孤絕壯麗，象徵台灣人在險惡世界燃起的熊熊魂火。<br><br>藍色象徵玉山，代表台灣人的精神。<br><br>青色象徵晴天，代表自由與希望。<br><br>白色象徵烈日，代表正值正義正大光明。", desc_inherit:false, colors:"003255,00b4b2,ffffff", colors_inherit:false, tags:"mountain,sun", tags_inherit:false},
     
@@ -31,7 +31,7 @@ var flagImages = [
     {en:"flag-of-four-languages-naval", md:"四大語言族群旗", level:2, parent:"flag-of-four-languages", title_en:"Ensign of Four Ethnics", title_md:"四大語言族群海上旗", desc:"", desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     
     {en:"flag-of-three-whales-1-1", md:"三鯨旗", level:1, parent:null, title_en:"Flag of Three Whales", title_md:"三鯨旗", desc:"白色代表和諧與善良；藍色代表生命與正義。<br><br>三條鯨魚代表台灣的獨立、民主與自由。<br><br>鯨魚們相互環繞的意象，象徵台灣與海洋無法分離的緊密聯繫。", desc_inherit:false, colors:"003c78,ffffff", colors_inherit:false, tags:"whale", tags_inherit:false},
-    {en:"flag-of-three-whales-1-2", md:"三鯨旗一式二型", level:2, parent:"flag-of-three-whales-1-1", title_en:"Flag of Three Whales I-II", title_md:"三鯨旗一式二型", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-three-whales-1-2", md:"三鯨旗之二", level:2, parent:"flag-of-three-whales-1-1", title_en:"Flag of Three Whales I-II", title_md:"三鯨旗之二", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     
     {en:"flag-of-department-of-defence", md:"國防部旗", level:1, parent:null, title_en:"Flag of Department of Defence", title_md:"國防部旗", desc:null, desc_inherit:false, colors:"003255,00b4b2,ffd700,ffffff", colors_inherit:false, tags:"lily", tags_inherit:false},
     {en:"flag-of-department-of-state", md:"行政院旗", level:1, parent:null, title_en:"Flag of Department of State", title_md:"行政院旗", desc:null, desc_inherit:false, colors:"003255,ffd700", colors_inherit:false, tags:"lily", tags_inherit:false},
@@ -50,10 +50,10 @@ var flagImages = [
     {en:"flag-of-nantou-county", md:"南投縣旗", level:1, parent:null, title_en:"Flag of Nantou County", title_md:"南投縣旗", desc:null, desc_inherit:false, colors:"005f35,009f16,ffffff", colors_inherit:false, tags:"reginal,mountain", tags_inherit:false},
     
     {en:"flag-of-vexillology-1", md:"台灣旗幟學", level:1, parent:null, title_en:"Flag of Vexillology", title_md:"台灣旗幟學", desc:null, desc_inherit:false, colors:"003255,00b4b2,ffffff", colors_inherit:false, tags:"vexillology", tags_inherit:false},
-    {en:"flag-of-vexillology-2", md:"台灣旗幟學二式", level:2, parent:"flag-of-vexillology-1", title_en:"Flag of Vexillology II", title_md:"台灣旗幟學二式", desc:null, desc_inherit:false, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-vexillology-2", md:"台灣旗幟學之二", level:2, parent:"flag-of-vexillology-1", title_en:"Flag of Vexillology II", title_md:"台灣旗幟學之二", desc:null, desc_inherit:false, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     
     {en:"flag-of-taizih-1", md:"台字章旗", level:1, parent:null, title_en:"Flag of Taizih", title_md:"台字章旗", desc:null, desc_inherit:false, colors:"004477,00bfb1,ffffff", colors_inherit:false, tags:"seal_of_tai", tags_inherit:false},
-    {en:"flag-of-taizih-2", md:"台字章旗二式", level:2, parent:"flag-of-taizih-1", title_en:"Flag of Taizih II", title_md:"台字章旗二式", desc:null, desc_inherit:true, colors:"003265,ffffff", colors_inherit:false, tags:"seal_of_tai", tags_inherit:false}
+    {en:"flag-of-taizih-2", md:"台字章旗二號", level:2, parent:"flag-of-taizih-1", title_en:"Flag of Taizih II", title_md:"台字章旗二號", desc:null, desc_inherit:true, colors:"003265,ffffff", colors_inherit:false, tags:"seal_of_tai", tags_inherit:false}
 ];
 
 /**
