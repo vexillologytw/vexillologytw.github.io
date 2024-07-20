@@ -83,10 +83,13 @@
             $("#prev-mon").hide();
             $("#next-mon").hide();
             
-            var subentities = getMonsByParentName(monName);
+            const relatedMons = getRelatedMons(monName);
 
-            for (var subEntity of subentities) {
-                appendImage(subEntity, monConfig);
+            if (relatedMons != undefined && relatedMons.length) {
+                $("div[data-title='mon-display']").addClass("mb-5");
+                for (var relatedMon of relatedMons) {
+                    appendImage(relatedMon, monConfig);
+                }
             }
             // show modal on left click on images
             $(".modal-trigger-image").on("mousedown", function(event) {
