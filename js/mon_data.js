@@ -5,6 +5,9 @@ var monImages = [
 	{en:"mon-of-5fortune-4-o", md:"五福之四", level:2, parent:"mon-of-5fortune-o", title_en:"Encircled Five Fortunes IV", title_md:"五福之四", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 
 	{en:"mon-of-hydrangea-3fold-o", md:"環內三瓣繡球", level:1, parent:null, title_en:"Encircled Trifold Hydrangeas", title_md:"三瓣繡球", desc:"", desc_inherit:false, tags:"hydrangea", tags_inherit:false},
+
+	{en:"mon-of-malus-spectabilis", md:"海棠", level:1, parent:null, title_en:"Malus Spectabilis", title_md:"海棠", desc:"", desc_inherit:false, tags:"malus_spectabilis", tags_inherit:false},
+	{en:"mon-of-malus-spectabilis-mokkou", md:"四方木瓜內海棠", level:2, parent:"mon-of-malus-spectabilis", title_en:"Mokkou Ensquared Malus Spectabilis", title_md:"四方木瓜內海棠", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	
 	{en:"mon-of-banboo-leaf", md:"五枚竹", level:1, parent:null, title_en:"Banboo Leaf", title_md:"五枚竹", desc:"竹有著謙虛、氣結與不屈的含意。", desc_inherit:false, tags:"bamboo", tags_inherit:false},
 	{en:"mon-of-banboo-leaf-o", md:"環內五枚竹", level:2, parent:"mon-of-banboo-leaf", title_en:"Encircled Banboo Leaf", title_md:"環內五枚竹", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
@@ -17,6 +20,8 @@ var monImages = [
 	{en:"mon-of-tsubaki-o", md:"環內椿", level:2, parent:"mon-of-tsubaki", title_en:"Encircled Tsubaki", title_md:"環內椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	{en:"mon-of-tsubaki-3split-o", md:"環內三分割椿", level:2, parent:"mon-of-tsubaki", title_en:"Tripartite Tsubakies", title_md:"環內三分割椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	{en:"mon-of-tsubaki-feather-3split-o", md:"環內三分割箭羽椿", level:2, parent:"mon-of-tsubaki", title_en:"Encircled Tripartite Tsubakies And Feather", title_md:"環內三分割箭羽椿", desc:"", desc_inherit:false, tags:"tsubaki,feather", tags_inherit:false},
+	{en:"mon-of-tsubaki-holding", md:"環抱椿", level:2, parent:"mon-of-tsubaki", title_en:"Holding Tsubaki", title_md:"環抱椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
+	{en:"mon-of-tsubaki-holding-o", md:"環內環抱椿", level:2, parent:"mon-of-tsubaki", title_en:"Encircled Holding Tsubaki", title_md:"環內環抱椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	{en:"mon-of-inori-tsubaki", md:"祈椿", level:2, parent:"mon-of-tsubaki", title_en:"Inori Tsubaki", title_md:"祈椿", desc:"椿花象徵謙敬溫和、乾淨俐落，兩枝花環抱著中央的椿，代表來自家族的祝福與祈許。是本站站主的個人紋章。", desc_inherit:false, tags:"tsubaki", tags_inherit:false},
 	{en:"mon-of-inori-tsubaki-o", md:"環內祈椿", level:2, parent:"mon-of-inori-tsubaki", title_en:"Encircled Inori Tsubaki", title_md:"環內祈椿", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-inori-tsubaki-carved", md:"石刻祈椿", level:2, parent:"mon-of-inori-tsubaki", title_en:"Stone-Carving Inori Tsubaki", title_md:"石刻祈椿", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
@@ -40,7 +45,7 @@ var monImages = [
 	{en:"mon-of-lily-12petal-3split", md:"三分割十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Tripartite Twelve-Petaled Lilies", title_md:"三分割十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-12petal-3split-o", md:"環內三分割十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Encircled Tripartite Twelve-Petaled Lilies", title_md:"環內三分割十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-12petal-3split-feather-o", md:"環內三分割十二重瓣箭羽百合", level:2, parent:"mon-of-lily", title_en:"Encircled Tripartite Twelve-Petaled Lilies with Feather", title_md:"環內三分割十二重瓣箭羽百合", desc:"百合象徵純潔、崇高與堅忍不拔的精神。<br><br>箭羽象徵能武，代表捍衛所愛的決心。", desc_inherit:false, tags:"lily,feather", tags_inherit:false},
-	{en:"mon-of-lily-12petal-kumiaikaku", md:"組合角內三分割十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Ensquared Tripartite Twelve-Petaled Lilies", title_md:"組合角內三分割十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-12petal-kumiaikaku", md:"組合角內十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Ensquared Twelve-Petaled Lilies", title_md:"組合角內十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-12petal-upon-sakura", md:"櫻上十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Tripartite Twelve-Petaled Lilies upon Sakura", title_md:"櫻上十二重瓣百合", desc:"", desc_inherit:true, tags:"lily,sakura", tags_inherit:false},
 	{en:"mon-of-lily-12petal-upon-sakura-o", md:"環內櫻上十二重瓣百合", level:2, parent:"mon-of-lily-12petal-upon-sakura", title_en:"Encircled Tripartite Twelve-Petaled Lilies upon Sakura", title_md:"環內櫻上十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal", md:"二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Twenty-Four-Petaled Lily", title_md:"二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
@@ -48,7 +53,7 @@ var monImages = [
 	{en:"mon-of-lily-24petal-3split", md:"三分割二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Tripartite Twenty-Four-Petaled Lilies", title_md:"三分割二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal-3split-o", md:"環內三分割二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Encircled Tripartite Twenty-Four-Petaled Lilies", title_md:"環內三分割二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal-3split-feather-o", md:"環內三分割二十四重瓣箭羽百合", level:2, parent:"mon-of-lily", title_en:"Encircled Tripartite Twenty-Four-Petaled Lilies with Feather", title_md:"環內三分割二十四重瓣箭羽百合", desc:"百合象徵純潔、崇高與堅忍不拔的精神。<br><br>箭羽象徵能武，代表捍衛所愛的決心。", desc_inherit:false, tags:"lily,feather", tags_inherit:false},
-	{en:"mon-of-lily-24petal-kumiaikaku", md:"組合角內三分割二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Ensquared Tripartite Twenty-Four-Petaled Lilies", title_md:"組合角內三分割二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-24petal-kumiaikaku", md:"組合角內二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Ensquared Twenty-Four-Petaled Lilies", title_md:"組合角內二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 
 	{en:"mon-of-lily-soft", md:"柔百合", level:2, parent:"mon-of-lily", title_en:"Soft Lily", title_md:"柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-soft-o", md:"環內柔百合", level:2, parent:"mon-of-lily", title_en:"Encircled Soft Lily", title_md:"環內柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
@@ -68,8 +73,8 @@ var monImages = [
 	{en:"mon-of-lily-curved", md:"折角百合", level:2, parent:"mon-of-lily", title_en:"Curved Lily", title_md:"折角百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-curved-o", md:"環內折角百合", level:2, parent:"mon-of-lily", title_en:"Encircled Curved Lily", title_md:"環內折角百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 
-	{en:"mon-of-tai-upon-lily", md:"百合上台字", level:2, parent:"mon-of-lily", title_en:"Tai upon Lily", title_md:"百合上台字", desc:"", desc_inherit:false, tags:"lily,tai-seal", tags_inherit:false},
-	{en:"mon-of-tai-upon-lily-o", md:"環內百合上台字", level:2, parent:"mon-of-tai-upon-lily", title_en:"Encircled Tai upon Lily", title_md:"環內百合上台字", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
+	{en:"mon-of-tai-upon-lily", md:"台字百合", level:2, parent:"mon-of-lily", title_en:"Tai upon Lily", title_md:"台字百合", desc:"", desc_inherit:false, tags:"lily,tai-seal", tags_inherit:false},
+	{en:"mon-of-tai-upon-lily-o", md:"環內台字百合", level:2, parent:"mon-of-tai-upon-lily", title_en:"Encircled Tai upon Lily", title_md:"環內台字百合", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 
 	{en:"mon-of-orchid", md:"蘭", level:1, parent:null, title_en:"Orchid", title_md:"蘭", desc:"", desc_inherit:false, tags:"orchid", tags_inherit:false},
 	{en:"mon-of-orchid-o", md:"環內蘭", level:2, parent:"mon-of-orchid", title_en:"Encircled Orchid", title_md:"環內蘭", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
@@ -83,8 +88,8 @@ var monImages = [
 	{en:"mon-of-papilio-thaiwanu", md:"台灣鳳蝶", level:1, parent:null, title_en:"Papilio Thaiwanu", title_md:"台灣鳳蝶", desc:"", desc_inherit:false, tags:"butterfly", tags_inherit:false},
 	{en:"mon-of-papilio-thaiwanu-o", md:"環內台灣鳳蝶", level:2, parent:"mon-of-papilio-thaiwanu", title_en:"Encircled Papilio Thaiwanu", title_md:"環內台灣鳳蝶", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	
-	{en:"mon-of-sakura-sword", md:"五劍山櫻", level:1, parent:null, title_en:"Sakura with Five Swords", title_md:"五劍山櫻", desc:"", desc_inherit:false, tags:"sakura,sword", tags_inherit:false},
-	{en:"mon-of-sakura-sword-o", md:"環內五劍山櫻", level:2, parent:"mon-of-sakura-sword", title_en:"Encircled Sakura with Five Swords", title_md:"環內五劍山櫻", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
+	{en:"mon-of-sakura-sword", md:"劍山櫻", level:1, parent:null, title_en:"Sakura with Five Swords", title_md:"劍山櫻", desc:"", desc_inherit:false, tags:"sakura,sword", tags_inherit:false},
+	{en:"mon-of-sakura-sword-o", md:"環內劍山櫻", level:2, parent:"mon-of-sakura-sword", title_en:"Encircled Sakura with Five Swords", title_md:"環內劍山櫻", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	
 	{en:"mon-of-tiliaceus", md:"槿", level:1, parent:null, title_en:"Tiliaceus", title_md:"槿", desc:"", desc_inherit:false, tags:"tiliaceus", tags_inherit:false},
 	{en:"mon-of-tiliaceus-o", md:"環內槿", level:2, parent:"mon-of-tiliaceus", title_en:"Encircled Tiliaceus", title_md:"環內槿", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
@@ -98,7 +103,7 @@ var monImages = [
 
 	{en:"mon-of-milii", md:"虎刺", level:1, parent:null, title_en:"Milli", title_md:"虎刺", desc:"", desc_inherit:false, tags:"milii", tags_inherit:false},
 	{en:"mon-of-milii-o", md:"環內虎刺", level:2, parent:"mon-of-milii", title_en:"Encircled Milli", title_md:"環內虎刺", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-milii-2", md:"虎刺之二", level:2, parent:"mon-of-milii", title_en:"Milli II", title_md:"虎刺之二", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-milii-2-o", md:"虎刺之二", level:2, parent:"mon-of-milii", title_en:"Milli II", title_md:"虎刺之二", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	
 	{en:"mon-of-succulent-holding", md:"環抱多肉植物", level:1, parent:null, title_en:"Holding Succulent", title_md:"環抱多肉植物", desc:"", desc_inherit:false, tags:"succulent", tags_inherit:false},
 	{en:"mon-of-succulent-holding-o", md:"環內環抱多肉植物", level:2, parent:"mon-of-succulent-holding", title_en:"Encircled Holding Succulent", title_md:"環內環抱多肉植物", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
