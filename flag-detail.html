@@ -107,10 +107,12 @@
             </a>
         </div>
 
-        <hr class="mb-5">
+        <span class="w-100 mb-5 my-5" id="related-entities">
+            <hr class="mb-4">
+            <div class="w-100 text-center fs-3 mb-4 noto-sans-tc">相關旗幟</div>
+        </span>
 
         <div data-title="flag-display" class="w-100">
-            <div class="w-100 text-center fs-3 mb-4 noto-sans-tc">相關旗幟</div>
             <div class="d-flex justify-content-center flex-wrap" id="flag-ctn"></div>
         </div>
 
@@ -170,6 +172,9 @@
             
             const relatedFlags = getRelatedFlags(flagName);
 
+            if (!relatedFlags.length) {
+                $("#related-entities").hide();
+            }
             if (relatedFlags != undefined && relatedFlags.length) {
                 $("div[data-title='flag-display']").addClass("mb-5");
                 for (var relatedFlag of relatedFlags) {

@@ -31,10 +31,12 @@
             <div class="description noto-sans-tc fs-5">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
         </div>
 
-        <hr class="mb-4">
-
-        <div data-title="mon-display" class="w-100 mb-5 my-5">
+        <span class="w-100 mb-5 my-5" id="related-entities">
+            <hr class="mb-4">
             <div class="w-100 text-center fs-3 mb-4 noto-sans-tc">相關和紋</div>
+        </span>
+
+        <div data-title="mon-display" class="w-100 mb-5">
             <div class="d-flex justify-content-center flex-wrap" id="mon-ctn"></div>
         </div>
 
@@ -92,6 +94,9 @@
             
             const relatedMons = getRelatedMons(monName);
 
+            if (!relatedMons.length) {
+                $("#related-entities").hide();
+            }
             if (relatedMons != undefined && relatedMons.length) {
                 $("div[data-title='mon-display']").addClass("mb-5");
                 for (var relatedMon of relatedMons) {

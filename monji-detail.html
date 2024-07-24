@@ -6,6 +6,10 @@
             aspect-ratio: 1/1;
             max-height: calc(40vh);
         }
+        hr {
+            border: 1px solid black;
+            width: 100%;
+        }
     </style>
     <title>旗章製造</title>
 </head>
@@ -24,7 +28,12 @@
             <div class="description noto-sans-tc fs-5">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
         </div>
 
-        <div data-title="monji-display" class="w-100 mb-5 my-5">
+        <span class="w-100 mb-5 my-5" id="related-entities">
+            <hr class="mb-4">
+            <div class="w-100 text-center fs-3 mb-4 noto-sans-tc">下轄地區</div>
+        </span>
+
+        <div data-title="monji-display" class="w-100 mb-5">
             <div class="d-flex justify-content-center flex-wrap" id="monji-ctn"></div>
         </div>
 
@@ -82,6 +91,9 @@
             
             var subentities = getMonjiesByParentName(monjiName);
 
+            if (!subentities.length) {
+                $("#related-entities").hide();
+            }
             for (var subEntity of subentities) {
                 appendImage(subEntity, monjiConfig);
             }
