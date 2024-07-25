@@ -34,33 +34,53 @@ var monImages = [
 	
 	{en:"mon-of-lily", md:"百合", level:1, parent:null, title_en:"Lily", title_md:"百合", desc:"百合象徵純潔、崇高與堅忍不拔的精神。", desc_inherit:false, tags:"lily", tags_inherit:false},
 	{en:"mon-of-lily-o", md:"環內百合", level:2, parent:"mon-of-lily", title_en:"Encircled Lily", title_md:"環內百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-kumiaikaku", md:"組合角內百合", level:2, parent:"mon-of-lily", title_en:"Ensquared Lily", title_md:"組合角內百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-3fold", md:"三枝百合", level:2, parent:"mon-of-lily", title_en:"Trifold Lilies", title_md:"三枝百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-3fold-o", md:"環內三枝百合", level:2, parent:"mon-of-lily", title_en:"Encircled Trifold Lilies", title_md:"環內三枝百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-3split", md:"三分割百合", level:2, parent:"mon-of-lily", title_en:"Tripartite Lilies", title_md:"三分割百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-3split-o", md:"環內三分割百合", level:2, parent:"mon-of-lily", title_en:"Encircled Tripartite Lilies", title_md:"環內三分割百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-3split-feather-o", md:"環內三分割箭羽百合", level:2, parent:"mon-of-lily", title_en:"Encircled Tripartite Lilies with Feather", title_md:"環內三分割箭羽百合", desc:"百合象徵純潔、崇高與堅忍不拔的精神。<br><br>箭羽象徵能武，代表捍衛所愛的決心。", desc_inherit:false, tags:"lily,feather", tags_inherit:false},
 	{en:"mon-of-lily-12petal", md:"十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Twelve-Petaled Lily", title_md:"十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-12petal-o", md:"環內十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Encircled Twelve-Petaled Lily", title_md:"環內十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-12petal-3split", md:"三分割十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Tripartite Twelve-Petaled Lilies", title_md:"三分割十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-12petal-3split-o", md:"環內三分割十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Encircled Tripartite Twelve-Petaled Lilies", title_md:"環內三分割十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-12petal-3split-feather-o", md:"環內三分割十二重瓣箭羽百合", level:2, parent:"mon-of-lily", title_en:"Encircled Tripartite Twelve-Petaled Lilies with Feather", title_md:"環內三分割十二重瓣箭羽百合", desc:"百合象徵純潔、崇高與堅忍不拔的精神。<br><br>箭羽象徵能武，代表捍衛所愛的決心。", desc_inherit:false, tags:"lily,feather", tags_inherit:false},
-	{en:"mon-of-lily-12petal-kumiaikaku", md:"組合角內十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Ensquared Twelve-Petaled Lilies", title_md:"組合角內十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-12petal-upon-sakura", md:"櫻上十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Tripartite Twelve-Petaled Lilies upon Sakura", title_md:"櫻上十二重瓣百合", desc:"", desc_inherit:true, tags:"lily,sakura", tags_inherit:false},
-	{en:"mon-of-lily-12petal-upon-sakura-o", md:"環內櫻上十二重瓣百合", level:2, parent:"mon-of-lily-12petal-upon-sakura", title_en:"Encircled Tripartite Twelve-Petaled Lilies upon Sakura", title_md:"環內櫻上十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal", md:"二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Twenty-Four-Petaled Lily", title_md:"二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal-o", md:"環內二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Encircled Twenty-Four-Petaled Lily", title_md:"環內二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-24petal-3split", md:"三分割二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Tripartite Twenty-Four-Petaled Lilies", title_md:"三分割二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-24petal-3split-o", md:"環內三分割二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Encircled Tripartite Twenty-Four-Petaled Lilies", title_md:"環內三分割二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-24petal-3split-feather-o", md:"環內三分割二十四重瓣箭羽百合", level:2, parent:"mon-of-lily", title_en:"Encircled Tripartite Twenty-Four-Petaled Lilies with Feather", title_md:"環內三分割二十四重瓣箭羽百合", desc:"百合象徵純潔、崇高與堅忍不拔的精神。<br><br>箭羽象徵能武，代表捍衛所愛的決心。", desc_inherit:false, tags:"lily,feather", tags_inherit:false},
-	{en:"mon-of-lily-24petal-kumiaikaku", md:"組合角內二十四重瓣百合", level:2, parent:"mon-of-lily", title_en:"Ensquared Twenty-Four-Petaled Lilies", title_md:"組合角內二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-
 	{en:"mon-of-lily-soft", md:"柔百合", level:2, parent:"mon-of-lily", title_en:"Soft Lily", title_md:"柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-soft-o", md:"環內柔百合", level:2, parent:"mon-of-lily", title_en:"Encircled Soft Lily", title_md:"環內柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-12petal-soft", md:"十二重瓣柔百合", level:2, parent:"mon-of-lily", title_en:"Twelve-Petaled Soft Lily", title_md:"十二重瓣柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-12petal-soft-o", md:"環內十二重瓣柔百合", level:2, parent:"mon-of-lily", title_en:"Encircled Twelve-Petaled Soft Lily", title_md:"環內十二重瓣柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal-soft", md:"二十四重瓣柔百合", level:2, parent:"mon-of-lily", title_en:"Twenty-Four-Petaled Soft Lily", title_md:"二十四重瓣柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal-soft-o", md:"環內二十四重瓣柔百合", level:2, parent:"mon-of-lily", title_en:"Encircled Twenty-Four-Petaled Soft Lily", title_md:"環內二十四重瓣柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	
+	{en:"mon-of-lily-curved", md:"折角百合", level:2, parent:"mon-of-lily", title_en:"Curved Lily", title_md:"折角百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-curved-o", md:"環內折角百合", level:2, parent:"mon-of-lily-curved", title_en:"Encircled Curved Lily", title_md:"環內折角百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	
+	{en:"mon-of-lily-kumiaikaku", md:"組合角內百合", level:2, parent:"mon-of-lily", title_en:"Ensquared Lily", title_md:"組合角內百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-12petal-kumiaikaku", md:"組合角內十二重瓣百合", level:2, parent:"mon-of-lily-kumiaikaku", title_en:"Ensquared Twelve-Petaled Lilies", title_md:"組合角內十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-24petal-kumiaikaku", md:"組合角內二十四重瓣百合", level:2, parent:"mon-of-lily-kumiaikaku", title_en:"Ensquared Twenty-Four-Petaled Lilies", title_md:"組合角內二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	
+	{en:"mon-of-lily-2overlap", md:"二重疊百合", level:2, parent:"mon-of-lily", title_en:"Two Overlapping Lilies", title_md:"二重疊百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-2overlap-o", md:"環內二重疊百合", level:2, parent:"mon-of-lily-2overlap", title_en:"Encircled Two Overlapping Lilies", title_md:"環內二重疊百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	
+	{en:"mon-of-lily-3fold", md:"三枝百合", level:2, parent:"mon-of-lily", title_en:"Trifold Lilies", title_md:"三枝百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-3fold-o", md:"環內三枝百合", level:2, parent:"mon-of-lily-3fold", title_en:"Encircled Trifold Lilies", title_md:"環內三枝百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-12petal-3fold", md:"三枝十二重瓣百合", level:2, parent:"mon-of-lily-3fold", title_en:"Tripartite Twelve-Petaled Lilies", title_md:"三枝十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-12petal-3fold-o", md:"環內三枝十二重瓣百合", level:2, parent:"mon-of-lily-3fold", title_en:"Encircled Tripartite Twelve-Petaled Lilies", title_md:"環內三枝十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-3fold-2", md:"三枝百合之二", level:2, parent:"mon-of-lily-3fold", title_en:"Trifold Lilies II", title_md:"三枝百合之二", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-3fold-2-o", md:"環內三枝百合之二", level:2, parent:"mon-of-lily-3fold", title_en:"Encircled Trifold Lilies II", title_md:"環內三枝百合之二", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	
+	{en:"mon-of-lily-3split", md:"三分割百合", level:2, parent:"mon-of-lily", title_en:"Tripartite Lilies", title_md:"三分割百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-3split-o", md:"環內三分割百合", level:2, parent:"mon-of-lily-3split", title_en:"Encircled Tripartite Lilies", title_md:"環內三分割百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-12petal-3split", md:"三分割十二重瓣百合", level:2, parent:"mon-of-lily-3split", title_en:"Tripartite Twelve-Petaled Lilies", title_md:"三分割十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-12petal-3split-o", md:"環內三分割十二重瓣百合", level:2, parent:"mon-of-lily-3split", title_en:"Encircled Tripartite Twelve-Petaled Lilies", title_md:"環內三分割十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-24petal-3split", md:"三分割二十四重瓣百合", level:2, parent:"mon-of-lily-3split", title_en:"Tripartite Twenty-Four-Petaled Lilies", title_md:"三分割二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-24petal-3split-o", md:"環內三分割二十四重瓣百合", level:2, parent:"mon-of-lily-3split", title_en:"Encircled Tripartite Twenty-Four-Petaled Lilies", title_md:"環內三分割二十四重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-3split-orchid-within", md:"三分割百合內蘭", level:2, parent:"mon-of-lily-3split", title_en:"Orchid within Tripartite Lilies", title_md:"三分割百合內蘭", desc:"", desc_inherit:true, tags:"lily,orchid", tags_inherit:false},
+	{en:"mon-of-lily-3split-orchid-within-o", md:"環內三分割百合內蘭", level:2, parent:"mon-of-lily-3split-orchid-within", title_en:"Encircled Orchid within Tripartite Lilies", title_md:"環內三分割百合內蘭", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	
+	{en:"mon-of-lily-3split-feather-o", md:"環內三分割箭羽百合", level:2, parent:"mon-of-lily", title_en:"Encircled Tripartite Lilies with Feather", title_md:"環內三分割箭羽百合", desc:"百合象徵純潔、崇高與堅忍不拔的精神。<br><br>箭羽象徵能武，代表捍衛所愛的決心。", desc_inherit:false, tags:"lily,feather", tags_inherit:false},
+	{en:"mon-of-lily-12petal-3split-feather-o", md:"環內三分割十二重瓣箭羽百合", level:2, parent:"mon-of-lily-3split-feather-o", title_en:"Encircled Tripartite Twelve-Petaled Lilies with Feather", title_md:"環內三分割十二重瓣箭羽百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-lily-24petal-3split-feather-o", md:"環內三分割二十四重瓣箭羽百合", level:2, parent:"mon-of-lily-3split-feather-o", title_en:"Encircled Tripartite Twenty-Four-Petaled Lilies with Feather", title_md:"環內三分割二十四重瓣箭羽百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+
+	{en:"mon-of-tai-upon-lily", md:"台字百合", level:2, parent:"mon-of-lily", title_en:"Tai upon Lily", title_md:"台字百合", desc:"", desc_inherit:false, tags:"lily,tai-seal", tags_inherit:false},
+	{en:"mon-of-tai-upon-lily-o", md:"環內台字百合", level:2, parent:"mon-of-tai-upon-lily", title_en:"Encircled Tai upon Lily", title_md:"環內台字百合", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
+	
+	{en:"mon-of-lily-12petal-upon-sakura", md:"櫻上十二重瓣百合", level:2, parent:"mon-of-lily", title_en:"Tripartite Twelve-Petaled Lilies upon Sakura", title_md:"櫻上十二重瓣百合", desc:"", desc_inherit:true, tags:"lily,sakura", tags_inherit:false},
+	{en:"mon-of-lily-12petal-upon-sakura-o", md:"環內櫻上十二重瓣百合", level:2, parent:"mon-of-lily-12petal-upon-sakura", title_en:"Encircled Tripartite Twelve-Petaled Lilies upon Sakura", title_md:"環內櫻上十二重瓣百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+
 	{en:"mon-of-lily-24petal-soft-kaohsiung", md:"二十四重瓣高字柔百合", level:2, parent:"mon-of-lily-24petal-soft", title_en:"Kaohsiung in Twenty-Four-Petaled Soft Lily", title_md:"二十四重瓣高字柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal-soft-carved-kaohsiung", md:"石刻二十四重瓣高字柔百合", level:2, parent:"mon-of-lily-24petal-soft", title_en:"Stonr-Carving Kaohsiung in Twenty-Four-Petaled Soft Lily", title_md:"石刻二十四重瓣高字柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal-soft-tainan", md:"二十四重瓣南字柔百合", level:2, parent:"mon-of-lily-24petal-soft", title_en:"Tainan in Twenty-Four-Petaled Soft Lily", title_md:"二十四重瓣南字柔百合", desc:"二十四重瓣南字柔百合", desc_inherit:true, tags:"", tags_inherit:true},
@@ -69,12 +89,6 @@ var monImages = [
 	{en:"mon-of-lily-24petal-soft-carved-chiayi", md:"石刻二十四重瓣嘉字柔百合", level:2, parent:"mon-of-lily-24petal-soft", title_en:"Stonr-Carving Chiayi in Twenty-Four-Petaled Soft Lily", title_md:"石刻二十四重瓣嘉字柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal-soft-penghu", md:"二十四重瓣澎字柔百合", level:2, parent:"mon-of-lily-24petal-soft", title_en:"Penghu in Twenty-Four-Petaled Soft Lily", title_md:"二十四重瓣澎字柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal-soft-carved-penghu", md:"石刻二十四重瓣澎字柔百合", level:2, parent:"mon-of-lily-24petal-soft", title_en:"Stonr-Carving Penghu in Twenty-Four-Petaled Soft Lily", title_md:"石刻二十四重瓣澎字柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	
-	{en:"mon-of-lily-curved", md:"折角百合", level:2, parent:"mon-of-lily", title_en:"Curved Lily", title_md:"折角百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-	{en:"mon-of-lily-curved-o", md:"環內折角百合", level:2, parent:"mon-of-lily", title_en:"Encircled Curved Lily", title_md:"環內折角百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
-
-	{en:"mon-of-tai-upon-lily", md:"台字百合", level:2, parent:"mon-of-lily", title_en:"Tai upon Lily", title_md:"台字百合", desc:"", desc_inherit:false, tags:"lily,tai-seal", tags_inherit:false},
-	{en:"mon-of-tai-upon-lily-o", md:"環內台字百合", level:2, parent:"mon-of-tai-upon-lily", title_en:"Encircled Tai upon Lily", title_md:"環內台字百合", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 
 	{en:"mon-of-orchid", md:"蘭", level:1, parent:null, title_en:"Orchid", title_md:"蘭", desc:"", desc_inherit:false, tags:"orchid", tags_inherit:false},
 	{en:"mon-of-orchid-o", md:"環內蘭", level:2, parent:"mon-of-orchid", title_en:"Encircled Orchid", title_md:"環內蘭", desc:"", desc_inherit:true, tags:"", tags_inherit:true},

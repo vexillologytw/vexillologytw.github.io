@@ -148,7 +148,7 @@
                 if (mon.en === monName) {
                     $(".breadcrumb").prepend(`<li class="breadcrumb-item text-secondary">${mon.title_md}</li>`);
                 } else {
-                    $(".breadcrumb").prepend(`<li class="breadcrumb-item"><a href="/mon-detail.html?name=${mon.en}" class="text-secondary">${mon.title_md}</a></li>`);
+                    $(".breadcrumb").prepend(`<li class="breadcrumb-item text-secondary"><a href="/mon-detail.html?name=${mon.en}" class="text-secondary">${mon.title_md}</a></li>`);
                 }
                 mon = getMonByEn(mon.parent);
             } while (mon !== null);
@@ -181,14 +181,14 @@
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";
             var text = image.title_md;
-            var childrenCount = getMonChildrenCount(image.en);
-            var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
+            // var childrenCount = getMonChildrenCount(image.en);
+            // var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
 
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">
-                        <a class="text-secondary" href="/mon-detail.html?name=${image.en}">${text}${childrenCountHtml}</a>
+                        <a class="text-secondary" href="/mon-detail.html?name=${image.en}">${text}</a>
                     </div>
                 </div>`
             ).appendTo(config.container);
