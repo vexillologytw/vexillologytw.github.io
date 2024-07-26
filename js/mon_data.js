@@ -87,7 +87,7 @@ var monImages = [
 	{en:"mon-of-lily-24petal-soft-penghu", md:"二十四重瓣澎字柔百合", level:2, parent:"mon-of-lily-24petal-soft", title_en:"Penghu in Twenty-Four-Petaled Soft Lily", title_md:"二十四重瓣澎字柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-lily-24petal-soft-carved-penghu", md:"石刻二十四重瓣澎字柔百合", level:2, parent:"mon-of-lily-24petal-soft", title_en:"Stonr-Carving Penghu in Twenty-Four-Petaled Soft Lily", title_md:"石刻二十四重瓣澎字柔百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 
-	{en:"mon-of-orchid", md:"蘭", level:1, parent:null, title_en:"Orchid", title_md:"蘭", desc:"", desc_inherit:false, tags:"orchid", tags_inherit:false},
+	{en:"mon-of-orchid", md:"蘭", level:1, parent:null, title_en:"Orchid", title_md:"蘭", desc:"蘭花象徵繁榮、典雅與力量，是充滿了祝福的花。", desc_inherit:false, tags:"orchid", tags_inherit:false},
 	{en:"mon-of-orchid-o", md:"環內蘭", level:2, parent:"mon-of-orchid", title_en:"Encircled Orchid", title_md:"環內蘭", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-orchid-2", md:"蘭之二", level:2, parent:"mon-of-orchid", title_en:"Orchid II", title_md:"蘭之二", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-orchid-2-o", md:"環內蘭之二", level:2, parent:"mon-of-orchid", title_en:"Encircled Orchid II", title_md:"環內蘭之二", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
