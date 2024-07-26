@@ -9,7 +9,7 @@ var monImages = [
 	{en:"mon-of-malus-spectabilis", md:"海棠", level:1, parent:null, title_en:"Malus Spectabilis", title_md:"海棠", desc:"", desc_inherit:false, tags:"malus_spectabilis", tags_inherit:false},
 	{en:"mon-of-malus-spectabilis-mokkou", md:"四方木瓜內海棠", level:2, parent:"mon-of-malus-spectabilis", title_en:"Mokkou Ensquared Malus Spectabilis", title_md:"四方木瓜內海棠", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	
-	{en:"mon-of-banboo-leaf", md:"五枚竹", level:1, parent:null, title_en:"Banboo Leaf", title_md:"五枚竹", desc:"竹有著謙虛、氣結與不屈的含意。", desc_inherit:false, tags:"bamboo", tags_inherit:false},
+	{en:"mon-of-banboo-leaf", md:"五枚竹", level:1, parent:null, title_en:"Banboo Leaf", title_md:"五枚竹", desc:"竹象徵謙虛、氣結與不屈。", desc_inherit:false, tags:"bamboo", tags_inherit:false},
 	{en:"mon-of-banboo-leaf-o", md:"環內五枚竹", level:2, parent:"mon-of-banboo-leaf", title_en:"Encircled Banboo Leaf", title_md:"環內五枚竹", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	
 	{en:"mon-of-icho-ring-6fold", md:"六輪銀杏", level:1, parent:null, title_en:"Six Icho Ring", title_md:"六輪銀杏", desc:"", desc_inherit:false, tags:"Icho,rings", tags_inherit:false},
@@ -102,10 +102,10 @@ var monImages = [
 	{en:"mon-of-sakura-sword", md:"劍山櫻", level:1, parent:null, title_en:"Sakura with Five Swords", title_md:"劍山櫻", desc:"", desc_inherit:false, tags:"sakura,sword", tags_inherit:false},
 	{en:"mon-of-sakura-sword-o", md:"環內劍山櫻", level:2, parent:"mon-of-sakura-sword", title_en:"Encircled Sakura with Five Swords", title_md:"環內劍山櫻", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	
-	{en:"mon-of-tiliaceus", md:"槿", level:1, parent:null, title_en:"Tiliaceus", title_md:"槿", desc:"", desc_inherit:false, tags:"tiliaceus", tags_inherit:false},
-	{en:"mon-of-tiliaceus-o", md:"環內槿", level:2, parent:"mon-of-tiliaceus", title_en:"Encircled Tiliaceus", title_md:"環內槿", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-tiliaceus", md:"黃槿", level:1, parent:null, title_en:"Tiliaceus", title_md:"黃槿", desc:"黃槿象徵平靜、祥和與幸福。", desc_inherit:false, tags:"tiliaceus", tags_inherit:false},
+	{en:"mon-of-tiliaceus-o", md:"環內黃槿", level:2, parent:"mon-of-tiliaceus", title_en:"Encircled Tiliaceus", title_md:"環內黃槿", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
    
-	{en:"mon-of-snowblue", md:"雪藍", level:1, parent:null, title_en:"Snowblue", title_md:"雪藍", desc:"", desc_inherit:false, tags:"snowblue", tags_inherit:false},
+	{en:"mon-of-snowblue", md:"雪藍", level:1, parent:null, title_en:"Snowblue", title_md:"雪藍", desc:"雪藍象徵溫馨、和諧與寧靜。", desc_inherit:false, tags:"snowblue", tags_inherit:false},
 	{en:"mon-of-snowblue-o", md:"環內雪藍", level:2, parent:"mon-of-snowblue", title_en:"Encircled Snowblue", title_md:"環內雪藍", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	{en:"mon-of-snowblue-3split", md:"三分割雪藍", level:2, parent:"mon-of-snowblue", title_en:"Tripartite Snowblues", title_md:"三分割雪藍", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	{en:"mon-of-snowblue-3split-o", md:"環內三分割雪藍", level:2, parent:"mon-of-snowblue", title_en:"Encircled Tripartite Snowblues", title_md:"環內三分割雪藍", desc:"", desc_inherit:false, tags:"", tags_inherit:true},

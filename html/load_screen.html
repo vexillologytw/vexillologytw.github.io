@@ -1,0 +1,24 @@
+<style>
+    .load-screen {
+        --bs-backdrop-zindex: 1050;
+        --bs-backdrop-bg: #000;
+        --bs-backdrop-opacity: 0.5;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: var(--bs-backdrop-zindex);
+        width: 100vw;
+        height: 100dvh !important;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left) !important;
+    }
+    .load-screen > .spinner-border {
+        width: 5em;
+        height: 5em;
+    }
+</style>
+<div class="load-screen d-flex justify-content-center align-items-center">
+    <div class="spinner-border text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>

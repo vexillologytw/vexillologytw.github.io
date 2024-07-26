@@ -1,4 +1,8 @@
 async function loadHtml() {
+    var loadScreen = await (await fetch("/html/load_screen")).text();
+    document.body.insertAdjacentHTML('afterend', loadScreen);
+
+
     var loaders = document.querySelectorAll("[data-load]");
     for (var loader of loaders) {
         var loadTarget = loader.getAttribute("data-load");
@@ -10,5 +14,7 @@ async function loadHtml() {
             }
         }
     }
+    var loadScreenEle = document.querySelector(".load-screen");
+    loadScreenEle.remove();
 }
 loadHtml();
