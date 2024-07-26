@@ -8,7 +8,7 @@ var flagImages = [
     
     {en:"flag-of-taiwan-milktea", md:"奶茶百合旗", level:2, parent:"flag-of-taiwan-1-1", title_en:"Flag of Taiwan Milk Tea", title_md:"奶茶百合旗", desc:null, desc_inherit:false, colors:"2f2e2a,ad8a6c,ffd700,ffffff", colors_inherit:false, tags:"lily,milktea", tags_inherit:false},
     
-    {en:"flag-of-taiwan-naval-1-1", md:"台灣百合海上旗", level:1, parent:"flag-of-taiwan-1-1", title_en:"Ensign of Taiwan", title_md:"台灣百合海上旗", desc:"", desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
+    {en:"flag-of-taiwan-naval-1-1", md:"台灣百合海上旗", level:2, parent:"flag-of-taiwan-1-1", title_en:"Ensign of Taiwan", title_md:"台灣百合海上旗", desc:"", desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     {en:"flag-of-taiwan-naval-1-2", md:"台灣百合海上旗一號之二", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-II", title_md:"台灣百合海上旗一號之二", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     {en:"flag-of-taiwan-naval-1-3", md:"台灣百合海上旗一號之三", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-III", title_md:"台灣百合海上旗一號之三", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     {en:"flag-of-taiwan-naval-1-4", md:"台灣百合海上旗一號之四", level:2, parent:"flag-of-taiwan-naval-1-1", title_en:"Ensign of Taiwan I-VI", title_md:"台灣百合海上旗一號之四", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
@@ -25,7 +25,7 @@ var flagImages = [
     {en:"flag-of-red-lily-naval-1-2", md:"紅百合海上旗一號之二", level:2, parent:"flag-of-red-lily-1-1", title_en:"Ensign of Red Lily I-II", title_md:"紅百合海上旗一號之二", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     {en:"flag-of-red-lily-naval-2-1", md:"紅百合海上旗二號之一", level:2, parent:"flag-of-red-lily-1-1", title_en:"Ensign of Red Lily II-I", title_md:"紅百合海上旗二號之一", desc:null, desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
     
-    {en:"flag-of-high-mountains", md:"高山旗", level:1, parent:null, title_en:"Flag of High Mountains", title_md:"高山旗", desc:"高山孤絕壯麗，象徵台灣人在險惡世界燃起的熊熊魂火。<br><br>藍色象徵玉山，代表台灣人的精神。<br><br>青色象徵晴天，代表自由與希望。<br><br>白色象徵烈日，代表正值正義正大光明。", desc_inherit:false, colors:"003255,00b4b2,ffffff", colors_inherit:false, tags:"mountain,sun", tags_inherit:false},
+    {en:"flag-of-high-mountains", md:"高山旗", level:1, parent:null, title_en:"Flag of High Mountains", title_md:"高山旗", desc:"高山孤絕壯麗，象徵台灣人在險惡世界燃起的熊熊魂火。<br><br>藍色象徵玉山，代表台灣人的精神。<br><br>青色象徵晴天，代表自由與希望。<br><br>白色象徵旭日，代表正值正義正大光明。", desc_inherit:false, colors:"003255,00b4b2,ffffff", colors_inherit:false, tags:"mountain,sun", tags_inherit:false},
     
     {en:"flag-of-four-languages", md:"四大語言族群旗", level:1, parent:null, title_en:"Flag of Four Ethnics", title_md:"四大語言族群旗", desc:"紅色代表守護自由的決心。<br><br>白色代表善良樸實的美德。<br><br>四條線分別代表台灣四大語言族群：中文、台語、客語、以及原住民語。<br><br>線條重疊而形成的八芒星，象徵多個民族的命運，在歷史的推動下交織在台灣島上。", desc_inherit:false, colors:"b40014,ffffff", colors_inherit:false, tags:"intersect_lines", tags_inherit:false},
     {en:"flag-of-four-languages-naval", md:"四大語言族群旗", level:2, parent:"flag-of-four-languages", title_en:"Ensign of Four Ethnics", title_md:"四大語言族群海上旗", desc:"", desc_inherit:true, colors:"", colors_inherit:true, tags:"", tags_inherit:true},
