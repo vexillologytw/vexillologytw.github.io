@@ -21,12 +21,12 @@ var monImages = [
 	
 	{en:"mon-of-tsubaki", md:"椿", level:1, parent:null, title_en:"Tsubaki", title_md:"椿", desc:"椿花象徵謙敬溫和、乾淨俐落。", desc_inherit:false, tags:"tsubaki", tags_inherit:false},
 	{en:"mon-of-tsubaki-o", md:"環內椿", level:2, parent:"mon-of-tsubaki", title_en:"Encircled Tsubaki", title_md:"環內椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
-	{en:"mon-of-tsubaki-saber", md:"劍氣椿", level:2, parent:"mon-of-tsubaki", title_en:"Saber Tsubaki", title_md:"劍氣椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
-	{en:"mon-of-tsubaki-saber-o", md:"環內劍氣椿", level:2, parent:"mon-of-tsubaki", title_en:"Encircled Saber Tsubaki", title_md:"環內劍氣椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
+	{en:"mon-of-tsubaki-saber", md:"劍氣椿", level:2, parent:"mon-of-tsubaki", title_en:"Saber Tsubaki", title_md:"劍氣椿", desc:"劍氣椿象徵仁愛與武力。", desc_inherit:false, tags:"", tags_inherit:true},
+	{en:"mon-of-tsubaki-saber-o", md:"環內劍氣椿", level:2, parent:"mon-of-tsubaki-saber", title_en:"Encircled Saber Tsubaki", title_md:"環內劍氣椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	{en:"mon-of-tsubaki-kumiaikaku", md:"組合角內椿", level:2, parent:"mon-of-tsubaki", title_en:"Ensquared Tsubaki", title_md:"組合角內椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	{en:"mon-of-tsubaki-3split-o", md:"環內三分割椿", level:2, parent:"mon-of-tsubaki", title_en:"Tripartite Tsubakies", title_md:"環內三分割椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
-	{en:"mon-of-tsubaki-3split-feather-o", md:"環內三分割椿三劍羽", level:2, parent:"mon-of-tsubaki", title_en:"Encircled Tripartite Tsubakies And Feathers", title_md:"環內三分割椿三劍羽", desc:"", desc_inherit:false, tags:"tsubaki,feather", tags_inherit:false},
-	{en:"mon-of-tsubaki-saber-3split-feather-o", md:"環內三分割劍氣椿三劍羽", level:2, parent:"mon-of-tsubaki", title_en:"Encircled Tripartite Saber Tsubakies And Feathers", title_md:"環內三分割劍氣椿三劍羽", desc:"", desc_inherit:false, tags:"tsubaki,feather", tags_inherit:false},
+	{en:"mon-of-tsubaki-3split-feather-o", md:"環內三分割椿三箭羽", level:2, parent:"mon-of-tsubaki", title_en:"Encircled Tripartite Tsubakies And Feathers", title_md:"環內三分割椿三箭羽", desc:"", desc_inherit:false, tags:"tsubaki,feather", tags_inherit:false},
+	{en:"mon-of-tsubaki-saber-3split-feather-o", md:"環內三分割劍氣椿三箭羽", level:2, parent:"mon-of-tsubaki-saber", title_en:"Encircled Tripartite Saber Tsubakies And Feathers", title_md:"環內三分割劍氣椿三箭羽", desc:"", desc_inherit:true, tags:"tsubaki,feather", tags_inherit:false},
 	{en:"mon-of-tsubaki-holding", md:"環抱椿", level:2, parent:"mon-of-tsubaki", title_en:"Holding Tsubaki", title_md:"環抱椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	{en:"mon-of-tsubaki-holding-o", md:"環內環抱椿", level:2, parent:"mon-of-tsubaki", title_en:"Encircled Holding Tsubaki", title_md:"環內環抱椿", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
 	{en:"mon-of-inori-tsubaki", md:"祈椿", level:2, parent:"mon-of-tsubaki", title_en:"Inori Tsubaki", title_md:"祈椿", desc:"椿花象徵謙敬溫和、乾淨俐落，兩枝花環抱著中央的椿，代表來自家族的祝福與祈許。是本站站主的個人紋章。", desc_inherit:false, tags:"tsubaki", tags_inherit:false},
@@ -34,8 +34,8 @@ var monImages = [
 	{en:"mon-of-inori-tsubaki-carved", md:"石刻祈椿", level:2, parent:"mon-of-inori-tsubaki", title_en:"Stone-Carving Inori Tsubaki", title_md:"石刻祈椿", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 	{en:"mon-of-tsubaki-ko", md:"柯椿", level:2, parent:"mon-of-tsubaki", title_en:"Tsubaki in Ko", title_md:"柯椿", desc:"柯字的紋章化設計，並在口字內擺一朵椿花。", desc_inherit:false, tags:"tsubaki,ko", tags_inherit:false},
 	
-	{en:"mon-of-kikyo-3fold-sideview-feather", md:"三側顏劍桔梗三箭羽", level:1, parent:null, title_en:"Triple Kikyo And Feathers", title_md:"三側顏劍桔梗三箭羽", desc:"", desc_inherit:false, tags:"kikyo,feather", tags_inherit:false},
-	{en:"mon-of-kikyo-3fold-sideview-feather-o", md:"環內三側顏劍桔梗三箭羽", level:2, parent:"mon-of-kikyo-3fold-sideview-feather", title_en:"Encircled Triple Kikyo And Feathers", title_md:"環內三側顏劍桔梗三箭羽", desc:"三朵向外綻放的劍氣桔梗，以及朝向紋中央的箭羽。", desc_inherit:true, tags:"", tags_inherit:true},
+	{en:"mon-of-kikyo-3fold-sideview-feather", md:"三側顏劍氣桔梗三箭羽", level:1, parent:null, title_en:"Triple Kikyo And Feathers", title_md:"三側顏劍氣桔梗三箭羽", desc:"", desc_inherit:false, tags:"kikyo,feather", tags_inherit:false},
+	{en:"mon-of-kikyo-3fold-sideview-feather-o", md:"環內三側顏劍氣桔梗三箭羽", level:2, parent:"mon-of-kikyo-3fold-sideview-feather", title_en:"Encircled Triple Kikyo And Feathers", title_md:"環內三側顏劍氣桔梗三箭羽", desc:"三朵向外綻放的劍氣桔梗，以及朝向紋中央的箭羽。", desc_inherit:true, tags:"", tags_inherit:true},
 
 	{en:"mon-of-ko", md:"柯", level:1, parent:null, title_en:"Ko", title_md:"柯", desc:"柯字的紋章化設計。", desc_inherit:false, tags:"ko", tags_inherit:false},
 	
