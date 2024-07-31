@@ -6,7 +6,7 @@ var monjiImages = [
     {en:"monji-of-cwh-ershui-2-1", md:"二水鄉章二號之一", level:2, parent:"monji-of-cwh-ershui", title_en:"Ershui Township II-I", title_md:"二水鄉二號之一", desc:"", desc_inherit:true},
     {en:"monji-of-cwh-erlin", md:"二林鎮章", level:2, parent:"monji-of-changhua-county", title_en:"Erlin Township", title_md:"二林鎮", desc:"", desc_inherit:false},
     {en:"monji-of-chiayi-city", md:"嘉義市章", level:1, parent:null, title_en:"Chiayi City", title_md:"嘉義市", desc:"", desc_inherit:false},
-    {en:"monji-of-chiayi-county", md:"嘉義縣章", level:1, parent:null, title_en:"Chiayi County", title_md:"嘉義縣", desc:"台灣第一高峰玉山主峰就位於嘉義縣，三重山岳的形狀象徵高山巍峨壯麗延綿，代表台灣民族的堅毅正直率真豪情。", desc_inherit:false},
+    {en:"monji-of-chiayi-county", md:"嘉義縣章", level:1, parent:null, title_en:"Chiayi County", title_md:"嘉義縣", desc:"台灣第一高峰玉山主峰就位於嘉義縣，三重山岳的形狀象徵高山壯麗延綿，代表台灣民族的正值率真豪情。", desc_inherit:false},
     {en:"monji-of-puzi-city", md:"朴子市章", level:1, parent:"monji-of-chiayi-county", title_en:"Puzi City", title_md:"朴子市", desc:"", desc_inherit:false},
     {en:"monji-of-taibou-city", md:"太保市章", level:1, parent:"monji-of-chiayi-county", title_en:"Taibou City", title_md:"太保市", desc:"", desc_inherit:false},
     {en:"monji-of-hsinchu-city", md:"新竹市章", level:1, parent:null, title_en:"Hsintsu City", title_md:"新竹市", desc:"位於台灣北部的新竹市是台灣的科技重鎮，世界第一的半導體製造公司台積電總部就坐落於此。<br><br>紋由「竹」與「市」字所組成，可分為三個區塊，分別象徵科學、創新與永續發展。", desc_inherit:false},
