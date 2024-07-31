@@ -1,7 +1,10 @@
 var monjiImages = [
     {en:"monji-of-changhua-county", md:"彰化縣章", level:1, parent:null, title_en:"Changhua County", title_md:"彰化縣", desc:"", desc_inherit:false},
-    {en:"monji-of-cwh-ershui", md:"二水鄉章", level:2, parent:"monji-of-changhua-county", title_en:"Ershui Dictrict", title_md:"二水鄉", desc:"", desc_inherit:false},
     {en:"monji-of-changhua-city", md:"彰化市章", level:1, parent:"monji-of-changhua-county", title_en:"Changhua City", title_md:"彰化市", desc:"", desc_inherit:false},
+    {en:"monji-of-cwh-ershui", md:"二水鄉章", level:2, parent:"monji-of-changhua-county", title_en:"Ershui Township", title_md:"二水鄉", desc:"", desc_inherit:false},
+    {en:"monji-of-cwh-ershui-1-2", md:"二水鄉章一號之二", level:2, parent:"monji-of-cwh-ershui", title_en:"Ershui Township I-II", title_md:"二水鄉一號之二", desc:"", desc_inherit:true},
+    {en:"monji-of-cwh-ershui-2-1", md:"二水鄉章二號之一", level:2, parent:"monji-of-cwh-ershui", title_en:"Ershui Township II-I", title_md:"二水鄉二號之一", desc:"", desc_inherit:true},
+    {en:"monji-of-cwh-erlin", md:"二林鎮章", level:2, parent:"monji-of-changhua-county", title_en:"Erlin Township", title_md:"二林鎮", desc:"", desc_inherit:false},
     {en:"monji-of-chiayi-city", md:"嘉義市章", level:1, parent:null, title_en:"Chiayi City", title_md:"嘉義市", desc:"", desc_inherit:false},
     {en:"monji-of-chiayi-county", md:"嘉義縣章", level:1, parent:null, title_en:"Chiayi County", title_md:"嘉義縣", desc:"台灣第一高峰玉山主峰就位於嘉義縣，三重山岳的形狀象徵高山巍峨壯麗延綿，代表台灣民族的堅毅正直率真豪情。", desc_inherit:false},
     {en:"monji-of-puzi-city", md:"朴子市章", level:1, parent:"monji-of-chiayi-county", title_en:"Puzi City", title_md:"朴子市", desc:"", desc_inherit:false},
@@ -15,6 +18,7 @@ var monjiImages = [
     {en:"monji-of-nantou-county", md:"南投縣章", level:1, parent:null, title_en:"Nantou County", title_md:"南投縣", desc:"", desc_inherit:false},
     {en:"monji-of-new-taipei-city", md:"新北市章", level:1, parent:null, title_en:"New Taipei City", title_md:"新北市", desc:"", desc_inherit:false},
     {en:"monji-of-penghu-county", md:"澎湖縣章", level:1, parent:null, title_en:"Penghu County", title_md:"澎湖縣", desc:"", desc_inherit:false},
+    {en:"monji-of-magong-city", md:"馬公市章", level:1, parent:"monji-of-penghu-county", title_en:"Magong City", title_md:"馬公市章", desc:"", desc_inherit:false},
     {en:"monji-of-pingtung-county", md:"屏東縣章", level:1, parent:null, title_en:"Pingtung County", title_md:"屏東縣", desc:"", desc_inherit:false},
     {en:"monji-of-taichung-city", md:"台中市章", level:1, parent:null, title_en:"Taichung City", title_md:"台中市", desc:"", desc_inherit:false},
     {en:"monji-of-taichung-city-10-1", md:"台中市章十號", level:2, parent:"monji-of-taichung-city", title_en:"Taichung City X", title_md:"台中市十號", desc:"", desc_inherit:false},
@@ -27,6 +31,7 @@ var monjiImages = [
     {en:"monji-of-tnn-qigu", md:"七股區章", level:2, parent:"monji-of-tainan-city", title_en:"Qigu Dictrict", title_md:"七股區", desc:"", desc_inherit:false},
     {en:"monji-of-tnn-xiaying", md:"下營區章", level:2, parent:"monji-of-tainan-city", title_en:"Xiaying Dictrict", title_md:"下營區", desc:"", desc_inherit:false},
     {en:"monji-of-taipei-city", md:"台北市章", level:1, parent:null, title_en:"Taipei City", title_md:"台北市", desc:"", desc_inherit:false},
+    {en:"monji-of-tpe-beitou", md:"北投區章", level:2, parent:"monji-of-taipei-city", title_en:"Beitou District", title_md:"北投區", desc:"", desc_inherit:false},
     {en:"monji-of-taitung-county", md:"台東縣章", level:1, parent:null, title_en:"Taitung County", title_md:"台東縣", desc:"", desc_inherit:false},
     {en:"monji-of-kaohsiung-city", md:"高雄市章", level:1, parent:null, title_en:"Kaohsiung City", title_en:"Kaohsiung City", title_md:"高雄市", desc:"擁有全台第一大港的高雄市位於台灣南部，是台灣人口規模第三大的城市。<br><br>紋結合了「高」字與日本時代的高雄市章，象徵這座城市繼承的歷史與人文。<br><br>紋自上而下可分為三個菱形區塊，分別象徵和平、民主與自由。", desc_inherit:false},
     {en:"monji-of-khh-qieding", md:"茄萣區章", level:2, parent:"monji-of-kaohsiung-city", title_en:"Qieding Dictrict", title_md:"茄萣區", desc:"", desc_inherit:false},
@@ -48,7 +53,7 @@ var monjiImages = [
     {en:"monji-of-taoyuan-city", md:"桃園市章", level:1, parent:null, title_en:"Taoyuan City", title_md:"桃園市", desc:"", desc_inherit:false},
     {en:"monji-of-yilan-county", md:"宜蘭縣章", level:1, parent:null, title_en:"Yilan County", title_md:"宜蘭縣", desc:"", desc_inherit:false},
     {en:"monji-of-yunlin-county", md:"雲林縣章", level:1, parent:null, title_en:"Yunlin County", title_md:"雲林縣", desc:"", desc_inherit:false},
-    {en:"monji-of-ylh-taixi", md:"台西鄉章", level:2, parent:"monji-of-yunlin-county", title_en:"Taixi Dictrict", title_md:"台西鄉", desc:"", desc_inherit:false}
+    {en:"monji-of-ylh-taixi", md:"台西鄉章", level:2, parent:"monji-of-yunlin-county", title_en:"Taixi Township", title_md:"台西鄉", desc:"", desc_inherit:false}
 ];
 var monjiConfig = {
     dir: "/images/monjis/",
