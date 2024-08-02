@@ -204,6 +204,9 @@
                 // only trigger on left click
                 if (event.which != 1) return;
                 var imgSrc = $(this).attr("src");
+                if (!$("#image-modal").hasClass("modal-lg")) {
+                    $("#image-modal").addClass("modal-lg");
+                }
                 $("#modal-image-src").attr("src", imgSrc);
                 $("#image-modal-trigger").click();
             })
