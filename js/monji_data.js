@@ -89,7 +89,7 @@ var monjiImages = [
     {en:"monji-of-khh-sinsing-1-1", md:"新興區一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-kaohsiung-city-4-8", title_en:"Sinsing Dictrict", title_md:"新興區", desc:"", desc_inherit:false, tags:"kaohsiung,sinsing", tags_inherit:false},
     {en:"monji-of-khh-taoyuan-2-1", md:"桃源區二號之一", version:"2.1", is_main:true, level:2, parent:"monji-of-kaohsiung-city-4-8", title_en:"Taoyuan Dictrict", title_md:"桃源區", desc:"", desc_inherit:false, tags:"kaohsiung,khh_taoyuan", tags_inherit:false},
     {en:"monji-of-khh-yongan-1-3", md:"永安區一號之三", version:"1.3", is_main:true, level:2, parent:"monji-of-kaohsiung-city-4-8", title_en:"Yongan Dictrict", title_md:"永安區", desc:"", desc_inherit:false, tags:"kaohsiung,yongan", tags_inherit:false},
-    {en:"monji-of-khh-yongan-1-4", md:"永安區一號之四", version:"1.4", is_main:true, level:2, parent:"monji-of-khh-yongan-1-3", title_en:"Yongan Dictrict", title_md:"永安區", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
+    {en:"monji-of-khh-yongan-1-4", md:"永安區一號之四", version:"1.4", is_main:false, level:2, parent:"monji-of-khh-yongan-1-3", title_en:"Yongan Dictrict", title_md:"永安區", desc:"", desc_inherit:false, tags:"", tags_inherit:true},
     {en:"monji-of-khh-zihguan-3-1", md:"梓官區三號之一", version:"3.1", is_main:true, level:2, parent:"monji-of-kaohsiung-city-4-8", title_en:"Zihguan Dictrict", title_md:"梓官區", desc:"", desc_inherit:false, tags:"kaohsiung,zihguan", tags_inherit:false},
     {en:"monji-of-khh-zuoying-1-1", md:"左營區一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-kaohsiung-city-4-8", title_en:"Zuoying Dictrict", title_md:"左營區", desc:"", desc_inherit:false, tags:"kaohsiung,zuoying", tags_inherit:false},
     
@@ -98,7 +98,7 @@ var monjiImages = [
     {en:"monji-of-yilan-county-6-1", md:"宜蘭縣六號之一", version:"6.1", is_main:true, level:1, parent:null, title_en:"Yilan County", title_md:"宜蘭縣", desc:"", desc_inherit:false, tags:"yilan", tags_inherit:false},
     
     {en:"monji-of-yunlin-county-6-1", md:"雲林縣六號之一", version:"6.1", is_main:true, level:1, parent:null, title_en:"Yunlin County", title_md:"雲林縣", desc:"", desc_inherit:false, tags:"yunlin", tags_inherit:false},
-    {en:"monji-of-ylh-taixi-1-1", md:"台西鄉一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-yunlin-county-6-1", title_en:"Taixi Township", title_md:"台西鄉", desc:"yunlin,taixi", desc_inherit:false}
+    {en:"monji-of-ylh-taixi-1-1", md:"台西鄉一號之一", version:"1.1", is_main:true, level:2, parent:"monji-of-yunlin-county-6-1", title_en:"Taixi Township", title_md:"台西鄉", desc:"", desc_inherit:false, tags:"yunlin,taixi", tags_inherit:false}
 ];
 var monjiConfig = {
     dir: "/images/monjis/",
