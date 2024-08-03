@@ -208,10 +208,13 @@ function getRelatedFlags(en) {
         var thisTags = getFlagTags(flag.en);
         if (!thisTags.length) continue; // skip flags with no tags
 
+        loop:
         for (var tag of tagArray) {
-            if (thisTags.indexOf(tag) == -1) continue; // skip flags that is not related
-            relatedFlags.push(flag);
-            break;  // break if flag is related
+            for (var thisTag of thisTags.split(",")) {
+                if (thisTag != tag) continue; // skip flags that is not related
+                relatedFlags.push(flag);
+                break loop;  // break if flag is related
+            }
         }
     }
     return relatedFlags;

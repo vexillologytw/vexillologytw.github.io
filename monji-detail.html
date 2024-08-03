@@ -42,7 +42,13 @@
 
         <div data-title="display" class="d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center w-75 pt-5 my-5">
             <img class="main-image me-md-5 mb-5 mb-md-0 modal-trigger-image" data-type="monji">
-            <div class="description noto-sans-tc fs-5">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
+            <div>
+                <div class="d-block mb-3">
+                    <h1 class="d-inline monji-name noto-sans-tc"></h1>
+                    <span class="d-inline monji-version text-muted noto-sans-tc ms-4"></span>
+                </div>
+                <div class="description noto-sans-tc fs-5">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
+            </div>
         </div>
 
         <span class="w-100 mb-5 my-5" id="related-entities">
@@ -106,13 +112,16 @@
             $("#prev-monji").hide();
             $("#next-monji").hide();
             
-            var subentities = getMonjiesByParentName(monjiName);
+            const relatedMonjis = getRelatedMonjis(monjiName);
 
-            if (!subentities.length) {
+            if (!relatedMonjis.length) {
                 $("#related-entities").hide();
             }
-            for (var subEntity of subentities) {
-                appendImage(subEntity, monjiConfig);
+            if (relatedMonjis != undefined && relatedMonjis.length) {
+                $("div[data-title='monji-display']").addClass("mb-5");
+                for (var relatedMonji of relatedMonjis) {
+                    appendImage(relatedMonji, monjiConfig);
+                }
             }
             // show modal on left click on images
             $(".modal-trigger-image").on("mousedown", function(event) {
@@ -143,6 +152,16 @@
         });
         
         function setMainImage(monji) {
+            $(".monji-name").html(
+                `${monji.title_md}`
+            );
+            if (monji.version.length) {
+                var html = `版本 v${monji.version}`;
+                if (monji.is_main) {
+                    html += `<span class="ms-4 badge bg-tcyan">主要版本</span>`
+                }
+                $(".monji-version").html(html);
+            }
             $(".main-image").attr("src", monjiConfig.dir + monji.en + ".png");
             $(".main-image").attr("alt", monji.title);
 
@@ -197,14 +216,19 @@
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";
             var text = image.title_md;
-            var childrenCount = getMonjiChildrenCount(image.en);
-            var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
+            // var childrenCount = getMonjiChildrenCount(image.en);
+            // var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
 
+            var version = image.version;
+            var versionHtml = "";
+            if (!image.is_main && version.length) {
+                versionHtml = `<span class="ms-2">(v${version})</span>`;
+            }
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">
-                        <a class="text-secondary" href="/monji-detail.html?name=${image.en}">${text}${childrenCountHtml}</a>
+                        <a class="text-secondary" href="/monji-detail.html?name=${image.en}">${text}${versionHtml}</a>
                     </div>
                 </div>`
             ).appendTo(config.container);

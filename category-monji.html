@@ -97,14 +97,14 @@
         function appendImage(image, config) {
             var path = config.dir + image.en + ".png";
             var text = image.title_md;
-            var childrenCount = getMonjiChildrenCount(image.en);
-            var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
+            // var childrenCount = getMonjiChildrenCount(image.en);
+            // var childrenCountHtml = childrenCount > 0 ? `<span class="ms-2">[${childrenCount}]</span>` : "";
 
             $(`<div class="text-center p-3">
                     <img src="${path}" class="${config.imageClasses}" data-title="${image.en}" data-type="${config.type}" width="${config.width}" height="${config.height}">
                     <br>
                     <div class="noto-sans-tc text-secondary pt-2">
-                        <a class="text-secondary" href="/${config.type}-detail.html?name=${image.en}">${text}${childrenCountHtml}</a>
+                        <a class="text-secondary" href="/${config.type}-detail.html?name=${image.en}">${text}</a>
                     </div>
                 </div>`
             ).appendTo(config.container);

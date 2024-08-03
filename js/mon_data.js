@@ -43,6 +43,8 @@ var monImages = [
 	{en:"mon-of-kikyo-3fold-sideview-feather-o", md:"環內箭羽桔梗", level:2, parent:"mon-of-kikyo-3fold-sideview-feather", title_en:"Encircled Triple Sideview Kikyo And Feathers", title_md:"環內箭羽桔梗", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
 
 	{en:"mon-of-ko", md:"柯", level:1, parent:null, title_en:"Ko", title_md:"柯", desc:"柯字的紋章化設計。", desc_inherit:false, tags:"ko", tags_inherit:false},
+
+	{en:"mon-of-immortal", md:"仙", level:1, parent:null, title_en:"Immortal", title_md:"仙", desc:"仙字的紋章化設計。", desc_inherit:false, tags:"immortal", tags_inherit:false},
 	
 	{en:"mon-of-lily", md:"百合", level:1, parent:null, title_en:"Lily", title_md:"百合", desc:"百合象徵純潔、崇高與堅忍不拔的精神。", desc_inherit:false, tags:"lily", tags_inherit:false},
 	{en:"mon-of-lily-o", md:"環內百合", level:2, parent:"mon-of-lily", title_en:"Encircled Lily", title_md:"環內百合", desc:"", desc_inherit:true, tags:"", tags_inherit:true},
