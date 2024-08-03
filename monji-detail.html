@@ -43,9 +43,9 @@
         <div data-title="display" class="d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center w-75 pt-5 my-5">
             <img class="main-image me-md-5 mb-5 mb-md-0 modal-trigger-image" data-type="monji">
             <div>
-                <div class="d-block mb-3">
+                <div class="d-block mb-4">
                     <h1 class="d-inline monji-name noto-sans-tc"></h1>
-                    <span class="d-inline monji-version text-muted noto-sans-tc ms-4"></span>
+                    <span class="d-inline monji-version text-muted noto-sans-tc ms-2"></span>
                 </div>
                 <div class="description noto-sans-tc fs-5">紋的介紹還沒完成，但或許過一段時間它就會自己長出來了。</div>
             </div>
@@ -158,7 +158,7 @@
             if (monji.version.length) {
                 var html = `版本 v${monji.version}`;
                 if (monji.is_main) {
-                    html += `<span class="ms-4 badge bg-tcyan">主要版本</span>`
+                    html += `<span class="ms-2 badge bg-tcyan">主要版本</span>`
                 }
                 $(".monji-version").html(html);
             }
